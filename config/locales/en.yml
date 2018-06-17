@@ -3,6 +3,10 @@ en:
   user:
     username: "Username"
     email: "Email"
+    change_your_password: "Change your password"
+    change_my_password: "Change my password"
+    new_password: "New password"
+    confirm_new_password: "Confirm new password"
     password: "Password"
     password_confirmation: "Password confirmation"
     sign_in: "Sign in"

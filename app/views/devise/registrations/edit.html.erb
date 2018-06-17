@@ -30,7 +30,7 @@
               <div class="col-md-7">
                 <%= f.password_field :password, autocomplete: 'off', class: 'form-control col-md-8' %>
                 <% if @minimum_password_length %>
-                  <em><%= @minimum_password_length %> characters minimum</em>
+                  <em><%= @minimum_password_length %> <%= t('user.characters_minimum') -%></em>
                 <% end %>
               </div>
             </div>
