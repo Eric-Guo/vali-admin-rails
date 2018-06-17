@@ -15,14 +15,15 @@ en:
     sign_up: "Sign up"
     stay_signed_in: "Stay Signed in"
     forgot_password: "Forgot Password ?"
-    reset: "RESET"
     back_to_login: "Back to Login"
     characters_minimum: "characters minimum"
     leave_blank_hint: "leave blank if you don't want to change it"
     need_current_password_hint: "we need your current password to confirm your changes"
+    resend_unlock_instructions: "Resend unlock instructions"
   activerecord:
     models:
       user: "User"
   form:
     edit: "Edit"
     update: "Update"
+    reset: "Reset"

@@ -15,14 +15,15 @@ en:
     sign_up: "注册"
     stay_signed_in: "保持登录"
     forgot_password: "忘记密码 ？"
-    reset: "重设"
     back_to_login: "回到登入"
     characters_minimum: "字符以上"
     leave_blank_hint: "如果您不想更改它，请留空"
     need_current_password_hint: "我们需要您当前的密码来确认您的更改"
+    resend_unlock_instructions: "重新发送解锁说明"
   activerecord:
     models:
       user: "用户"
   form:
     edit: "编辑"
     update: "更新"
+    reset: "重置"
