@@ -87,8 +87,8 @@
           </li>
         <% else %>
           <li class="app-login-box">
-            <a class="btn btn-dark" href="<%= new_user_session_path -%>">Sign in</a>
-            <a class="btn btn-light" href="<%= new_user_registration_path -%>">Sign up</a>
+            <a class="btn btn-dark" href="<%= new_user_session_path -%>"><%= t('user.sign_in') -%></a>
+            <a class="btn btn-light" href="<%= new_user_registration_path -%>"><%= t('user.sign_up') -%></a>
           </li>
         <% end %>
       </ul>
