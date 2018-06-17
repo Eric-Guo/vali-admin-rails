@@ -32,3 +32,4 @@ yarn-debug.log*
 .yarn-integrity
 harman_vendor.sublime-workspace
 config/database.yml
+/test/reports/TEST-*.xml

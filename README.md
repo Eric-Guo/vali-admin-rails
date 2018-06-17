@@ -1,4 +1,4 @@
-# README
+[![CircleCI](https://circleci.com/gh/Eric-Guo/vali-admin-rails.svg?style=svg)](https://circleci.com/gh/Eric-Guo/vali-admin-rails)
 
 ## Introduction
 
