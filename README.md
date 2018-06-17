@@ -25,6 +25,12 @@ bin/rails credentials:edit
 # copy secret_key_base line and paste as new line as devise_secret_key
 ```
 
+## Link the master.key (using above if you don't)
+
+```bash
+ln -s /Users/user_name/.ssh/harman_vendor_master.key config/master.key
+```
+
 ## Development prepare
 
 ```bash
