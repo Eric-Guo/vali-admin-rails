@@ -76,8 +76,7 @@ jobs:
       # run tests!
       - run:
           name: run tests
-          command: |
-            bundle exec rake
+          command: bin/rails test:system test
 
       # Save test results for timing analysis
       - store_test_results:
