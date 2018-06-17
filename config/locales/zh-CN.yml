@@ -1,0 +1,11 @@
+---
+en:
+  user:
+    username: "用户名"
+    email: "电子邮件"
+    password: "密码"
+    sign_in: "登录"
+    stay_signed_in: "保持登录"
+    forgot_password: "忘记密码 ？"
+    reset: "重设"
+    back_to_login: "回到登入"
