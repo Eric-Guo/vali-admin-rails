@@ -5,5 +5,6 @@ class CompanyTest < ActiveSupport::TestCase
     dicos = companies(:dicos)
     assert dicos.valid?
     assert dicos.users.count == 1
+    assert dicos.vertical_markets.count == 2
   end
 end

@@ -1,0 +1,18 @@
+---
+akg:
+  name: AKG
+
+mi:
+  name: MI
+
+amx:
+  name: AMX
+
+jbl_entertainment:
+  name: JBL Entertainment
+
+install_sound:
+  name: Install Sound
+
+martin_lighting:
+  name: Martin Lighting

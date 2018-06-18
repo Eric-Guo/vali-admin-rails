@@ -1,0 +1,8 @@
+---
+dicos_akg:
+  vertical_market: akg
+  company: dicos
+
+dicos_install_sound:
+  vertical_market: install_sound
+  company: dicos
