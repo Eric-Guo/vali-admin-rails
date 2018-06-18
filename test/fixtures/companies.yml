@@ -1,0 +1,12 @@
+---
+dicos:
+  name: 德克士
+  city: 杨浦
+  province: 上海
+  address: 宝地广场
+
+kfc:
+  name: 肯德基
+  city: 静安
+  province: 上海
+  address: 茂名北路
