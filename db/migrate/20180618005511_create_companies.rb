@@ -1,5 +1,18 @@
 class CreateCompanies < ActiveRecord::Migration[5.2]
   def change
+    create_table :vertical_markets do |t|
+      t.string :name
+
+      t.timestamps null: false
+    end
+
+    create_table :vertical_market_companies do |t|
+      t.references :vertical_market
+      t.references :company
+
+      t.timestamps null: false
+    end
+
     create_table :companies do |t|
       t.string :name
       t.string :city
@@ -15,5 +28,9 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
 
       t.timestamps null: false
     end
+
+    add_column :users, :name, :string
+    add_column :users, :title, :string
+    add_column :users, :phone, :string
   end
 end

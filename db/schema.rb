@@ -53,10 +53,28 @@ ActiveRecord::Schema.define(version: 2018_06_18_005511) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "title"
+    t.string "phone"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  end
+
+  create_table "vertical_market_companies", force: :cascade do |t|
+    t.bigint "vertical_market_id"
+    t.bigint "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_vertical_market_companies_on_company_id"
+    t.index ["vertical_market_id"], name: "index_vertical_market_companies_on_vertical_market_id"
+  end
+
+  create_table "vertical_markets", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
