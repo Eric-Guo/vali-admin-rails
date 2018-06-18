@@ -1,4 +1,5 @@
 ---
 eric:
+  name: 'Eric Guo'
   email: "eric@cloud-mes.com"
   confirmed_at: <%= Time.zone.now %>

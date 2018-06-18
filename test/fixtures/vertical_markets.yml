@@ -1,6 +1,7 @@
 ---
 akg:
   name: AKG
+  admin: eric
 
 mi:
   name: MI
