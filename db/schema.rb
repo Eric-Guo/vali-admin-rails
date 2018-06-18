@@ -73,8 +73,10 @@ ActiveRecord::Schema.define(version: 2018_06_18_005511) do
 
   create_table "vertical_markets", force: :cascade do |t|
     t.string "name"
+    t.bigint "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_vertical_markets_on_admin_id"
   end
 
 end

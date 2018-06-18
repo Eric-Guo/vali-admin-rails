@@ -5,5 +5,6 @@ class VerticalMarketTest < ActiveSupport::TestCase
     akg = vertical_markets(:akg)
     assert akg.valid?
     assert akg.companies.count == 1
+    assert akg.admin.name == 'Eric Guo'
   end
 end

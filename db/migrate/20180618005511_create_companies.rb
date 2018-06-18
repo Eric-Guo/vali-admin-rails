@@ -2,6 +2,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
   def change
     create_table :vertical_markets do |t|
       t.string :name
+      t.references :admin
 
       t.timestamps null: false
     end
