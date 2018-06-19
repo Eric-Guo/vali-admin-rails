@@ -1,5 +1,9 @@
 ---
 eric:
-  name: 'Eric Guo'
+  name: "Eric Guo"
+  title: "Rails developer"
   email: "eric@cloud-mes.com"
+  # password: 123456
+  encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
+  phone: "+8613901862171"
   confirmed_at: <%= Time.zone.now %>

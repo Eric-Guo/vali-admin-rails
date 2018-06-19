@@ -34,6 +34,7 @@ zh-CN:
     models:
       user: "用户"
   form:
+    new: "新建"
     edit: "编辑"
     update: "更新"
     reset: "重置"
