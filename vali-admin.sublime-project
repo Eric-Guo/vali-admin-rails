@@ -9,7 +9,9 @@
                                 "config/credentials.yml.enc"]
     },
     {
-      "path": "./node_modules/vali-admin"
+      "path": "./node_modules/vali-admin",
+      "file_exclude_patterns": ["docs/js/bootstrap.min.js",
+                                "docs/js/jquery-*.min.js"]
     }
   ],
     "settings":

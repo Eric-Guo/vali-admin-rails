@@ -2,6 +2,9 @@
 zh-CN:
   user:
     username: "用户名"
+    name: "姓名"
+    title: "职务"
+    phone: "联系电话"
     email: "电子邮件"
     change_your_password: "更改您的密码"
     change_my_password: "更改我的密码"
@@ -22,6 +25,13 @@ zh-CN:
     resend_unlock_instructions: "重新发送解锁说明"
     resend_confirmation: "重新发送确认 ？"
     resend_confirmation_instructions: "重新发送确认说明"
+  company:
+    name: "公司全称"
+    city: "城市"
+    district: "区／县"
+    address: "联系地址"
+  vertical_market:
+    title: "所涉及的垂直市场"
   activerecord:
     errors:
       models:
@@ -31,6 +41,8 @@ zh-CN:
               blank: "电子邮件为空"
             password:
               blank: "密码为空"
+            base:
+              in_complete_company_registration: "公司注册信息不完全"
     models:
       user: "用户"
   form:

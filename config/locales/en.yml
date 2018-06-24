@@ -2,6 +2,9 @@
 en:
   user:
     username: "Username"
+    name: "Name"
+    title: "Title"
+    phone: "Phone"
     email: "Email"
     change_your_password: "Change your password"
     change_my_password: "Change my password"
@@ -22,6 +25,13 @@ en:
     resend_unlock_instructions: "Resend unlock instructions"
     resend_confirmation: "Resend confirmation ?"
     resend_confirmation_instructions: "Resend confirmation instructions"
+  company:
+    name: "Company name"
+    city: "Company city"
+    district: "District"
+    address: "Address"
+  vertical_market:
+    title: "Vertical Market"
   activerecord:
     errors:
       models:
@@ -31,6 +41,8 @@ en:
               blank: "Email is blank"
             password:
               blank: "Password is blank"
+            base:
+              in_complete_company_registration: "In complete company registration"
     models:
       user: "User"
   form:
