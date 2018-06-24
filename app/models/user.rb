@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :company_users
   has_many :companies, through: :company_users
 
+  attr_accessor(*CompanyRegistration::COMPANY_REG_FIELDS)
+
   def gravatarurl
     hash = Digest::MD5.hexdigest(email)
     "http://www.gravatar.com/avatar/#{hash}"

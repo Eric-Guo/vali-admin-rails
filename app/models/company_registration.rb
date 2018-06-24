@@ -1,7 +1,8 @@
 class CompanyRegistration
   include ActiveModel::Model
-  FORM_FIELDS = %i[user_name user_title user_phone user_email user_password
-                   co_name co_city co_province co_address vm_name].freeze
+  DEVISE_USER_EXT_FIELDS = %i[name title phone].freeze
+  COMPANY_REG_FIELDS = %i[co_name city district address vm_name].freeze
+  FORM_FIELDS = (DEVISE_USER_EXT_FIELDS + COMPANY_REG_FIELDS).freeze
   attr_accessor(*FORM_FIELDS)
   validates_presence_of(*FORM_FIELDS)
 
