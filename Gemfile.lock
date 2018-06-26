@@ -169,7 +169,7 @@ GEM
       sprockets (> 2.11)
       sprockets-rails
       tilt
-    selenium-webdriver (3.12.0)
+    selenium-webdriver (3.13.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     spring (2.0.2)
