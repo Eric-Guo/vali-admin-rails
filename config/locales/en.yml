@@ -23,6 +23,14 @@ en:
     resend_confirmation: "Resend confirmation ?"
     resend_confirmation_instructions: "Resend confirmation instructions"
   activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Email is blank"
+            password:
+              blank: "Password is blank"
     models:
       user: "User"
   form:
