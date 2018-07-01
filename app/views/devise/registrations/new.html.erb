@@ -72,7 +72,14 @@
             <div class="form-group row">
               <label class="control-label col-md-5"><%= t('company.vm_name') -%></label>
               <div class="col-md-7">
-                <%= f.text_field :vm_name, class: 'form-control col-md-8' %>
+                <%= f.collection_radio_buttons :vm_id, VerticalMarket.all, :id, :name do |b| %>
+                  <div class='form-check'>
+                    <label class="form-check-label">
+                      <%= b.radio_button class: 'form-check-input' %>
+                      <%= b.object.name %>
+                    </label>
+                  </div>
+                <% end %>
               </div>
             </div>
           </form>
