@@ -30,6 +30,7 @@ zh-CN:
     city: "城市"
     district: "区／县"
     address: "联系地址"
+    vm_name: "垂直市场名称"
   vertical_market:
     title: "所涉及的垂直市场"
   activerecord:
@@ -39,6 +40,7 @@ zh-CN:
           attributes:
             email:
               blank: "电子邮件为空"
+              user: "电子邮件已存在"
             password:
               blank: "密码为空"
             base:

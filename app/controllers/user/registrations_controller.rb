@@ -4,7 +4,8 @@ class User::RegistrationsController < Devise::RegistrationsController
   def create
     super do |user|
       if user.persisted?
-        reg = CompanyRegistration.new user.attributes.slice(CompanyRegistration::FORM_FIELDS)
+        reg = CompanyRegistration.new params[:user].permit!.to_unsafe_hash.slice(*CompanyRegistration::COMPANY_REG_FIELDS)
+        reg.user = user
         unless reg.save
           user.destroy!
           user.errors.add(:base, :in_complete_company_registration)
