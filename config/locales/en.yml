@@ -30,6 +30,7 @@ en:
     city: "Company city"
     district: "District"
     address: "Address"
+    vm_name: "Vertical market name"
   vertical_market:
     title: "Vertical Market"
   activerecord:
@@ -39,6 +40,7 @@ en:
           attributes:
             email:
               blank: "Email is blank"
+              user: "Email is taken"
             password:
               blank: "Password is blank"
             base:

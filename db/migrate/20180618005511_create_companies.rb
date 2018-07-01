@@ -17,7 +17,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
     create_table :companies do |t|
       t.string :name
       t.string :city
-      t.string :province
+      t.string :district
       t.string :address
 
       t.timestamps null: false
