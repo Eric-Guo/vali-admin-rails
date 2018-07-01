@@ -27,7 +27,6 @@ document.addEventListener("turbolinks:load", function() {
   var notice_text = $('body').data('notice');
   if(notice_text) {
     $.notify({
-      title: "Harman Notice",
       message: notice_text,
       icon: 'fa fa-check'
     },{
@@ -37,7 +36,6 @@ document.addEventListener("turbolinks:load", function() {
   var alert_text = $('body').data('alert');
   if(alert_text) {
     $.notify({
-      title: "Harman Alert",
       message: alert_text,
       icon: 'fa fa-alert'
     },{
