@@ -12,7 +12,9 @@ module ApplicationHelper
   def display_system_role(user)
     return unless user.present?
     vm = VerticalMarket.find_by admin: user
-    if vm.present?
+    if user.super_admin?
+      content_tag :p, '系统管理员', class: 'app-sidebar__user-designation'
+    elsif vm.present?
       content_tag :p, "#{vm.name}管理员", class: 'app-sidebar__user-designation'
     end
   end

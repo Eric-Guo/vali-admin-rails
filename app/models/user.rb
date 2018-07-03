@@ -14,4 +14,8 @@ class User < ApplicationRecord
     hash = Digest::MD5.hexdigest(email)
     "http://www.gravatar.com/avatar/#{hash}"
   end
+
+  def super_admin?
+    email == 'rubygsy@icloud.com'
+  end
 end
