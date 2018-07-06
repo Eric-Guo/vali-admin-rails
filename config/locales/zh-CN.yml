@@ -2,8 +2,14 @@
 zh-CN:
   ui:
     notification: "通知"
+    vendor_manage: "经销商管理"
     vendor_list: "经销商列表"
     vendor_approve: "经销商审批"
+    vendor_2nd_signup: "二级经销商注册"
+    training_info_manage: "培训信息管理"
+    training_info_publish: "发布培训信息"
+    training_info_new: "新增培训信息"
+    training_user_add: "培训报名"
   user:
     username: "用户名"
     name: "姓名"

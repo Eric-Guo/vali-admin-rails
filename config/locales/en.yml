@@ -2,8 +2,14 @@
 en:
   ui:
     notification: "Notification"
-    vendor_list: "Vendor List"
-    vendor_approve: "Vendor Approve"
+    vendor_manage: "Vendor management"
+    vendor_list: "Vendor list"
+    vendor_approve: "Vendor approve"
+    vendor_2nd_signup: "2nd level vendor signup"
+    training_info_manage: "Training info management"
+    training_info_publish: "Publish training info"
+    training_info_new: "New training"
+    training_user_add: "Attend training"
   user:
     username: "Username"
     name: "Name"
