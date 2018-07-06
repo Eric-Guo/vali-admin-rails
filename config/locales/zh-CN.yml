@@ -1,5 +1,9 @@
 ---
 zh-CN:
+  ui:
+    notification: "通知"
+    vendor_list: "经销商列表"
+    vendor_approve: "经销商审批"
   user:
     username: "用户名"
     name: "姓名"

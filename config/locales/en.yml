@@ -1,5 +1,9 @@
 ---
 en:
+  ui:
+    notification: "Notification"
+    vendor_list: "Vendor List"
+    vendor_approve: "Vendor Approve"
   user:
     username: "Username"
     name: "Name"
