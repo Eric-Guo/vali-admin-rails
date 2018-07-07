@@ -34,6 +34,9 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Loading test data into dev db =="
   system! 'bin/rails db:fixtures:load RAILS_ENV=development'
 
+  puts "\n== Generate some fake data into dev db =="
+  system! 'bin/rails db:seed'
+
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'
 end
