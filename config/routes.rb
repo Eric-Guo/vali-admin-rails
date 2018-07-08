@@ -4,6 +4,10 @@ Rails.application.routes.draw do
                                     confirmations: 'user/confirmations',
                                     unlocks: 'user/unlocks',
                                     registrations: 'user/registrations' }
-  resources :vendors, only: :index
+  resources :vendors, only: :index do
+    collection do
+      get :pending
+    end
+  end
   root to: 'home#index'
 end

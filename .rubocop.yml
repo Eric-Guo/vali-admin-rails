@@ -8,6 +8,9 @@ Style/FrozenStringLiteralComment:
 ClassLength:
   Max: 150
 
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
 Metrics/AbcSize:
   Max: 25
 
