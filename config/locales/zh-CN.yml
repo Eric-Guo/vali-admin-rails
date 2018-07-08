@@ -5,11 +5,13 @@ zh-CN:
     vendor_manage: "经销商管理"
     vendor_list: "经销商列表"
     vendor_approve: "经销商审批"
+    need_approve_vendor_list: "需要审批代理商列表"
     vendor_2nd_signup: "二级经销商注册"
     training_info_manage: "培训信息管理"
     training_info_publish: "发布培训信息"
     training_info_new: "新增培训信息"
     training_user_add: "培训报名"
+    no_access_list: "请联系管理员获得访问此列表权限"
   user:
     username: "用户名"
     name: "姓名"
