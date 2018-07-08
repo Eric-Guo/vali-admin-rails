@@ -16,6 +16,7 @@ en:
     title: "Title"
     phone: "Phone"
     email: "Email"
+    contact_information: "Contact information"
     change_your_password: "Change your password"
     change_my_password: "Change my password"
     change_profile: "Change Profile"
@@ -35,6 +36,9 @@ en:
     resend_unlock_instructions: "Resend unlock instructions"
     resend_confirmation: "Resend confirmation ?"
     resend_confirmation_instructions: "Resend confirmation instructions"
+    belongs_to_vertical_market: "Belongs to Vertical Market"
+    belongs_to_company: "Belongs to Company"
+    admin_action: "Admin action"
   company:
     name: "Company name"
     city: "Company city"
