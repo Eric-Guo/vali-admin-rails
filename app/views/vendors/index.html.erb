@@ -18,10 +18,10 @@
               <tr>
                 <th><%= t('user.name') -%></th>
                 <th><%= t('user.title') -%></th>
-                <th><%= t('user.phone') -%></th>
-                <th><%= t('company.name') -%></th>
-                <th><%= t('user.email') -%></th>
-                <th><%= t('company.address') -%></th>
+                <th><%= t('user.contact_information') -%></th>
+                <th><%= t('user.belongs_to_company') -%></th>
+                <th><%= t('user.belongs_to_vertical_market') -%></th>
+                <th><%= t('user.admin_action') -%></th>
               </tr>
             </thead>
             <tbody>
@@ -29,10 +29,14 @@
               <tr>
                 <td><%= user.name -%></td>
                 <td><%= user.title -%></td>
-                <td><%= user.phone -%></td>
-                <td><%= user.companies.map(&:name).to_sentence -%></td>
-                <td><%= user.email -%></td>
-                <td><%= user.companies.map(&:address).to_sentence -%></td>
+                <td>
+                  <%= user.phone -%>
+                  <br />
+                  <%= user.email -%>
+                </td>
+                <td><%= user.companies.pluck(:name).to_sentence -%></td>
+                <td><%= user.vertical_markets.pluck(:name).join(' | ') -%></td>
+                <td></td>
               </tr>
               <% end -%>
             </tbody>
