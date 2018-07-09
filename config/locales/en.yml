@@ -41,6 +41,7 @@ en:
     belongs_to_vertical_market: "Belongs to Vertical Market"
     belongs_to_company: "Belongs to Company"
     admin_action: "Admin action"
+    unlock_access: "Unlock access"
   company:
     name: "Company name"
     city: "Company city"

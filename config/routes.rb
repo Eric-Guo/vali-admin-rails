@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     collection do
       get :pending
     end
+    member do
+      patch :unlock_access
+    end
   end
   root to: 'home#index'
 end
