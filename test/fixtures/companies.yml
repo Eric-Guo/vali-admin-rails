@@ -10,3 +10,21 @@ kfc:
   city: 上海
   district: 静安
   address: 茂名北路
+
+citicprufunds:
+  name: 信诚基金
+  city: 上海
+  district: 浦东
+  address: 上海国金中心汇丰银行大楼9层
+
+51fund:
+  name: 上投摩根基金管理有限公司
+  city: 上海
+  district: 浦东
+  address: 震旦国际大楼25楼
+
+gbicc:
+  name: 吉贝克信息技术
+  city: 上海
+  district: 杨浦
+  address: 凯迪金融大厦15层

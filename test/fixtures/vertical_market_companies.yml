@@ -6,3 +6,27 @@ dicos_akg:
 dicos_install_sound:
   vertical_market: install_sound
   company: dicos
+
+51fund_akg:
+  vertical_market: akg
+  company: 51fund
+
+51fund_install_sound:
+  vertical_market: install_sound
+  company: 51fund
+
+51fund_jbl_entertainment:
+  vertical_market: jbl_entertainment
+  company: 51fund
+
+citicprufunds_akg:
+  vertical_market: akg
+  company: citicprufunds
+
+citicprufunds_amx:
+  vertical_market: amx
+  company: citicprufunds
+
+gbicc_akg:
+  vertical_market: akg
+  company: gbicc
