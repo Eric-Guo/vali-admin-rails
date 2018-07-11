@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :company_users
   has_many :companies, through: :company_users
   has_many :vertical_markets, through: :companies
+  has_one :admined_vm, class_name: :VerticalMarket, foreign_key: :admin_id
 
   attr_accessor(*CompanyRegistration::COMPANY_REG_FIELDS)
 
@@ -18,5 +19,15 @@ class User < ApplicationRecord
 
   def super_admin?
     email == 'rubygsy@icloud.com'
+  end
+
+  def managed_users
+    if super_admin?
+      User.all
+    elsif admined_vm.present?
+      admined_vm.users
+    else
+      User.none
+    end
   end
 end
