@@ -12,6 +12,8 @@ zh-CN:
     training_info_new: "新增培训信息"
     training_user_add: "培训报名"
     no_access_list: "请联系管理员获得访问此列表权限"
+    list_unlocked_managed_user: "下表列出了%{managed}代理商"
+    list_locked_managed_user: "下表列出了%{managed}锁定的代理商"
   user:
     username: "用户名"
     name: "姓名"

@@ -3,9 +3,9 @@ class VendorsController < ApplicationController
 
   def index
     @vendor_list_description = if current_user.super_admin?
-      '下表列出了所有代理商'
+      I18n.t('ui.list_unlocked_managed_user', managed: '所有的')
     elsif current_user.admined_vm.present?
-      "下表列出了#{current_user.admined_vm.name}代理商"
+      I18n.t('ui.list_unlocked_managed_user', managed: current_user.admined_vm.name)
     else
       I18n.t('ui.no_access_list')
     end
@@ -14,9 +14,9 @@ class VendorsController < ApplicationController
 
   def pending
     @vendor_list_description = if current_user.super_admin?
-      '下表列出了所有锁定的代理商'
+      I18n.t('ui.list_locked_managed_user', managed: '所有的')
     elsif current_user.admined_vm.present?
-      "下表列出了#{current_user.admined_vm.name}被锁定的代理商"
+      I18n.t('ui.list_locked_managed_user', managed: current_user.admined_vm.name)
     else
       I18n.t('ui.no_access_list')
     end
