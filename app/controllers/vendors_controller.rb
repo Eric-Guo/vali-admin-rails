@@ -28,4 +28,10 @@ class VendorsController < ApplicationController
     @user.unlock_access!
     redirect_to vendors_path, status: :found, notice: "User #{@user.name} unlocked."
   end
+
+  def lock_access
+    @user = current_user.managed_users.find params[:id]
+    @user.lock_access!
+    redirect_to vendors_path, status: :found, notice: "User #{@user.name} locked."
+  end
 end

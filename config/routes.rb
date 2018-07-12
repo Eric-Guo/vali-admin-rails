@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
     member do
       patch :unlock_access
+      patch :lock_access
     end
   end
   root to: 'home#index'

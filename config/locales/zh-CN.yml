@@ -44,6 +44,7 @@ zh-CN:
     belongs_to_company: "所属经销商"
     admin_action: "管理员操作"
     unlock_access: "允许访问"
+    lock_access: "禁止访问"
   company:
     name: "公司全称"
     city: "城市"
