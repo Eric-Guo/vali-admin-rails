@@ -12,6 +12,8 @@ en:
     training_info_new: "New training"
     training_user_add: "Attend training"
     no_access_list: "Please contact the administrator to gain access to this list."
+    list_unlocked_managed_user: "Below list the %{managed} vendor list"
+    list_locked_managed_user: "Below list the %{managed} locked vendor list"
   user:
     username: "Username"
     name: "Name"
