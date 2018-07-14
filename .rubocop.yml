@@ -11,6 +11,9 @@ ClassLength:
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
 Metrics/AbcSize:
   Max: 25
 

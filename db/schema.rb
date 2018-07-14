@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2018_06_18_005511) do
   end
 
   create_table "company_users", force: :cascade do |t|
-    t.bigint "company_id"
-    t.bigint "user_id"
+    t.bigint "company_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_company_users_on_company_id"

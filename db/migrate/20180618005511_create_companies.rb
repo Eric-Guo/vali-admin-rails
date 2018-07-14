@@ -24,8 +24,8 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
     end
 
     create_table :company_users do |t|
-      t.references :company
-      t.references :user
+      t.references :company, null: false
+      t.references :user, null: false
 
       t.timestamps null: false
     end
