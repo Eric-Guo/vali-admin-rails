@@ -34,4 +34,11 @@ class VendorsController < ApplicationController
     @user.lock_access!
     redirect_to vendors_path, status: :found, notice: "User #{@user.name} locked."
   end
+
+  def new_user
+    @user = User.new
+  end
+
+  def add_user
+  end
 end

@@ -38,6 +38,7 @@
                 <td><%= user.vertical_markets.pluck(:name).join(' | ') -%></td>
                 <td>
                   <%= link_to t('user.lock_access'), lock_access_vendor_path(user), method: :patch, class: 'btn btn-danger btn-xs' -%>
+                  <%= link_to t('company.add_user'), new_user_vendor_path(user), class: 'btn btn-success btn-xs' -%>
                 </td>
               </tr>
               <% end -%>

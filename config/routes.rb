@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     member do
       patch :unlock_access
       patch :lock_access
+      get :new_user
+      post :add_user
     end
   end
   root to: 'home#index'
