@@ -40,6 +40,17 @@ class VendorsController < ApplicationController
   end
 
   def create_user
-    redirect_to vendors_path, status: :found, notice: "User created."
+    company = current_user.companies.find user_params[:create_user_via_company_id]
+    user = User.create!(user_params)
+    CompanyUser.find_or_create_by!(company: company, user: user)
+    redirect_to vendors_path, status: :found, notice: 'User created.'
+  end
+
+  private
+
+  def user_params
+    @user_params ||= params.require(:user).permit(:create_user_via_company_id,
+      :email, :password, :password_confirmation,
+      :name, :title, :phone)
   end
 end
