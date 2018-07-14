@@ -1,11 +1,17 @@
 <main class="app-content">
   <div class="row">
     <div class="col-md-8">
-<%= form_with(model: @user, url: new_user_vendor_path(current_user), local: true, class: 'login-form') do |f| %>
+<%= form_with(model: @user, url: create_user_vendor_path(current_user), local: true, class: 'login-form') do |f| %>
       <div class="tile">
-        <h3 class="tile-title"><%= t('company.add_user') -%></h3>
+        <h3 class="tile-title"><%= t('company.add_user_for', company: current_user.companies.pluck(:name).to_sentence) -%></h3>
         <div class="tile-body">
           <form class="form-horizontal">
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('user.belongs_to_company') -%></label>
+              <div class="col-md-7">
+                <%= f.select :create_user_via_company_id, current_user.companies.pluck(:name, :id), {}, class: 'form-control col-md-8' -%>
+              </div>
+            </div>
             <div class="form-group row">
               <label class="control-label col-md-5"><%= t('user.email') -%></label>
               <div class="col-md-7">

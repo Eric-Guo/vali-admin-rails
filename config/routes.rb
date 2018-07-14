@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       patch :unlock_access
       patch :lock_access
       get :new_user
-      post :add_user
+      post :create_user
     end
   end
   root to: 'home#index'
