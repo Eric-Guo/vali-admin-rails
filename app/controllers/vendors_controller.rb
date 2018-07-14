@@ -39,6 +39,7 @@ class VendorsController < ApplicationController
     @user = User.new
   end
 
-  def add_user
+  def create_user
+    redirect_to vendors_path, status: :found, notice: "User created."
   end
 end
