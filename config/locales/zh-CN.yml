@@ -51,6 +51,7 @@ zh-CN:
     district: "区／县"
     address: "联系地址"
     vm_name: "垂直市场名称"
+    add_user: "添加人员"
   vertical_market:
     title: "所涉及的垂直市场"
   activerecord:

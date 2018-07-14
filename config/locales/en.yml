@@ -51,6 +51,7 @@ en:
     district: "District"
     address: "Address"
     vm_name: "Vertical market name"
+    add_user: "Add user"
   vertical_market:
     title: "Vertical Market"
   activerecord:
