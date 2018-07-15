@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2018_06_18_005511) do
     t.string "city"
     t.string "district"
     t.string "address"
+    t.bigint "managed_by_company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["managed_by_company_id"], name: "index_companies_on_managed_by_company_id"
   end
 
   create_table "company_users", force: :cascade do |t|
@@ -63,8 +65,8 @@ ActiveRecord::Schema.define(version: 2018_06_18_005511) do
   end
 
   create_table "vertical_market_companies", force: :cascade do |t|
-    t.bigint "vertical_market_id"
-    t.bigint "company_id"
+    t.bigint "vertical_market_id", null: false
+    t.bigint "company_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_vertical_market_companies_on_company_id"
