@@ -4,7 +4,7 @@ class VerticalMarketTest < ActiveSupport::TestCase
   test 'Vertical Market akg valid' do
     akg = vertical_markets(:akg)
     assert akg.valid?
-    assert akg.companies.count == 1
+    assert akg.companies.count == 4
     assert akg.admin.name == 'Eric Guo'
   end
 end

@@ -8,8 +8,8 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
     end
 
     create_table :vertical_market_companies do |t|
-      t.references :vertical_market
-      t.references :company
+      t.references :vertical_market, null: false
+      t.references :company, null: false
 
       t.timestamps null: false
     end
@@ -19,6 +19,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :district
       t.string :address
+      t.references :managed_by_company
 
       t.timestamps null: false
     end
