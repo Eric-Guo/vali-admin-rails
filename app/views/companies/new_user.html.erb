@@ -1,0 +1,85 @@
+<main class="app-content">
+  <div class="row">
+    <div class="col-md-8">
+<%= form_with(model: @user, url: create_user_companies_path(current_user), local: true, class: 'login-form') do |f| %>
+      <div class="tile">
+        <h3 class="tile-title"><%= t('ui.vendor_2nd_signup') -%></h3>
+        <div class="tile-body">
+          <form class="form-horizontal">
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('user.email') -%></label>
+              <div class="col-md-7">
+                <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Enter email address', class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('user.name') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :name, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('user.title') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :title, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('user.phone') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :phone, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('company.name') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :co_name, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('company.city') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :city, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('company.district') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :district, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('company.address') -%></label>
+              <div class="col-md-7">
+                <%= f.text_field :address, class: 'form-control col-md-8' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('company.vm_name') -%></label>
+              <div class="col-md-7">
+                <%= f.collection_radio_buttons :vm_id, VerticalMarket.all, :id, :name do |b| %>
+                  <div class='form-check'>
+                    <label class="form-check-label">
+                      <%= b.radio_button class: 'form-check-input' %>
+                      <%= b.object.name %>
+                    </label>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="tile-footer">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-3">
+              <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+                <i class="fa fa-sign-in fa-lg fa-fw"></i><%= t('form.new') -%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+<% end %>
+    </div>
+  </div>
+</main>
