@@ -7,6 +7,7 @@ class CompaniesController < ApplicationController
 
   def create_user
     @c2r = Company2ndRegistration.new user_params
+    @c2r.save
   end
 
   private

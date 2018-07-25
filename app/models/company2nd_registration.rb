@@ -6,9 +6,12 @@ class Company2ndRegistration
   attr_accessor(*FORM_FIELDS)
   validates_presence_of(*FORM_FIELDS)
   attr_writer :user
+  validate :email_not_exist_in_user
 
   def save
     return false unless valid?
+    @user = User.new(email: email, name: name, title: title, phone: phone)
+    @user.save(validate: false)
 
     company = Company.find_or_create_by(name: co_name, city: city) do |co|
       co.district = district
@@ -17,5 +20,9 @@ class Company2ndRegistration
     CompanyUser.find_or_create_by!(company: company, user: @user)
     VerticalMarketCompany.find_or_create_by!(company: company, vertical_market_id: vm_id)
     true
+  end
+
+  def email_not_exist_in_user
+    errors.add(:email, t('user.email_duplicate')) if User.find_by(email: email).present?
   end
 end
