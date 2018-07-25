@@ -45,6 +45,7 @@ zh-CN:
     admin_action: "管理员操作"
     unlock_access: "允许访问"
     lock_access: "禁止访问"
+    email_duplicate: "找到重复的电子邮件"
   company:
     name: "公司全称"
     city: "城市"
