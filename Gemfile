@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 
 gem 'devise'
+gem 'pundit'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
