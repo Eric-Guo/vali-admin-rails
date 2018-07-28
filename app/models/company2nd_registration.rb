@@ -11,6 +11,7 @@ class Company2ndRegistration
   def save
     return false unless valid?
     @user = User.new(email: email, name: name, title: title, phone: phone)
+    @user.skip_confirmation_notification!
     @user.save(validate: false)
 
     company = Company.find_or_create_by(name: co_name, city: city) do |co|
@@ -23,6 +24,6 @@ class Company2ndRegistration
   end
 
   def email_not_exist_in_user
-    errors.add(:email, t('user.email_duplicate')) if User.find_by(email: email).present?
+    errors.add(:email, I18n.t('user.email_duplicate')) if User.find_by(email: email).present?
   end
 end

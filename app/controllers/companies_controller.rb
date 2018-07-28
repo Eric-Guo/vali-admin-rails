@@ -6,8 +6,13 @@ class CompaniesController < ApplicationController
   end
 
   def create_user
-    @c2r = Company2ndRegistration.new user_params
-    @c2r.save
+    @user = Company2ndRegistration.new user_params
+    if @user.save
+      redirect_to new_user_companies_path, notice: "User #{@user.name} created."
+    else
+      flash[:alert] = @user.errors.full_messages.to_sentence
+      render :new_user
+    end
   end
 
   private
