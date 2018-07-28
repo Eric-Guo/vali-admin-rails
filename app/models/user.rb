@@ -21,14 +21,4 @@ class User < ApplicationRecord
   def super_admin?
     email == 'rubygsy@icloud.com'
   end
-
-  def managed_users
-    if super_admin?
-      User.all
-    elsif admined_vm.present?
-      admined_vm.users
-    else
-      User.none
-    end
-  end
 end
