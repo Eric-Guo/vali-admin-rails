@@ -10,6 +10,6 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
     user = User.find_by email: '2nd@company.com'
     assert_equal user.name, '金无命'
     assert_equal user.companies.first.name, '金钱帮'
-    assert_response :success
+    assert_response :redirect
   end
 end
