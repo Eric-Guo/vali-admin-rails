@@ -137,6 +137,8 @@ GEM
     public_suffix (5.0.4)
     puma (6.4.1)
       nio4r (~> 2.0)
+    pundit (2.3.1)
+      activesupport (>= 3.0.0)
     racc (1.7.3)
     rack (2.2.8)
     rack-proxy (0.7.7)
@@ -250,6 +252,7 @@ DEPENDENCIES
   minitest-ci
   pg (~> 1.2.3)
   puma
+  pundit
   rails (~> 6.1.7)
   sassc-rails
   selenium-webdriver (>= 4.14.0)
