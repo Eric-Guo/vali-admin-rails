@@ -4,7 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "stimulus": "^1.0.1",
-    "vali-admin": "^2.4.0"
+    "vali-admin": "^2.4.1"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
