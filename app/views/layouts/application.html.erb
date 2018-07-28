@@ -102,7 +102,7 @@
           <div>
             <p class="app-sidebar__user-name"><%= current_user.name -%></p>
             <p class="app-sidebar__user-designation"><%= current_user.title -%></p>
-            <%= display_system_role(current_user) -%>
+            <%= policy(User).system_role_name -%>
           </div>
         </div>
       <% end %>

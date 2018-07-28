@@ -8,14 +8,4 @@ module ApplicationHelper
                       resource: resource.class.model_name.human.downcase)
     "#{sentence}#{messages}"
   end
-
-  def display_system_role(user)
-    return unless user.present?
-    vm = VerticalMarket.find_by admin: user
-    if user.super_admin?
-      content_tag :p, '系统管理员', class: 'app-sidebar__user-designation'
-    elsif vm.present?
-      content_tag :p, "#{vm.name}管理员", class: 'app-sidebar__user-designation'
-    end
-  end
 end
