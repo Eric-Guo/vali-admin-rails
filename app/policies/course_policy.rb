@@ -1,5 +1,9 @@
 class CoursePolicy < ApplicationPolicy
   def index?
-    user&.super_admin? || user&.admined_vm.present?
+    internal_user?
+  end
+
+  def new?
+    internal_user?
   end
 end

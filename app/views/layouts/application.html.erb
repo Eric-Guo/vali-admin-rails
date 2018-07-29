@@ -133,7 +133,7 @@
           </ul>
           <ul class="treeview-menu">
             <li>
-              <%= link_to vendors_path, class: 'treeview-item' do %>
+              <%= link_to new_course_path, class: "treeview-item #{params[:controller] == 'courses' && params[:action] == 'new' ? 'active' : ''}" do %>
                 <i class="icon fa fa-leanpub"></i> <%= t('ui.training_info_new') -%></a>
               <% end %>
             </li>

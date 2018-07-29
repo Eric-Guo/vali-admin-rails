@@ -34,6 +34,12 @@ class ApplicationPolicy
     false
   end
 
+  private
+
+  def internal_user?
+    user&.super_admin? || user&.admined_vm.present?
+  end
+
   class Scope
     attr_reader :user, :scope
 
