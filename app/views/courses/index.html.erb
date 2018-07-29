@@ -1,0 +1,42 @@
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;<%= t('ui.course_list') -%></h1>
+      <p><%= @vendor_list_description -%></p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="<%= vendors_path -%>"><%= t('ui.course_list') -%></a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tile">
+        <div class="tile-body">
+          <table class="table table-hover table-bordered" id="courses-table">
+            <thead>
+              <tr>
+                <th><%= t('course.title') -%></th>
+                <th><%= t('course.address') -%></th>
+                <th><%= t('course.capacity') -%></th>
+                <th><%= t('course.start_time') -%></th>
+                <th><%= t('course.end_time') -%></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @courses.each do |course| -%>
+              <tr>
+                <td><%= course.title -%></td>
+                <td><%= course.address -%></td>
+                <td><%= course.capacity -%></td>
+                <td><%= course.start_time -%></td>
+                <td><%= course.end_time -%></td>
+              </tr>
+              <% end -%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
