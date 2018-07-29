@@ -122,6 +122,7 @@
             <i class="app-menu__icon fa fa-user-plus"></i><span class="app-menu__label"><%= t('ui.vendor_2nd_signup') -%></span>
           <% end %>
         </li>
+        <% if policy(Course).index? %>
         <li class="treeview <%= params[:controller] == 'courses' ? 'is-expanded' : '' -%>"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-graduation-cap"></i><span class="app-menu__label"><%= t('ui.training_info_manage') -%></span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li>
@@ -138,6 +139,7 @@
             </li>
           </ul>
         </li>
+        <% end -%>
         <li class="treeview <%= params[:controller] == 'vendors' ? 'is-expanded' : '' -%>"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label"><%= t('ui.vendor_manage') -%></span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li>
