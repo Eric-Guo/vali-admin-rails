@@ -6,4 +6,9 @@ class CoursesController < ApplicationController
     authorize Course
     @courses = policy_scope(Course)
   end
+
+  def new
+    @course = Course.new
+    authorize @course
+  end
 end
