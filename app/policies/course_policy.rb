@@ -6,4 +6,8 @@ class CoursePolicy < ApplicationPolicy
   def new?
     internal_user?
   end
+
+  def create?
+    internal_user?
+  end
 end
