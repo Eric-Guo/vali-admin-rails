@@ -21,5 +21,6 @@ Rails.application.routes.draw do
       post :create_user
     end
   end
+  resources :courses, only: %i[index]
   root to: 'home#index'
 end

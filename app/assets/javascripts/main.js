@@ -50,4 +50,5 @@ document.addEventListener("turbolinks:load", function() {
   });
 
   $('#users-table').DataTable();
+  $('#courses-table').DataTable();
 })

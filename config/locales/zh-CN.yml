@@ -4,6 +4,7 @@ zh-CN:
     notification: "通知"
     vendor_manage: "经销商管理"
     vendor_list: "经销商列表"
+    course_list: "培训课程列表"
     vendor_approve: "经销商审批"
     need_approve_vendor_list: "需要审批代理商列表"
     vendor_2nd_signup: "二级经销商注册"
@@ -56,6 +57,12 @@ zh-CN:
     add_user_for: "为%{company}添加人员"
   vertical_market:
     title: "所涉及的垂直市场"
+  course:
+    title: "培训内容"
+    address: "培训地址"
+    capacity: "最大可培训人数"
+    start_time: "开始时间"
+    end_time: "结束时间"
   activerecord:
     errors:
       models:
