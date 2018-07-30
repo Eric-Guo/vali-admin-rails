@@ -1,12 +1,15 @@
 class CompaniesController < ApplicationController
   before_action :authenticate_user!
+  after_action :verify_authorized
 
   def new_user
     @user = User.new
+    authorize @user
   end
 
   def create_user
     @user = Company2ndRegistration.new user_params
+    authorize @user
     if @user.save
       redirect_to new_user_companies_path, notice: "User #{@user.name} created."
     else

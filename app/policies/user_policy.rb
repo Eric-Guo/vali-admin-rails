@@ -26,6 +26,10 @@ class UserPolicy < ApplicationPolicy
     internal_user?
   end
 
+  def new_user?
+    internal_user?
+  end
+
   def vendor_unlocked_list_description
     if user.super_admin?
       I18n.t('ui.list_unlocked_managed_user', managed: '所有的')
