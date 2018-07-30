@@ -15,6 +15,7 @@ en:
     no_access_list: "Please contact the administrator to gain access to this list."
     list_unlocked_managed_user: "Below list the %{managed} vendor list"
     list_locked_managed_user: "Below list the %{managed} locked vendor list"
+    admin_action: "Admin action"
   user:
     username: "Username"
     name: "Name"
@@ -43,7 +44,6 @@ en:
     resend_confirmation_instructions: "Resend confirmation instructions"
     belongs_to_vertical_market: "Belongs to Vertical Market"
     belongs_to_company: "Belongs to Company"
-    admin_action: "Admin action"
     unlock_access: "Unlock access"
     lock_access: "Lock access"
     email_duplicate: "Duplicated email found"
@@ -63,6 +63,7 @@ en:
     capacity: "Capacity"
     start_time: "Start time"
     end_time: "End time"
+    delete: "Delete"
   activerecord:
     errors:
       models:

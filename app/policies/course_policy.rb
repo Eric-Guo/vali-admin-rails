@@ -10,4 +10,8 @@ class CoursePolicy < ApplicationPolicy
   def create?
     internal_user?
   end
+
+  def destroy?
+    internal_user?
+  end
 end

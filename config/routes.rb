@@ -21,6 +21,6 @@ Rails.application.routes.draw do
       post :create_user
     end
   end
-  resources :courses, only: %i[index new create]
+  resources :courses, only: %i[index new create destroy]
   root to: 'home#index'
 end

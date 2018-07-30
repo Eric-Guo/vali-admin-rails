@@ -23,6 +23,13 @@ class CoursesController < ApplicationController
     end
   end
 
+  def destroy
+    @course = policy_scope(Course).not_published.find(params[:id])
+    authorize @course
+    @course.destroy
+    redirect_to courses_path, status: :found, notice: 'Course destroy.'
+  end
+
   private
 
   def course_params
