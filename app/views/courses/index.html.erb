@@ -21,6 +21,7 @@
                 <th><%= t('course.capacity') -%></th>
                 <th><%= t('course.start_time') -%></th>
                 <th><%= t('course.end_time') -%></th>
+                <th><%= t('ui.admin_action') -%></th>
               </tr>
             </thead>
             <tbody>
@@ -31,6 +32,11 @@
                 <td><%= course.capacity -%></td>
                 <td><%= course.start_time -%></td>
                 <td><%= course.end_time -%></td>
+                <td>
+                  <% if !course.published -%>
+                    <%= link_to t('course.delete'), course_path(course), method: :delete, class: 'btn btn-danger btn-xs' -%>
+                  <% end -%>
+                </td>
               </tr>
               <% end -%>
             </tbody>
