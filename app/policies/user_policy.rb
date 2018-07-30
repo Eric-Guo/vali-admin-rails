@@ -18,6 +18,14 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    internal_user?
+  end
+
+  def pending?
+    internal_user?
+  end
+
   def vendor_unlocked_list_description
     if user.super_admin?
       I18n.t('ui.list_unlocked_managed_user', managed: '所有的')

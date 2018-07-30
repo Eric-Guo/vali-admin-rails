@@ -140,6 +140,7 @@
           </ul>
         </li>
         <% end -%>
+        <% if policy(User).index? %>
         <li class="treeview <%= params[:controller] == 'vendors' ? 'is-expanded' : '' -%>"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label"><%= t('ui.vendor_manage') -%></span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li>
@@ -156,6 +157,7 @@
             </li>
           </ul>
         </li>
+        <% end -%>
       </ul>
     </aside>
     <%= yield %>
