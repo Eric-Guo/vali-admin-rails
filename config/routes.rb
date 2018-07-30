@@ -21,6 +21,10 @@ Rails.application.routes.draw do
       post :create_user
     end
   end
-  resources :courses, only: %i[index new create destroy]
+  resources :courses, only: %i[index new create destroy] do
+    member do
+      patch :publish
+    end
+  end
   root to: 'home#index'
 end
