@@ -14,4 +14,8 @@ class CoursePolicy < ApplicationPolicy
   def destroy?
     internal_user?
   end
+
+  def publish?
+    internal_user?
+  end
 end

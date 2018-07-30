@@ -64,6 +64,7 @@ zh-CN:
     start_time: "开始时间"
     end_time: "结束时间"
     delete: "删除"
+    publish: "发布"
   activerecord:
     errors:
       models:
