@@ -25,6 +25,9 @@ Rails.application.routes.draw do
     member do
       patch :publish
     end
+    collection do
+      get :available
+    end
   end
   root to: 'home#index'
 end
