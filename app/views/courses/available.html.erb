@@ -1,0 +1,23 @@
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-sign-in"></i> <%= t('ui.training_user_add') -%></h1>
+      <p>培训信息</p>
+    </div>
+  </div>
+  <% @courses.each_with_index do |course, index| -%>
+    <% if index.even? -%>
+      <div class="row">
+    <% end -%>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title"><%= course.title -%></h3>
+            <div class="tile-body"><%= course.address -%></div>
+            <div class="tile-footer"><a class="btn btn-primary" href="#"><i class="fa fa-sign-in"></i><%= t('ui.training_user_add') -%></a></div>
+          </div>
+        </div>
+    <% if index.odd? -%>
+      </div>
+    <% end -%>
+  <% end -%>
+</main>

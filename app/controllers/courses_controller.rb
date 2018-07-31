@@ -1,10 +1,15 @@
 class CoursesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:available]
   after_action :verify_authorized
 
   def index
     authorize Course
     @courses = policy_scope(Course)
+  end
+
+  def available
+    authorize Course
+    @courses = policy_scope(Course).available
   end
 
   def new
