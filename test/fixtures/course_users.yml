@@ -1,0 +1,8 @@
+---
+svsi_course_eric:
+  course: svsi_course
+  user: eric
+
+svsi_course_ruby:
+  course: svsi_course
+  user: ruby

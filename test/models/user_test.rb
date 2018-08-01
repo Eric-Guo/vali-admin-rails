@@ -5,5 +5,6 @@ class UserTest < ActiveSupport::TestCase
     eric = users(:eric)
     assert eric.valid?
     assert eric.companies.count == 1
+    assert eric.courses.count == 1
   end
 end

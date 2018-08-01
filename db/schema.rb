@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 2018_07_29_053923) do
     t.index ["user_id"], name: "index_company_users_on_user_id"
   end
 
+  create_table "course_users", force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_course_users_on_course_id"
+    t.index ["user_id"], name: "index_course_users_on_user_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.string "address"
