@@ -7,6 +7,10 @@ class CoursePolicy < ApplicationPolicy
     true
   end
 
+  def rsvp?
+    true
+  end
+
   def new?
     internal_user?
   end
