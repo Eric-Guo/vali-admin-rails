@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     collection do
       get :available
     end
+    resources :rsvp, only: %i[update]
   end
   root to: 'home#index'
 end

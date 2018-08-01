@@ -13,7 +13,17 @@
           <div class="tile">
             <h3 class="tile-title"><%= course.title -%></h3>
             <div class="tile-body"><%= course.address -%></div>
-            <div class="tile-footer"><a class="btn btn-primary" href="#"><i class="fa fa-sign-in"></i><%= t('ui.training_user_add') -%></a></div>
+            <div class="tile-footer">
+              <% if current_user.nil? %>
+                <a class="btn btn-primary" href="<%= new_user_session_path -%>" role="button"><%= t('ui.training_user_signin') -%></a>
+              <% elsif course.users.exists?(current_user.id) -%>
+                <a class="btn btn-primary disabled" href="#" role="button"><i class="fa fa-sign-in"></i><%= t('ui.training_user_exist') -%></a>
+              <% else -%>
+                <%= link_to course_rsvp_path(course, current_user), method: :put, class: 'btn btn-primary', role: 'button', disable_with: t('ui.training_user_exist') do %>
+                  <i class="fa fa-sign-in"></i><%= t('ui.training_user_rsvp') -%>
+                <% end %>
+              <% end -%>
+            </div>
           </div>
         </div>
     <% if index.odd? -%>
