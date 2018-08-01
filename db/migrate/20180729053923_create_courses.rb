@@ -10,5 +10,12 @@ class CreateCourses < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    create_table :course_users do |t|
+      t.references :course, null: false
+      t.references :user, null: false
+
+      t.timestamps null: false
+    end
   end
 end
