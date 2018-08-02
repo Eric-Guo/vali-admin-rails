@@ -18,9 +18,8 @@
               <tr>
                 <th><%= t('course.title') -%></th>
                 <th><%= t('course.address') -%></th>
-                <th><%= t('course.capacity') -%></th>
-                <th><%= t('course.start_time') -%></th>
-                <th><%= t('course.end_time') -%></th>
+                <th><%= t('course.rsvp_count') -%><br /><%= t('course.capacity') -%></th>
+                <th><%= t('course.start_time') -%><br /><%= t('course.end_time') -%></th>
                 <th><%= t('ui.admin_action') -%></th>
               </tr>
             </thead>
@@ -29,9 +28,8 @@
               <tr>
                 <td><%= course.title -%></td>
                 <td><%= course.address -%></td>
-                <td><%= course.capacity -%></td>
-                <td><%= course.start_time -%></td>
-                <td><%= course.end_time -%></td>
+                <td><%= course.users.count -%><br /><%= course.capacity -%></td>
+                <td><%= course.start_time -%><br /><%= course.end_time -%></td>
                 <td>
                   <% unless course.published -%>
                     <%= link_to t('course.publish'), publish_course_path(course), method: :patch, class: 'btn btn-success btn-xs' -%>
