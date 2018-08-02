@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       post :create_user
     end
   end
-  resources :courses, only: %i[index new create destroy] do
+  resources :courses, except: %i[edit update] do
     member do
       patch :publish
     end

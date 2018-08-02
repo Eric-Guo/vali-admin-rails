@@ -3,6 +3,10 @@ class CoursePolicy < ApplicationPolicy
     internal_user?
   end
 
+  def show?
+    internal_user?
+  end
+
   def available?
     true
   end

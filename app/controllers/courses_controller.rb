@@ -7,6 +7,11 @@ class CoursesController < ApplicationController
     @courses = policy_scope(Course)
   end
 
+  def show
+    @course = policy_scope(Course).find(params[:id])
+    authorize @course
+  end
+
   def available
     authorize Course
     @courses = policy_scope(Course).available

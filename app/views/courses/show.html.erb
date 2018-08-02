@@ -1,0 +1,29 @@
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-laptop"></i> <%= @course.title -%></h1>
+      <p></p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="<%= courses_path -%>"><%= t('ui.course_list') -%></a></li>
+      <li class="breadcrumb-item"><a href="<%= course_path(@course) -%>"><%= t('ui.course_detail') -%></a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="tile">
+        <div class="tile-title-w-btn">
+          <h3 class="title">All Items</h3>
+          <p><a class="btn btn-primary icon-btn" href=""><i class="fa fa-plus"></i>Add Item </a></p>
+        </div>
+        <div class="tile-body">
+          <b>Card with action button </b><br>
+          Hey there, I am a very simple card. I am good at containing small bits of information. I am quite convenient because I require little markup to use effectively.
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
