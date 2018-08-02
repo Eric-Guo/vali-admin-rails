@@ -5,6 +5,7 @@ en:
     vendor_manage: "Vendor management"
     vendor_list: "Vendor list"
     course_list: "Course list"
+    course_detail: "Course detail"
     vendor_approve: "Vendor approve"
     need_approve_vendor_list: "Need to approve vendor list"
     vendor_2nd_signup: "2nd level vendor signup"

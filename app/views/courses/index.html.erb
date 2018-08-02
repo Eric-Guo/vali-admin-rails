@@ -26,7 +26,7 @@
             <tbody>
               <% @courses.each do |course| -%>
               <tr>
-                <td><%= course.title -%></td>
+                <td><%= link_to course.title, course_path(course) -%></td>
                 <td><%= course.address -%></td>
                 <td><%= course.users.count -%><br /><%= course.capacity -%></td>
                 <td><%= course.start_time -%><br /><%= course.end_time -%></td>
