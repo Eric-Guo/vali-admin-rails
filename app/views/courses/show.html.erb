@@ -14,14 +14,11 @@
     <div class="col-md-8">
       <div class="tile">
         <div class="tile-title-w-btn">
-          <h3 class="title">All Items</h3>
+          <h3 class="title"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></h3>
           <p><a class="btn btn-primary icon-btn" href=""><i class="fa fa-plus"></i>Add Item </a></p>
         </div>
         <div class="tile-body">
-          <b>Card with action button </b><br>
-          Hey there, I am a very simple card. I am good at containing small bits of information. I am quite convenient because I require little markup to use effectively.
-
-
+          <%= @course.address -%>
         </div>
       </div>
     </div>
