@@ -41,7 +41,7 @@ class ApplicationPolicy
   end
 
   def first_level_vender?
-    internal_user? || user.encrypted_password.present?
+    internal_user? || user&.encrypted_password.present?
   end
 
   class Scope
