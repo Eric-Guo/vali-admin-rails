@@ -27,7 +27,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def new_user?
-    internal_user?
+    first_level_vender?
   end
 
   def vendor_unlocked_list_description

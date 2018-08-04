@@ -1,5 +1,5 @@
 class Company2ndRegistrationPolicy < ApplicationPolicy
   def create_user?
-    internal_user?
+    first_level_vender?
   end
 end
