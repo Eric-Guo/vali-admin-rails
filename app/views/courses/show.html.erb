@@ -16,9 +16,9 @@
         <h3 class="tile-title"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></h3>
         <div class="tile-body">
           <p><%= @course.address -%></p>
-<%= form_with(model: @course) do |f| %>
-  <%= f.select :attend_user_ids, policy_scope(User).where(locked_at: nil).pluck(:name, :id), {}, class: 'form-control', multiple: 'multiple' %>
-  <%= f.submit t('form.update') %>
+<%= form_with model: @course, class: 'form-inline' do |f| %>
+  <%= f.select :attend_user_ids, policy_scope(User).where(locked_at: nil).pluck(:name, :id), {}, id: 'attend-users-select', class: 'form-control', multiple: true, style: 'width: 80%;' %>
+  <%= f.submit t('form.update'), class: 'btn btn-primary' %>
 <% end %>
         </div>
       </div>
