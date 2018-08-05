@@ -33,6 +33,12 @@ class CoursesController < ApplicationController
     end
   end
 
+  def update
+    @course = Course.find params[:id]
+    authorize @course
+    @course.update(course_params)
+  end
+
   def destroy
     @course = policy_scope(Course).not_published.find(params[:id])
     authorize @course
@@ -50,6 +56,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    @course_params ||= params.require(:course).permit(:title, :address, :capacity, :start_time, :end_time)
+    @course_params ||= params.require(:course).permit(:title, :address, :capacity, :start_time, :end_time,
+      attend_user_ids: [])
   end
 end
