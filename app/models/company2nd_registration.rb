@@ -13,6 +13,7 @@ class Company2ndRegistration
     @user = User.new(email: email, name: name, title: title, phone: phone)
     @user.skip_confirmation_notification!
     @user.save(validate: false)
+    @user.lock_access!
 
     company = Company.find_or_create_by(name: co_name, city: city) do |co|
       co.district = district
