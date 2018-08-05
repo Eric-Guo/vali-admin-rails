@@ -13,12 +13,13 @@
   <div class="row">
     <div class="col-md-8">
       <div class="tile">
-        <div class="tile-title-w-btn">
-          <h3 class="title"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></h3>
-          <p><a class="btn btn-primary icon-btn" href=""><i class="fa fa-plus"></i>Add Item </a></p>
-        </div>
+        <h3 class="tile-title"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></h3>
         <div class="tile-body">
-          <%= @course.address -%>
+          <p><%= @course.address -%></p>
+<%= form_with(model: @course) do |f| %>
+  <%= f.select :attend_user_ids, policy_scope(User).where(locked_at: nil).pluck(:name, :id), {}, class: 'form-control', multiple: 'multiple' %>
+  <%= f.submit t('form.update') %>
+<% end %>
         </div>
       </div>
     </div>

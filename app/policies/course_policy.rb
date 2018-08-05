@@ -23,6 +23,10 @@ class CoursePolicy < ApplicationPolicy
     internal_user?
   end
 
+  def update?
+    internal_user?
+  end
+
   def destroy?
     internal_user?
   end
