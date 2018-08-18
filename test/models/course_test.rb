@@ -5,7 +5,7 @@ class CourseTest < ActiveSupport::TestCase
     svsi_course = courses(:svsi_course)
     assert svsi_course.valid?
     assert svsi_course.published
-    assert svsi_course.users.count == 2
+    assert_equal svsi_course.users.count, 2
   end
 
   test 'Course audio_architecture_course valid' do
