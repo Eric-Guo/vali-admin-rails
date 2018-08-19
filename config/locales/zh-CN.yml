@@ -11,6 +11,7 @@ zh-CN:
     vendor_2nd_signup: "二级经销商注册"
     circular_list: "通知列表"
     circular_manage: "通知管理"
+    circular_new: "新建通知"
     training_info_manage: "培训信息管理"
     training_info_publish: "发布培训信息"
     training_info_new: "新增培训信息"
