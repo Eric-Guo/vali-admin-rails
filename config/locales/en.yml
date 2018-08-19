@@ -11,6 +11,7 @@ en:
     vendor_2nd_signup: "2nd level vendor signup"
     circular_list: "Circular list"
     circular_manage: "Circular management"
+    circular_new: "New circular"
     training_info_manage: "Training info management"
     training_info_publish: "Publish training info"
     training_info_new: "New training"
