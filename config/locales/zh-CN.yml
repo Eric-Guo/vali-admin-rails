@@ -9,6 +9,8 @@ zh-CN:
     vendor_approve: "经销商审批"
     need_approve_vendor_list: "需要审批代理商列表"
     vendor_2nd_signup: "二级经销商注册"
+    circular_list: "通知列表"
+    circular_manage: "通知管理"
     training_info_manage: "培训信息管理"
     training_info_publish: "发布培训信息"
     training_info_new: "新增培训信息"
@@ -70,6 +72,10 @@ zh-CN:
     end_time: "结束时间"
     delete: "删除"
     publish: "发布"
+  circular:
+    title: "通知标题"
+    body: "通知内容"
+    delete: "删除通知"
   activerecord:
     errors:
       models:
