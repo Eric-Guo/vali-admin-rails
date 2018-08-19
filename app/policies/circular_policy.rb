@@ -1,5 +1,9 @@
 class CircularPolicy < ApplicationPolicy
-  def index?
+  def public_home?
     true
+  end
+
+  def index?
+    internal_user?
   end
 end

@@ -9,6 +9,8 @@ en:
     vendor_approve: "Vendor approve"
     need_approve_vendor_list: "Need to approve vendor list"
     vendor_2nd_signup: "2nd level vendor signup"
+    circular_list: "Circular list"
+    circular_manage: "Circular management"
     training_info_manage: "Training info management"
     training_info_publish: "Publish training info"
     training_info_new: "New training"
@@ -70,6 +72,10 @@ en:
     end_time: "End time"
     delete: "Delete"
     publish: "Publish"
+  circular:
+    title: "Title"
+    body: "Body"
+    delete: "Delete"
   activerecord:
     errors:
       models:

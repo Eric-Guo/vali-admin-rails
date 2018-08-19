@@ -30,5 +30,7 @@ Rails.application.routes.draw do
     end
     resources :rsvp, only: %i[update]
   end
+
+  resources :circulars, only: %i[index destroy]
   root to: 'home#index'
 end

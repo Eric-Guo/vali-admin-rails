@@ -1,0 +1,40 @@
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-calendar"></i>&nbsp;&nbsp;<%= t('ui.circular_list') -%></h1>
+      <p><%= @vendor_list_description -%></p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="<%= circulars_path -%>"><%= t('ui.circular_list') -%></a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tile">
+        <div class="tile-body">
+          <table class="table table-hover table-bordered" id="courses-table">
+            <thead>
+              <tr>
+                <th><%= t('circular.title') -%></th>
+                <th><%= t('circular.body') -%></th>
+                <th><%= t('ui.admin_action') -%></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @circulars.each do |circular| -%>
+              <tr>
+                <td><%= circular.title -%></td>
+                <td><%= circular.body -%></td>
+                <td>
+                  <%= link_to t('circular.delete'), circular_path(circular), method: :delete, class: 'btn btn-danger btn-xs' -%>
+                </td>
+              </tr>
+              <% end -%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
