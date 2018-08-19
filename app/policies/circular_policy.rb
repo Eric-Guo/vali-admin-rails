@@ -6,4 +6,8 @@ class CircularPolicy < ApplicationPolicy
   def index?
     internal_user?
   end
+
+  def destroy?
+    internal_user?
+  end
 end
