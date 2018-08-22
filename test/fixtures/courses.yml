@@ -3,29 +3,29 @@ svsi_course:
   title: SVSI 系统认证培训
   address: 上海体验中心
   capacity: 30
-  start_time: 2018-08-21 08:30
-  end_time: 2018-08-22 16:30
+  start_time: 2018-09-21 08:30
+  end_time: 2018-09-22 16:30
   published: true
 
 wine_bar_course:
   title: 酒吧音频系统调音认证培训
   address: 上海体验中心
   capacity: 30
-  start_time: 2018-08-04 08:30
-  end_time: 2018-08-06 16:30
+  start_time: 2018-09-04 08:30
+  end_time: 2018-09-06 16:30
   published: true
 
 martin_lighting_course:
   title: Martin Lighting之舞台灯光
   address: 上海体验中心
   capacity: 30
-  start_time: 2018-08-16 08:30
-  end_time: 2018-08-16 16:30
+  start_time: 2018-09-16 08:30
+  end_time: 2018-09-16 16:30
   published: true
 
 audio_architecture_course:
   title: Audio Architect软件认证培训
   address: 上海体验中心
   capacity: 30
-  start_time: 2018-08-08 08:30
-  end_time: 2018-08-10 16:30
+  start_time: 2018-09-08 08:30
+  end_time: 2018-09-10 16:30
