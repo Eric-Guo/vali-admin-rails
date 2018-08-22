@@ -1,14 +1,17 @@
 ---
-dicos_eric:
-  company: dicos
+# Harman Admin
+harman_eric:
+  company: harman
   user: eric
 
-kfc_ruby:
-  company: kfc
+# Harman VM admin
+jiefu_ruby:
+  company: harman
   user: ruby
 
-dicos_shin:
-  company: dicos
+# 1st level vendor user
+jiefu_shin:
+  company: jiefu
   user: shin
 
 citicprufunds_ming_pan:

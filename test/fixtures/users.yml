@@ -1,4 +1,5 @@
 ---
+# Harman Admin
 eric:
   name: "Eric Guo"
   title: "Rails developer"
@@ -8,6 +9,7 @@ eric:
   phone: "+8613901862171"
   confirmed_at: <%= Time.zone.now %>
 
+# Harman VM admin
 ruby:
   name: "过纾逸"
   title: "宝宝"
@@ -18,6 +20,7 @@ ruby:
   confirmed_at: <%= Time.zone.now %>
   locked_at: <%= Time.zone.now %>
 
+# 1st level vendor user
 shin:
   name: "张华"
   title: "Shin"

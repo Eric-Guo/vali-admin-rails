@@ -1,11 +1,11 @@
 ---
-dicos_akg:
+harman_akg:
   vertical_market: akg
-  company: dicos
+  company: harman
 
-dicos_install_sound:
+harman_install_sound:
   vertical_market: install_sound
-  company: dicos
+  company: harman
 
 51fund_akg:
   vertical_market: akg
