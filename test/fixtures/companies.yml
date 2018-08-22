@@ -1,27 +1,33 @@
 ---
-dicos:
-  name: 德克士
+harman:
+  name: 哈曼
   city: 上海
   district: 杨浦
   address: 宝地广场
+  rank: 0
 
-kfc:
-  name: 肯德基
+# 1st level vendor
+jiefu:
+  name: 杰夫
   city: 上海
   district: 静安
   address: 茂名北路
+  rank: 1
 
+# Below are all 2nd level vendor
 citicprufunds:
   name: 信诚基金
   city: 上海
   district: 浦东
   address: 上海国金中心汇丰银行大楼9层
+  rank: 2
 
 51fund:
   name: 上投摩根基金管理有限公司
   city: 上海
   district: 浦东
   address: 震旦国际大楼25楼
+  rank: 2
 
 gbicc:
   name: 吉贝克信息技术
@@ -29,3 +35,4 @@ gbicc:
   district: 杨浦
   address: 凯迪金融大厦15层
   managed_by_company: citicprufunds
+  rank: 2

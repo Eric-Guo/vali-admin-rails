@@ -1,11 +1,11 @@
 require 'test_helper'
 
 class CompanyTest < ActiveSupport::TestCase
-  test 'Company dicos valid' do
-    dicos = companies(:dicos)
-    assert dicos.valid?
-    assert_equal dicos.users.count, 2
-    assert_equal dicos.vertical_markets.count, 2
+  test 'Company harman valid' do
+    harman = companies(:harman)
+    assert harman.valid?
+    assert_equal harman.users.count, 2
+    assert_equal harman.vertical_markets.count, 2
   end
 
   test 'Company gbicc belongs to citicprufunds' do
