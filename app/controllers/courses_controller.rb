@@ -56,7 +56,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    @course_params ||= params.require(:course).permit(:title, :address, :capacity, :start_time, :end_time,
+    @course_params ||= params.require(:course).permit(:title, :address, :body, :capacity, :start_time, :end_time,
       attend_user_ids: [])
   end
 end

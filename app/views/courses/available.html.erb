@@ -12,7 +12,11 @@
         <div class="col-md-6">
           <div class="tile">
             <h3 class="tile-title"><%= course.title -%></h3>
-            <div class="tile-body"><%= course.address -%></div>
+            <div class="tile-body">
+              <%= simple_format course.body -%>
+              <br />
+              <%= t('course.address') -%>: <%= course.address -%>
+            </div>
             <div class="tile-footer">
               <% if current_user.nil? %>
                 <a class="btn btn-primary" href="<%= new_user_session_path -%>" role="button"><%= t('ui.training_user_signin') -%></a>

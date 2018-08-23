@@ -69,6 +69,7 @@ en:
   course:
     title: "Title"
     address: "Address"
+    body: "Content"
     rsvp_count: "RSVP Count"
     capacity: "Capacity"
     start_time: "Start time"
