@@ -21,6 +21,7 @@ en:
     training_user_exist: "Already RSVP"
     training_user_rsvp: "Attend & RSVP"
     training_user_signin: "Sign in first then RSVP"
+    training_user_manage: "View this training RSVP"
     no_access_list: "Please contact the administrator to gain access to this list."
     list_unlocked_managed_user: "Below list the %{managed} vendor list"
     list_locked_managed_user: "Below list the %{managed} locked vendor list"
