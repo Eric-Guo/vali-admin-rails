@@ -130,7 +130,7 @@
           <ul class="treeview-menu">
             <li>
               <%= link_to pending_vendors_path, class: "treeview-item #{params[:controller] == 'vendors' && params[:action] == 'pending' ? 'active' : ''}" do %>
-                <i class="icon fa fa-check"></i> <%= t('ui.vendor_approve') -%></a>
+                <i class="icon fa fa-check"></i> <%= policy(User).unlock_access? ? t('ui.vendor_approve') : t('ui.waiting_approve_vendor_list') -%></a>
               <% end %>
             </li>
           </ul>
