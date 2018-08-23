@@ -30,7 +30,9 @@
         <i class="fa fa-sign-in fa-lg fa-fw"></i><%= t('user.sign_in') -%>
       <% end %>
     </div>
-    <%= link_to '注册一级供应商', new_user_registration_path %>
+    <div class="form-group mt-3">
+      <p class="semibold-text mb-0"><a href="<%= new_user_registration_path -%>"><i class="fa fa-sign-in"></i> 注册一级供应商</a></p>
+    </div>
 <% end %>
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'forget-form' }) do |f| %>
     <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i><%= t('user.forgot_password') -%></h3>
