@@ -11,7 +11,8 @@ class UserPolicy < ApplicationPolicy
       if user.super_admin?
         scope.all
       elsif user.admined_vm.present?
-        user.admined_vm.users
+        user_managed_company_ids = user.admined_vm.companies.pluck(:id)
+        scope.joins(:company_users).where(company_users: { company_id: user_managed_company_ids })
       elsif user.first_level_vendor?
         user_belongs_to_company_ids = user.companies.pluck(:id)
         user_managed_company_ids = Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)

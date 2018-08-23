@@ -4,7 +4,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def show?
-    internal_user?
+    internal_user? || first_level_vendor?
   end
 
   def available?
@@ -24,7 +24,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def update?
-    internal_user?
+    internal_user? || first_level_vendor?
   end
 
   def destroy?
