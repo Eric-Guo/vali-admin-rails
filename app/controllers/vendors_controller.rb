@@ -15,12 +15,14 @@ class VendorsController < ApplicationController
 
   def unlock_access
     @user = policy_scope(User).find params[:id]
+    authorize @user
     @user.unlock_access!
     redirect_to vendors_path, status: :found, notice: "User #{@user.name} unlocked."
   end
 
   def lock_access
     @user = policy_scope(User).find params[:id]
+    authorize @user
     @user.lock_access!
     redirect_to vendors_path, status: :found, notice: "User #{@user.name} locked."
   end
