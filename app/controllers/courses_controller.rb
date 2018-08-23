@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :authenticate_user!, except: [:available]
+  before_action :authenticate_user!
   after_action :verify_authorized
 
   def index
