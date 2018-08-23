@@ -8,20 +8,19 @@ class CompanyTest < ActiveSupport::TestCase
     assert_equal harman.vertical_markets.count, 2
   end
 
-  test 'Company gbicc belongs to citicprufunds' do
+  test 'Company gbicc belongs to jiefu' do
     gbicc = companies(:gbicc)
     assert gbicc.valid?
     assert_equal gbicc.users.count, 1
     assert_equal gbicc.vertical_markets.count, 1
-    assert_equal gbicc.managed_by_company.name, '信诚基金'
+    assert_equal gbicc.managed_by_company.name, '杰夫'
   end
 
-  test 'Company citicprufunds has one managed company' do
-    citicprufunds = companies(:citicprufunds)
-    assert citicprufunds.valid?
-    assert_equal citicprufunds.users.count, 1
-    assert_equal citicprufunds.vertical_markets.count, 2
-    assert_equal citicprufunds.managed_companies.count, 1
-    assert_equal citicprufunds.managed_companies.first.name, '吉贝克信息技术'
+  test 'Company jiefu has one managed company' do
+    jiefu = companies(:jiefu)
+    assert jiefu.valid?
+    assert_equal jiefu.users.count, 1
+    assert_equal jiefu.vertical_markets.count, 2
+    assert_equal jiefu.managed_companies.count, 3
   end
 end
