@@ -40,8 +40,8 @@ class ApplicationPolicy
     user&.super_admin? || user&.admined_vm.present?
   end
 
-  def first_level_vender?
-    internal_user? || user&.encrypted_password.present?
+  def first_level_vendor?
+    user&.first_level_vendor?
   end
 
   class Scope

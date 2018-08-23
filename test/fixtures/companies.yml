@@ -21,6 +21,7 @@ citicprufunds:
   district: 浦东
   address: 上海国金中心汇丰银行大楼9层
   rank: 2
+  managed_by_company: jiefu
 
 51fund:
   name: 上投摩根基金管理有限公司
@@ -28,6 +29,7 @@ citicprufunds:
   district: 浦东
   address: 震旦国际大楼25楼
   rank: 2
+  managed_by_company: jiefu
 
 gbicc:
   name: 吉贝克信息技术
@@ -36,3 +38,4 @@ gbicc:
   address: 凯迪金融大厦15层
   managed_by_company: citicprufunds
   rank: 2
+  managed_by_company: jiefu

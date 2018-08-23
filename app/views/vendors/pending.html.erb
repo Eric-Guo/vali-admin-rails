@@ -37,7 +37,9 @@
                 <td><%= user.companies.pluck(:name).to_sentence -%></td>
                 <td><%= user.vertical_markets.pluck(:name).join(' | ') -%></td>
                 <td>
-                  <%= link_to t('user.unlock_access'), unlock_access_vendor_path(user), method: :patch, class: 'btn btn-success btn-xs' -%>
+                  <% if policy(user).unlock_access? %>
+                    <%= link_to t('user.unlock_access'), unlock_access_vendor_path(user), method: :patch, class: 'btn btn-success btn-xs' -%>
+                  <% end -%>
                 </td>
               </tr>
               <% end -%>

@@ -23,4 +23,8 @@ class User < ApplicationRecord
   def super_admin?
     email == 'rubygsy@icloud.com'
   end
+
+  def first_level_vendor?
+    companies&.pluck(:rank)&.min == 1
+  end
 end
