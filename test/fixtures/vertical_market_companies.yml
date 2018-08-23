@@ -21,11 +21,11 @@ harman_install_sound:
 
 citicprufunds_akg:
   vertical_market: akg
-  company: citicprufunds
+  company: jiefu
 
 citicprufunds_amx:
   vertical_market: amx
-  company: citicprufunds
+  company: jiefu
 
 gbicc_akg:
   vertical_market: akg
