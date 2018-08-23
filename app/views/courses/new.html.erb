@@ -19,6 +19,12 @@
               </div>
             </div>
             <div class="form-group row">
+              <label class="control-label col-md-5"><%= t('course.body') -%></label>
+              <div class="col-md-12">
+                <%= f.text_area :body, rows: 20, class: 'form-control col-md-12' %>
+              </div>
+            </div>
+            <div class="form-group row">
               <label class="control-label col-md-5"><%= t('course.capacity') -%></label>
               <div class="col-md-7">
                 <%= f.number_field :capacity, class: 'form-control col-md-8' %>

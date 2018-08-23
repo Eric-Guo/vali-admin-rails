@@ -67,8 +67,9 @@ zh-CN:
   vertical_market:
     title: "所涉及的垂直市场"
   course:
-    title: "培训内容"
+    title: "培训标题"
     address: "培训地址"
+    body: "培训内容"
     rsvp_count: "报名人数"
     capacity: "最大人数"
     start_time: "开始时间"
