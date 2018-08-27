@@ -19,6 +19,6 @@ class User::RegistrationsController < Devise::RegistrationsController
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: CompanyRegistration::FORM_FIELDS)
+    devise_parameter_sanitizer.permit(:sign_up, keys: Company2ndRegistration::FORM_FIELDS - [:vm_ids] + [vm_ids: []])
   end
 end
