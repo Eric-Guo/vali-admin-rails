@@ -21,6 +21,6 @@ class CompaniesController < ApplicationController
   private
 
   def user_params
-    @user_params ||= params.require(:user).permit(*Company2ndRegistration::FORM_FIELDS)
+    @user_params ||= params.require(:user).permit(*(Company2ndRegistration::FORM_FIELDS - [:vm_ids] + [vm_ids: []]))
   end
 end

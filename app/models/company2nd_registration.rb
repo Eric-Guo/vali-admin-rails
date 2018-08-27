@@ -1,7 +1,7 @@
 class Company2ndRegistration
   include ActiveModel::Model
   USER_FIELDS = %i[email name title phone create_user_via_company_id].freeze
-  COMPANY_REG_FIELDS = %i[co_name city district address vm_id].freeze
+  COMPANY_REG_FIELDS = %i[co_name city district address vm_ids].freeze
   FORM_FIELDS = (USER_FIELDS + COMPANY_REG_FIELDS).freeze
   attr_accessor(*FORM_FIELDS)
   validates_presence_of(*FORM_FIELDS)
@@ -21,7 +21,9 @@ class Company2ndRegistration
       co.managed_by_company_id = create_user_via_company_id
     end
     CompanyUser.find_or_create_by!(company: company, user: @user)
-    VerticalMarketCompany.find_or_create_by!(company: company, vertical_market_id: vm_id)
+    vm_ids.reject(&:blank?).each do |vm_id|
+      VerticalMarketCompany.find_or_create_by!(company: company, vertical_market_id: vm_id)
+    end
     true
   end
 
