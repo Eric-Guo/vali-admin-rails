@@ -62,6 +62,8 @@ zh-CN:
     vm_name: "垂直市场名称"
     add_user: "添加人员"
     add_user_for: "为%{company}添加人员"
+    belongs_to_vertical_market: "涉及垂直市场"
+    approve: "批准"
   vertical_market:
     title: "所涉及的垂直市场"
   course:
