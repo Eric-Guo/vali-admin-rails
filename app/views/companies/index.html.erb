@@ -1,0 +1,43 @@
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<%= t('ui.vendor_companies_list') -%></h1>
+      <p><%= @companies_list_description -%></p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="<%= companies_path -%>"><%= t('ui.vendor_companies_list') -%></a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tile">
+        <div class="tile-body">
+          <table class="table table-hover table-bordered" id="companies-table">
+            <thead>
+              <tr>
+                <th><%= t('company.name') -%></th>
+                <th><%= t('company.address') -%></th>
+                <th><%= t('company.district') -%></th>
+                <th><%= t('company.belongs_to_vertical_market') -%></th>
+                <th><%= t('ui.admin_action') -%></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @companies.each do |company| -%>
+              <tr>
+                <td><%= company.name -%></td>
+                <td><%= company.address -%></td>
+                <td><%= company.city -%> <%= company.district -%></td>
+                <td><%= company.vertical_markets.pluck(:name).join(' | ') -%></td>
+                <td>
+                </td>
+              </tr>
+              <% end -%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

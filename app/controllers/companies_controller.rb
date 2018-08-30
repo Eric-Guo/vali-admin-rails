@@ -2,6 +2,12 @@ class CompaniesController < ApplicationController
   before_action :authenticate_user!
   after_action :verify_authorized
 
+  def index
+    authorize Company
+    @companies_list_description = policy(Company).companies_list_description
+    @companies = policy_scope(Company)
+  end
+
   def new_user
     @user = User.new
     authorize @user
