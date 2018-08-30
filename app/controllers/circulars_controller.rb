@@ -32,6 +32,6 @@ class CircularsController < ApplicationController
   private
 
   def circular_params
-    @circular_params ||= params.require(:circular).permit(:title, :body)
+    @circular_params ||= params.require(:circular).permit(:title, :body, vertical_market_ids: [])
   end
 end
