@@ -17,6 +17,7 @@
             <thead>
               <tr>
                 <th><%= t('circular.title') -%></th>
+                <th><%= t('circular.belongs_to_vertical_market') -%></th>
                 <th><%= t('circular.body') -%></th>
                 <th><%= t('ui.admin_action') -%></th>
               </tr>
@@ -25,6 +26,7 @@
               <% @circulars.each do |circular| -%>
               <tr>
                 <td><%= circular.title -%></td>
+                <td><%= circular.vertical_markets.pluck(:name).join(' | ') -%></td>
                 <td><%= circular.body -%></td>
                 <td>
                   <%= link_to t('circular.delete'), circular_path(circular), method: :delete, class: 'btn btn-danger btn-xs' -%>

@@ -53,4 +53,5 @@ document.addEventListener("turbolinks:load", function() {
   $('#companies-table').DataTable();
   $('#courses-table').DataTable();
   $('#attend-users-select').select2();
+  $('#circular-vertical-markets-select').select2();
 })

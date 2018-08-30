@@ -1,0 +1,2 @@
+class VerticalMarketPolicy < ApplicationPolicy
+end

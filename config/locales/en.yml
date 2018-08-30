@@ -78,6 +78,7 @@ en:
     publish: "Publish"
   circular:
     title: "Title"
+    belongs_to_vertical_market: "Belongs to Vertical Market"
     body: "Body"
     delete: "Delete"
   activerecord:
