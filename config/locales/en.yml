@@ -68,6 +68,7 @@ en:
     title: "Vertical Market"
   course:
     title: "Title"
+    belongs_to_vertical_market: "Belongs to Vertical Market"
     address: "Address"
     body: "Content"
     rsvp_count: "RSVP Count"
