@@ -54,6 +54,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'ffaker'
+
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-puma'
 end
 
 group :test do
