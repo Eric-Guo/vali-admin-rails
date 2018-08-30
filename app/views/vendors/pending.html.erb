@@ -1,12 +1,12 @@
 <main class="app-content">
   <div class="app-title">
     <div>
-      <h1><i class="fa fa-check"></i>&nbsp;&nbsp;<%= policy(User).unlock_access? ? t('ui.need_approve_vendor_list') : t('ui.waiting_approve_vendor_list') -%></h1>
+      <h1><i class="fa fa-check"></i>&nbsp;&nbsp;<%= t('ui.waiting_approve_vendor_list') -%></h1>
       <p><%= @vendor_list_description -%></p>
     </div>
     <ul class="app-breadcrumb breadcrumb">
       <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-      <li class="breadcrumb-item"><a href="<%= pending_vendors_path -%>"><%= policy(User).unlock_access? ? t('ui.need_approve_vendor_list') : t('ui.waiting_approve_vendor_list') -%></a></li>
+      <li class="breadcrumb-item"><a href="<%= pending_vendors_path -%>"><%= t('ui.waiting_approve_vendor_list') -%></a></li>
     </ul>
   </div>
   <div class="row">
@@ -21,9 +21,6 @@
                 <th><%= t('user.contact_information') -%></th>
                 <th><%= t('user.belongs_to_company') -%></th>
                 <th><%= t('user.belongs_to_vertical_market') -%></th>
-                <% if policy(User).unlock_access? %>
-                  <th><%= t('ui.admin_action') -%></th>
-                <% end -%>
               </tr>
             </thead>
             <tbody>
@@ -38,11 +35,6 @@
                 </td>
                 <td><%= user.companies.pluck(:name).to_sentence -%></td>
                 <td><%= user.vertical_markets.pluck(:name).join(' | ') -%></td>
-                <% if policy(user).unlock_access? %>
-                  <td>
-                    <%= link_to t('user.unlock_access'), unlock_access_vendor_path(user), method: :patch, class: 'btn btn-success btn-xs' -%>
-                  </td>
-                <% end -%>
               </tr>
               <% end -%>
             </tbody>

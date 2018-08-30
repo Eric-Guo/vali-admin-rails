@@ -57,7 +57,6 @@ zh-CN:
     resend_confirmation_instructions: "重新发送确认说明"
     belongs_to_vertical_market: "涉及垂直市场"
     belongs_to_company: "所属经销商"
-    unlock_access: "允许访问"
     lock_access: "禁止访问"
     email_duplicate: "找到重复的电子邮件"
   company:
