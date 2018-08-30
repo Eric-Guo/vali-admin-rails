@@ -9,7 +9,6 @@ Rails.application.routes.draw do
       get :pending
     end
     member do
-      patch :lock_access
       get :new_user
       post :create_user
     end
