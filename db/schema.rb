@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_30_105120) do
+ActiveRecord::Schema.define(version: 2018_08_30_143910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,15 @@ ActiveRecord::Schema.define(version: 2018_08_30_105120) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  create_table "vertical_market_circulars", force: :cascade do |t|
+    t.bigint "vertical_market_id", null: false
+    t.bigint "circular_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["circular_id"], name: "index_vertical_market_circulars_on_circular_id"
+    t.index ["vertical_market_id"], name: "index_vertical_market_circulars_on_vertical_market_id"
+  end
+
   create_table "vertical_market_companies", force: :cascade do |t|
     t.bigint "vertical_market_id", null: false
     t.bigint "company_id", null: false
@@ -101,6 +110,15 @@ ActiveRecord::Schema.define(version: 2018_08_30_105120) do
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_vertical_market_companies_on_company_id"
     t.index ["vertical_market_id"], name: "index_vertical_market_companies_on_vertical_market_id"
+  end
+
+  create_table "vertical_market_courses", force: :cascade do |t|
+    t.bigint "vertical_market_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_vertical_market_courses_on_course_id"
+    t.index ["vertical_market_id"], name: "index_vertical_market_courses_on_vertical_market_id"
   end
 
   create_table "vertical_markets", force: :cascade do |t|
