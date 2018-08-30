@@ -5,9 +5,6 @@ Rails.application.routes.draw do
                                     unlocks: 'user/unlocks',
                                     registrations: 'user/registrations' }
   resources :vendors, only: :index do
-    collection do
-      get :pending
-    end
     member do
       get :new_user
       post :create_user

@@ -4,13 +4,7 @@ class VendorsController < ApplicationController
   def index
     authorize User
     @vendor_list_description = policy(User).vendor_unlocked_list_description
-    @users = policy_scope(User).where(locked_at: nil)
-  end
-
-  def pending
-    authorize User
-    @vendor_list_description = policy(User).vendor_locked_list_description
-    @users = policy_scope(User).where.not(locked_at: nil)
+    @users = policy_scope(User)
   end
 
   def new_user
