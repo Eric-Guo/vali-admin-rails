@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     end
   end
   resources :companies, only: %i[index] do
+    member do
+      patch :approve
+    end
     collection do
       get :new_user
       post :create_user

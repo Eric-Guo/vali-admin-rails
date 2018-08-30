@@ -61,7 +61,9 @@ en:
     address: "Address"
     vm_name: "Vertical market name"
     add_user: "Add user"
-    add_user: "Add user for %{company}"
+    add_user_for: "Add user for %{company}"
+    belongs_to_vertical_market: "Belongs to Vertical Market"
+    approve: "Approve"
   vertical_market:
     title: "Vertical Market"
   course:

@@ -24,6 +24,13 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def approve
+    @company = policy_scope(Company).find params[:id]
+    authorize @company
+    @company.update_attributes(approved_at: Time.current)
+    redirect_to companies_path, status: :found, notice: "Company #{@company.name} approved."
+  end
+
   private
 
   def user_params

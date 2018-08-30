@@ -20,7 +20,9 @@
                 <th><%= t('company.address') -%></th>
                 <th><%= t('company.district') -%></th>
                 <th><%= t('company.belongs_to_vertical_market') -%></th>
-                <th><%= t('ui.admin_action') -%></th>
+                <% if policy(Company).approve? %>
+                  <th><%= t('ui.admin_action') -%></th>
+                <% end -%>
               </tr>
             </thead>
             <tbody>
@@ -30,8 +32,13 @@
                 <td><%= company.address -%></td>
                 <td><%= company.city -%> <%= company.district -%></td>
                 <td><%= company.vertical_markets.pluck(:name).join(' | ') -%></td>
+                <% if policy(Company).approve? %>
                 <td>
+                  <% if company.approved_at.nil? -%>
+                    <%= link_to t('company.approve'), approve_company_path(company), method: :patch, class: 'btn btn-success btn-xs' -%>
+                  <% end -%>
                 </td>
+                <% end -%>
               </tr>
               <% end -%>
             </tbody>

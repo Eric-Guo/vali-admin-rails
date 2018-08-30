@@ -3,6 +3,10 @@ class CompanyPolicy < ApplicationPolicy
     internal_user?
   end
 
+  def approve?
+    internal_user?
+  end
+
   def companies_list_description
     if user.super_admin?
       I18n.t('ui.list_all_companies')
