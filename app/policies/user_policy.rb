@@ -27,10 +27,6 @@ class UserPolicy < ApplicationPolicy
     internal_user? || first_level_vendor?
   end
 
-  def pending?
-    internal_user? || first_level_vendor?
-  end
-
   def new_user?
     first_level_vendor?
   end
