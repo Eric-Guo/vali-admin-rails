@@ -3,6 +3,7 @@ zh-CN:
   ui:
     notification: "通知"
     vendor_manage: "经销商管理"
+    vendor_companies_list: "经销商公司列表"
     vendor_list: "经销商列表"
     course_list: "培训课程列表"
     course_detail: "培训课程详情"
@@ -23,6 +24,8 @@ zh-CN:
     training_user_manage: "查看报名情况"
     training_user_signin: "登录后可报名"
     no_access_list: "请联系管理员获得访问此列表权限"
+    list_all_companies: "下表列出了所有的代理商公司"
+    list_vm_companies: "下表列出了您管理的垂直行业代理商公司"
     list_unlocked_managed_user: "下表列出了%{managed}代理商"
     list_locked_managed_user: "下表列出了%{managed}锁定的代理商"
     admin_action: "管理员操作"

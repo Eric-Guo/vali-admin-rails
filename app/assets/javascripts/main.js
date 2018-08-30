@@ -50,6 +50,7 @@ document.addEventListener("turbolinks:load", function() {
   });
 
   $('#users-table').DataTable();
+  $('#companies-table').DataTable();
   $('#courses-table').DataTable();
   $('#attend-users-select').select2();
 })
