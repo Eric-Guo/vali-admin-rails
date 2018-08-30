@@ -13,13 +13,6 @@ class VendorsController < ApplicationController
     @users = policy_scope(User).where.not(locked_at: nil)
   end
 
-  def unlock_access
-    @user = policy_scope(User).find params[:id]
-    authorize @user
-    @user.unlock_access!
-    redirect_to vendors_path, status: :found, notice: "User #{@user.name} unlocked."
-  end
-
   def lock_access
     @user = policy_scope(User).find params[:id]
     authorize @user

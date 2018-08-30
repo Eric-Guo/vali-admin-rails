@@ -35,10 +35,6 @@ class UserPolicy < ApplicationPolicy
     first_level_vendor?
   end
 
-  def unlock_access?
-    internal_user?
-  end
-
   def lock_access?
     internal_user?
   end
