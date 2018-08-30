@@ -57,7 +57,6 @@ en:
     resend_confirmation_instructions: "Resend confirmation instructions"
     belongs_to_vertical_market: "Belongs to Vertical Market"
     belongs_to_company: "Belongs to Company"
-    lock_access: "Lock access"
     email_duplicate: "Duplicated email found"
   company:
     name: "Company name"
