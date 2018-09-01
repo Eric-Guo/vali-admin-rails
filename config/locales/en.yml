@@ -72,6 +72,12 @@ en:
     address: "Address"
     body: "Content"
     rsvp_count: "RSVP Count"
+    status:
+      title: "Status"
+      preparation: "Preparation"
+      open: "Open"
+      full: "Full"
+      end: "End"
     capacity: "Capacity"
     start_time: "Start time"
     end_time: "End time"
