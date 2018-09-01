@@ -9,6 +9,10 @@ class Course < ApplicationRecord
   scope :not_published, -> { where(published: false) }
   scope :available, -> { where(published: true).where('start_time > ?', Time.zone.now) }
 
+  def status
+    I18n.t('course.status.open')
+  end
+
   def attend_user_ids
     @attend_user_ids ||= users.pluck(:id)
   end

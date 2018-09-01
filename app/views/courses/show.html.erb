@@ -13,11 +13,16 @@
   <div class="row">
     <div class="col-md-12">
       <div class="tile">
-        <h3 class="tile-title"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></h3>
+        <h3 class="tile-title">
+          <span class="badge badge-info"><%= t('course.status.title') -%>: <%= @course.status -%></span>
+          <span class="badge badge-secondary"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></span>
+        </h3>
         <div class="tile-body">
-          <% @course.vertical_markets.each do |vm| -%>
-            <span class="badge badge-primary"><%= vm.name -%></span>
-          <% end -%>
+          <h5>
+            <% @course.vertical_markets.each do |vm| -%>
+              <span class="badge badge-primary"><%= vm.name -%></span>
+            <% end -%>
+          </h5>
           <p><%= @course.address -%></p>
           <br />
           <%= simple_format @course.body -%>
