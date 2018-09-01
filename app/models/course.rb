@@ -10,7 +10,17 @@ class Course < ApplicationRecord
   scope :available, -> { where(published: true).where('start_time > ?', Time.zone.now) }
 
   def status
-    I18n.t('course.status.open')
+    if end_time < Time.current
+      I18n.t('course.status.end')
+    elsif published?
+      if users.count >= capacity
+        I18n.t('course.status.full')
+      else
+        I18n.t('course.status.open')
+      end
+    else
+      I18n.t('course.status.preparation')
+    end
   end
 
   def attend_user_ids
