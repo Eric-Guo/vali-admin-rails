@@ -13,6 +13,10 @@
           <div class="tile">
             <h3 class="tile-title"><%= course.title -%></h3>
             <div class="tile-body">
+              <% course.vertical_markets.each do |vm| -%>
+                <span class="badge badge-primary"><%= vm.name -%></span>
+              <% end -%>
+              <br />
               <%= simple_format course.body -%>
               <br />
               <%= t('course.address') -%>: <%= course.address -%>

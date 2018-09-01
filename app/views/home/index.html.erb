@@ -12,7 +12,13 @@
       <div class="col-md-6">
         <div class="tile">
           <h3 class="tile-title"><%= circular.title -%></h3>
-          <div class="tile-body"><%= simple_format circular.body -%></div>
+          <div class="tile-body">
+            <% circular.vertical_markets.each do |vm| -%>
+              <span class="badge badge-primary"><%= vm.name -%></span>
+            <% end -%>
+            <br />
+            <%= simple_format circular.body -%>
+          </div>
         </div>
       </div>
   <% if index.odd? -%>
