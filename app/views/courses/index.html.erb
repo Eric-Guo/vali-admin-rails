@@ -19,7 +19,6 @@
                 <th><%= t('course.title') -%></th>
                 <th><%= t('course.belongs_to_vertical_market') -%></th>
                 <th><%= t('course.address') -%></th>
-                <th><%= t('course.body') -%></th>
                 <th><%= t('course.rsvp_count') -%><br /><%= t('course.capacity') -%></th>
                 <th><%= t('course.start_time') -%><br /><%= t('course.end_time') -%></th>
                 <th><%= t('ui.admin_action') -%></th>
@@ -31,7 +30,6 @@
                 <td><%= link_to course.title, course_path(course) -%></td>
                 <td><%= course.vertical_markets.pluck(:name).join(' | ') -%></td>
                 <td><%= course.address -%></td>
-                <td><%= course.body&.truncate_words(2) -%></td>
                 <td><%= course.users.count -%><br /><%= course.capacity -%></td>
                 <td><%= course.start_time -%><br /><%= course.end_time -%></td>
                 <td>

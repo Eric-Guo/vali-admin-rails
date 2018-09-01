@@ -11,11 +11,16 @@
     </ul>
   </div>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="tile">
         <h3 class="tile-title"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></h3>
         <div class="tile-body">
+          <% @course.vertical_markets.each do |vm| -%>
+            <span class="badge badge-primary"><%= vm.name -%></span>
+          <% end -%>
           <p><%= @course.address -%></p>
+          <br />
+          <%= simple_format @course.body -%>
 <%= form_with model: @course, class: 'form-inline' do |f| %>
   <%= f.select :attend_user_ids, policy_scope(User).where(locked_at: nil).pluck(:name, :id), {}, id: 'attend-users-select', class: 'form-control', multiple: true, style: 'width: 80%;' %>
   <%= f.submit t('form.update'), class: 'btn btn-primary' %>
