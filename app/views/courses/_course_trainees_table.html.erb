@@ -1,0 +1,22 @@
+<table class="table table-hover table-bordered" id="course-trainees-table">
+  <thead>
+    <tr>
+      <th><%= t('course.trainee') -%></th>
+      <th><%= t('user.title') -%></th>
+      <th><%= t('user.phone') -%></th>
+      <th><%= t('user.belongs_to_company') -%></th>
+      <th><%= t('ui.admin_action') -%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% course.users.each do |user| -%>
+    <tr>
+      <td><%= user.name -%></td>
+      <td><%= user.title -%></td>
+      <td><%= user.phone -%></td>
+      <td><%= user.companies.pluck(:name).to_sentence -%></td>
+      <td></td>
+    </tr>
+    <% end -%>
+  </tbody>
+</table>
