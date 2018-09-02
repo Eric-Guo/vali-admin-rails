@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :courses, except: %i[edit] do
     member do
       patch :publish
+      get :select_company_changed
     end
     collection do
       get :available

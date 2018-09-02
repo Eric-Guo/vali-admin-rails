@@ -26,10 +26,17 @@
           <p><%= @course.address -%></p>
           <br />
           <%= simple_format @course.body -%>
-<%= form_with model: @course, class: 'form-inline' do |f| %>
-  <%= f.select :attend_user_ids, policy_scope(User).where(locked_at: nil).pluck(:name, :id), {}, id: 'attend-users-select', class: 'form-control', multiple: true, style: 'width: 80%;' %>
-  <%= f.submit t('form.update'), class: 'btn btn-primary' %>
-<% end %>
+          <form class="form-horizontal">
+            <div class="form-group row">
+              <label class="control-label col-md-4"><%= t('course.company') -%></label>
+              <div class="col-md-8">
+                <%= select_tag :company_id, options_from_collection_for_select(policy_scope(Company), 'id', 'name'),
+                  class: 'form-control col-md-8', id: 'to-filter-company-id', include_blank: true,
+                  'data-remote' => true, 'data-type' => 'script',
+                  'data-url' => url_for(controller: 'courses', action: 'select_company_changed', format: 'js') %>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
