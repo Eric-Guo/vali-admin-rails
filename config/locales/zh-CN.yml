@@ -84,6 +84,7 @@ zh-CN:
     end_time: "结束时间"
     delete: "删除"
     publish: "发布"
+    trainee: "参加培训人员"
   circular:
     title: "通知标题"
     belongs_to_vertical_market: "涉及垂直市场"
@@ -108,3 +109,4 @@ zh-CN:
     edit: "编辑"
     update: "更新"
     reset: "重置"
+    add: "添加"
