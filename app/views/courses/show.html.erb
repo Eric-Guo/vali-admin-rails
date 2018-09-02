@@ -38,6 +38,7 @@
             </div>
           </form>
           <%= render partial: 'add_user_to_table', locals: { course: @course, users: @users } %>
+          <%= render partial: 'course_trainees_table', locals: { course: @course } %>
         </div>
       </div>
     </div>
