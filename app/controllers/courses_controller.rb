@@ -8,6 +8,10 @@ class CoursesController < ApplicationController
     @courses = policy_scope(Course)
   end
 
+  def show
+    @users = User.none
+  end
+
   def available
     authorize Course
     @courses = policy_scope(Course).available
