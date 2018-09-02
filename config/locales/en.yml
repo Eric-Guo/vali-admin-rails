@@ -68,6 +68,7 @@ en:
     title: "Vertical Market"
   course:
     title: "Title"
+    company: "Company"
     belongs_to_vertical_market: "Belongs to Vertical Market"
     address: "Address"
     body: "Content"

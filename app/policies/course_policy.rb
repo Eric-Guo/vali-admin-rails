@@ -34,4 +34,8 @@ class CoursePolicy < ApplicationPolicy
   def publish?
     internal_user?
   end
+
+  def select_company_changed?
+    internal_user?
+  end
 end

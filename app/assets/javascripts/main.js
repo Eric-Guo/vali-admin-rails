@@ -55,4 +55,5 @@ document.addEventListener("turbolinks:load", function() {
   $('#attend-users-select').select2();
   $('#circular-vertical-markets-select').select2();
   $('#course-vertical-markets-select').select2();
+  $('#to-filter-company-id').select2();
 })
