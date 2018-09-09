@@ -85,6 +85,7 @@ zh-CN:
     delete: "删除"
     publish: "发布"
     trainee: "参加培训人员"
+    delete_trainee: "删除"
   circular:
     title: "通知标题"
     belongs_to_vertical_market: "涉及垂直市场"

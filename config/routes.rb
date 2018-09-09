@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     member do
       patch :publish
       get :select_company_changed
+      delete :delete_trainee
     end
     collection do
       get :available

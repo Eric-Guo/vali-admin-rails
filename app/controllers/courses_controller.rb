@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_and_authorize_course, only: %i[show update publish select_company_changed]
+  before_action :set_and_authorize_course, only: %i[show update publish select_company_changed delete_trainee]
   after_action :verify_authorized
 
   def index
@@ -53,6 +53,12 @@ class CoursesController < ApplicationController
   def select_company_changed
     company = policy_scope(Company).find(params[:company_id])
     @users = company.users
+  end
+
+  def delete_trainee
+    user = policy_scope(User).find course_params[:attend_user_id]
+    CourseUser.find_by(course: @course, user: user)&.destroy
+    render action: :update
   end
 
   private
