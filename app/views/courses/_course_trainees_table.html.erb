@@ -15,7 +15,9 @@
       <td><%= user.title -%></td>
       <td><%= user.phone -%></td>
       <td><%= user.companies.pluck(:name).to_sentence -%></td>
-      <td></td>
+      <td>
+        <%= link_to t('course.delete_trainee'), delete_trainee_course_path(course, course: { attend_user_id: user.id }), remote: true, method: :delete, class: 'btn btn-danger btn-xs' -%>
+      </td>
     </tr>
     <% end -%>
   </tbody>

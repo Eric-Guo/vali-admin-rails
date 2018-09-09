@@ -85,6 +85,7 @@ en:
     delete: "Delete"
     publish: "Publish"
     trainee: "Trainee"
+    delete_trainee: "Delete trainee"
   circular:
     title: "Title"
     belongs_to_vertical_market: "Belongs to Vertical Market"
