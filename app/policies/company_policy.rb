@@ -1,6 +1,27 @@
 class CompanyPolicy < ApplicationPolicy
+  class Scope
+    attr_reader :user, :scope
+
+    def initialize(user, scope)
+      @user  = user
+      @scope = scope
+    end
+
+    def resolve
+      if user.super_admin?
+        scope.all
+      elsif user.admined_vm.present?
+        user.admined_vm.companies
+      elsif user.first_level_vendor?
+        user.companies
+      else
+        scope.none
+      end
+    end
+  end
+
   def index?
-    internal_user?
+    internal_user? || first_level_vendor?
   end
 
   def approve?
