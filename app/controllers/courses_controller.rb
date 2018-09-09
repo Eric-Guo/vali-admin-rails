@@ -34,7 +34,8 @@ class CoursesController < ApplicationController
   end
 
   def update
-    @course.update(course_params)
+    user = policy_scope(User).find course_params[:attend_user_id]
+    CourseUser.find_or_create_by!(course: @course, user: user)
   end
 
   def destroy
@@ -63,6 +64,6 @@ class CoursesController < ApplicationController
 
   def course_params
     @course_params ||= params.require(:course).permit(:title, :address, :body, :capacity, :start_time, :end_time,
-      attend_user_ids: [], vertical_market_ids: [])
+      :attend_user_id, vertical_market_ids: [])
   end
 end

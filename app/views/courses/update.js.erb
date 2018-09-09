@@ -1,1 +1,3 @@
 $("h3.tile-title").html("<%= I18n.t('course.rsvp_count') -%>: <%= @course.users.count -%>");
+$('#course-trainees-table').html("<%= j render partial: 'course_trainees_table', locals: { course: @course } -%>");
+$('#course-trainees-table').DataTable();
