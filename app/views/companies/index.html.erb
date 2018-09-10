@@ -18,6 +18,7 @@
               <tr>
                 <th><%= t('company.created_at') -%></th>
                 <th><%= t('company.name') -%></th>
+                <th><%= t('company.rank') -%></th>
                 <th><%= t('company.address') -%></th>
                 <th><%= t('company.district') -%></th>
                 <th><%= t('company.belongs_to_vertical_market') -%></th>
@@ -31,6 +32,7 @@
               <tr>
                 <td><%= company.created_at.to_date -%></td>
                 <td><%= company.name -%></td>
+                <td><%= company.rank -%></td>
                 <td><%= company.address -%></td>
                 <td><%= company.city -%> <%= company.district -%></td>
                 <td>
