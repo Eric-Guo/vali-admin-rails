@@ -7,7 +7,7 @@ class User::RegistrationsController < Devise::RegistrationsController
         reg = CompanyRegistration.new params[:user].permit!.to_unsafe_hash.slice(*CompanyRegistration::COMPANY_REG_FIELDS)
         reg.user = user
         if reg.save
-          user.lock_access!(send_instructions: false)
+          user.lock_access!(send_instructions: false) if user.companies.any? { |co| co.approved_at.nil? }
         else
           user.destroy!
           user.errors.add(:base, :in_complete_company_registration)
