@@ -13,6 +13,7 @@ class CompanyRegistration
     company = Company.find_or_create_by(name: co_name, city: city) do |co|
       co.district = district
       co.address = address
+      co.rank = 1
     end
     CompanyUser.find_or_create_by!(company: company, user: @user)
     vm_ids.reject(&:blank?).each do |vm_id|
