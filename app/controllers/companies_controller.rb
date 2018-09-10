@@ -29,6 +29,9 @@ class CompaniesController < ApplicationController
     authorize @company
     @company.update_attributes(approved_at: Time.current)
     @company.users.map(&:unlock_access!)
+    @company.users.each do |user|
+      user.update_attributes(confirmed_at: Time.current)
+    end
     redirect_to companies_path, status: :found, notice: "Company #{@company.name} approved."
   end
 
