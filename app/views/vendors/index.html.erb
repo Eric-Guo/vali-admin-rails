@@ -16,6 +16,7 @@
           <table class="table table-hover table-bordered" id="users-table">
             <thead>
               <tr>
+                <th><%= t('user.created_at') -%></th>
                 <th><%= t('user.name') -%></th>
                 <th><%= t('user.title') -%></th>
                 <th><%= t('user.contact_information') -%></th>
@@ -27,6 +28,7 @@
             <tbody>
               <% @users.each do |user| -%>
               <tr>
+                <td><%= user.created_at.to_date -%></td>
                 <td><%= user.name -%></td>
                 <td><%= user.title -%></td>
                 <td>

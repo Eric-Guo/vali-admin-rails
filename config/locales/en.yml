@@ -54,6 +54,7 @@ en:
     belongs_to_vertical_market: "Belongs to Vertical Market"
     belongs_to_company: "Belongs to Company"
     email_duplicate: "Duplicated email found"
+    created_at: "Created at"
   company:
     name: "Company name"
     city: "Company city"
