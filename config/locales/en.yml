@@ -64,6 +64,7 @@ en:
     add_user_for: "Add user for %{company}"
     belongs_to_vertical_market: "Belongs to Vertical Market"
     approve: "Approve"
+    created_at: "Created at"
   vertical_market:
     title: "Vertical Market"
   course:
