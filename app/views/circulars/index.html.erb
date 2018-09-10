@@ -16,6 +16,7 @@
           <table class="table table-hover table-bordered" id="courses-table">
             <thead>
               <tr>
+                <th><%= t('circular.created_at') -%></th>
                 <th><%= t('circular.title') -%></th>
                 <th><%= t('circular.belongs_to_vertical_market') -%></th>
                 <th><%= t('circular.body') -%></th>
@@ -25,6 +26,7 @@
             <tbody>
               <% @circulars.each do |circular| -%>
               <tr>
+                <td><%= circular.created_at.to_date -%></td>
                 <td><%= circular.title -%></td>
                 <td>
                   <% circular.vertical_markets.each do |vm| -%>
