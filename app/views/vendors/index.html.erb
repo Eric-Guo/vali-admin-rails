@@ -47,7 +47,7 @@
                   <% end -%>
                 </td>
                 <td>
-                  <%= link_to t('company.add_user'), new_user_vendor_path(user), class: 'btn btn-success btn-xs' -%>
+                  <%= link_to t('company.add_user'), new_user_vendor_path(user, company_ids: user.companies.pluck(:id)), class: 'btn btn-success btn-xs' -%>
                 </td>
               </tr>
               <% end -%>

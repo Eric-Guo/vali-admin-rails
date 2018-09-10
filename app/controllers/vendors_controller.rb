@@ -9,6 +9,7 @@ class VendorsController < ApplicationController
 
   def new_user
     @user = User.new
+    @companies = policy_scope(Company).where(id: params[:company_ids])
   end
 
   def create_user
