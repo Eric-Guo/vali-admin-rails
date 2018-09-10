@@ -93,6 +93,7 @@ en:
     belongs_to_vertical_market: "Belongs to Vertical Market"
     body: "Body"
     delete: "Delete"
+    created_at: "Created at"
   activerecord:
     errors:
       models:

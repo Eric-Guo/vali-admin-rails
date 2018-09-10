@@ -93,6 +93,7 @@ zh-CN:
     belongs_to_vertical_market: "涉及垂直市场"
     body: "通知内容"
     delete: "删除通知"
+    created_at: "发布日期"
   activerecord:
     errors:
       models:
