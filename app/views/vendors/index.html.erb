@@ -35,7 +35,11 @@
                   <%= user.email -%>
                 </td>
                 <td><%= user.companies.pluck(:name).to_sentence -%></td>
-                <td><%= user.vertical_markets.pluck(:name).join(' | ') -%></td>
+                <td>
+                  <% user.vertical_markets.each do |vm| -%>
+                    <span class="badge badge-primary"><%= vm.name -%></span>
+                  <% end -%>
+                </td>
                 <td>
                   <%= link_to t('company.add_user'), new_user_vendor_path(user), class: 'btn btn-success btn-xs' -%>
                 </td>
