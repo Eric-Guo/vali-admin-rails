@@ -14,7 +14,7 @@ zh-CN:
       last_attempt: "您还有最后一次尝试机会，再次失败您的帐号将被锁定。"
       not_found_in_database: "邮箱或密码错误。"
       timeout: "您已登录超时，请重新登录。"
-      unauthenticated: "继续操作前请注册或者登录。"
+      unauthenticated: ""  # No word necessory, req by customer
       unconfirmed: "继续操作前请先确认您的帐号。"
     mailer:
       confirmation_instructions:
