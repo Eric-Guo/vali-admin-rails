@@ -16,6 +16,7 @@
           <table class="table table-hover table-bordered" id="courses-table">
             <thead>
               <tr>
+                <th><%= t('course.created_at') -%></th>
                 <th><%= t('course.title') -%></th>
                 <th><%= t('course.belongs_to_vertical_market') -%><br /><%= t('course.status.title') -%></th>
                 <th><%= t('course.address') -%></th>
@@ -27,6 +28,7 @@
             <tbody>
               <% @courses.each do |course| -%>
               <tr>
+                <td><%= course.created_at.to_date -%></td>
                 <td><%= link_to course.title, course_path(course) -%></td>
                 <td>
                   <% course.vertical_markets.each do |vm| -%>
