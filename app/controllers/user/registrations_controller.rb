@@ -16,6 +16,10 @@ class User::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def after_inactive_sign_up_path_for(_user)
+    Rails.application.routes.url_helpers.new_user_session_path
+  end
+
   protected
 
   def configure_permitted_parameters
