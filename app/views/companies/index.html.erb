@@ -31,7 +31,11 @@
                 <td><%= company.name -%></td>
                 <td><%= company.address -%></td>
                 <td><%= company.city -%> <%= company.district -%></td>
-                <td><%= company.vertical_markets.pluck(:name).join(' | ') -%></td>
+                <td>
+                  <% company.vertical_markets.each do |vm| -%>
+                    <span class="badge badge-primary"><%= vm.name -%></span>
+                  <% end -%>
+                </td>
                 <% if policy(Company).approve? %>
                 <td>
                   <% if company.approved_at.nil? -%>

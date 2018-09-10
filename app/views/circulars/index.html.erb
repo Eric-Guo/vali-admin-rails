@@ -26,7 +26,11 @@
               <% @circulars.each do |circular| -%>
               <tr>
                 <td><%= circular.title -%></td>
-                <td><%= circular.vertical_markets.pluck(:name).join(' | ') -%></td>
+                <td>
+                  <% circular.vertical_markets.each do |vm| -%>
+                    <span class="badge badge-primary"><%= vm.name -%></span>
+                  <% end -%>
+                </td>
                 <td><%= circular.body -%></td>
                 <td>
                   <%= link_to t('circular.delete'), circular_path(circular), method: :delete, class: 'btn btn-danger btn-xs' -%>
