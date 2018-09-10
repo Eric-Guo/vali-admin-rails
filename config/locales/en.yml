@@ -57,6 +57,7 @@ en:
     created_at: "Created at"
   company:
     name: "Company name"
+    rank: "Rank"
     city: "Company city"
     district: "District"
     address: "Address"

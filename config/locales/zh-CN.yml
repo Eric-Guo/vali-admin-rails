@@ -57,6 +57,7 @@ zh-CN:
     created_at: "创建日期"
   company:
     name: "公司全称"
+    rank: "级别"
     city: "城市"
     district: "区／县"
     address: "联系地址"

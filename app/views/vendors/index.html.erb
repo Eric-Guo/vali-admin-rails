@@ -36,7 +36,11 @@
                   <br />
                   <%= user.email -%>
                 </td>
-                <td><%= user.companies.pluck(:name).to_sentence -%></td>
+                <td>
+                  <% user.companies.each do |company| -%>
+                    <p><%= company.name -%><span class="badge badge-primary"><%= company.rank -%></span></p>
+                  <% end -%>
+                </td>
                 <td>
                   <% user.vertical_markets.each do |vm| -%>
                     <span class="badge badge-primary"><%= vm.name -%></span>
