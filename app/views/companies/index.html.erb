@@ -16,6 +16,7 @@
           <table class="table table-hover table-bordered" id="companies-table">
             <thead>
               <tr>
+                <th><%= t('company.created_at') -%></th>
                 <th><%= t('company.name') -%></th>
                 <th><%= t('company.address') -%></th>
                 <th><%= t('company.district') -%></th>
@@ -28,6 +29,7 @@
             <tbody>
               <% @companies.each do |company| -%>
               <tr>
+                <td><%= company.created_at.to_date -%></td>
                 <td><%= company.name -%></td>
                 <td><%= company.address -%></td>
                 <td><%= company.city -%> <%= company.district -%></td>
