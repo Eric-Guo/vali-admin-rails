@@ -15,7 +15,8 @@ class UserPolicy < ApplicationPolicy
         scope.joins(:company_users).where(company_users: { company_id: user_managed_company_ids })
       elsif user.first_level_vendor?
         user_belongs_to_company_ids = user.companies.pluck(:id)
-        user_managed_company_ids = Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)
+        user_managed_company_ids = user_belongs_to_company_ids +
+                                   Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)
         scope.joins(:company_users).where(company_users: { company_id: user_managed_company_ids })
       else
         scope.none

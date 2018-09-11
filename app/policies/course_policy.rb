@@ -36,7 +36,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def select_company_changed?
-    internal_user?
+    internal_user? || first_level_vendor?
   end
 
   def delete_trainee?
