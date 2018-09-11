@@ -57,6 +57,8 @@ class UserPolicy < ApplicationPolicy
       ActionController::Base.helpers.content_tag :p, '系统管理员', class: 'app-sidebar__user-designation'
     elsif user.admined_vm.present?
       ActionController::Base.helpers.content_tag :p, "#{user.admined_vm.name}管理员", class: 'app-sidebar__user-designation'
+    else
+      ActionController::Base.helpers.content_tag :p, "#{user.companies.pluck(:name).to_sentence}管理", class: 'app-sidebar__user-designation'
     end
   end
 end
