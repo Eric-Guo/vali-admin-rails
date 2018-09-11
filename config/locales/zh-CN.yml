@@ -107,7 +107,7 @@ zh-CN:
             password:
               blank: "密码为空"
             base:
-              in_complete_company_registration: "公司注册信息不完全"
+              in_complete_company_registration: "公司注册信息不完全或者公司名已经存在。"
     models:
       user: "用户"
   form:
