@@ -9,10 +9,12 @@ class CompanyRegistration
 
   def save
     return false unless valid?
+    return false if Company.find_by(name: co_name).present?
 
-    company = Company.find_or_create_by(name: co_name, city: city) do |co|
+    company = Company.find_or_create_by(name: co_name) do |co|
       co.district = district
       co.address = address
+      co.city = city
       co.rank = 1
     end
     CompanyUser.find_or_create_by!(company: company, user: @user)
