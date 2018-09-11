@@ -107,7 +107,7 @@ en:
             password:
               blank: "Password is blank"
             base:
-              in_complete_company_registration: "In complete company registration"
+              in_complete_company_registration: "In complete company registration or company name exist already."
     models:
       user: "User"
   form:
