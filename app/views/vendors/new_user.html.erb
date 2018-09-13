@@ -18,21 +18,8 @@
                 <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Enter email address', class: 'form-control col-md-8' %>
               </div>
             </div>
-            <div class="form-group row">
-              <label class="control-label col-md-5"><%= t('user.password') -%></label>
-              <div class="col-md-7">
-                <%= f.password_field :password, autocomplete: 'off', class: 'form-control col-md-8' %>
-                <% if @minimum_password_length %>
-                  <em><%= @minimum_password_length %> <%= t('user.characters_minimum') -%></em>
-                <% end %>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="control-label col-md-5"><%= t('user.password_confirmation') -%></label>
-              <div class="col-md-7">
-                <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control col-md-8' %>
-              </div>
-            </div>
+            <%= f.hidden_field :password, value: @new_user_random_password -%>
+            <%= f.hidden_field :password_confirmation, value: @new_user_random_password -%>
             <div class="form-group row">
               <label class="control-label col-md-5"><%= t('user.name') -%></label>
               <div class="col-md-7">
