@@ -8,16 +8,16 @@ class CompaniesController < ApplicationController
     @companies = policy_scope(Company)
   end
 
-  def new_user
+  def new_2nd_vendor
     @user = User.new
     authorize @user
   end
 
-  def create_user
+  def create_2nd_vendor
     @user = Company2ndRegistration.new user_params
     authorize @user
     if @user.save
-      redirect_to new_user_companies_path, notice: "User #{@user.name} created."
+      redirect_to new_2nd_vendor_companies_path, notice: "User #{@user.name} created."
     else
       flash[:alert] = @user.errors.full_messages.to_sentence
       render :new_user

@@ -15,8 +15,8 @@ Rails.application.routes.draw do
       patch :approve
     end
     collection do
-      get :new_user
-      post :create_user
+      get :new_2nd_vendor
+      post :create_2nd_vendor
     end
   end
   resources :courses, except: %i[edit] do
