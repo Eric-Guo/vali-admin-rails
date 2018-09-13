@@ -13,7 +13,7 @@ class VendorsController < ApplicationController
   end
 
   def create_user
-    company = current_user.companies.find user_params[:create_user_via_company_id]
+    company = policy_scope(Company).find user_params[:create_user_via_company_id]
     user = User.create!(user_params)
     CompanyUser.find_or_create_by!(company: company, user: user)
     redirect_to vendors_path, status: :found, notice: 'User created.'
