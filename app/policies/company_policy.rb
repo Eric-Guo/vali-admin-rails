@@ -13,7 +13,10 @@ class CompanyPolicy < ApplicationPolicy
       elsif user.admined_vm.present?
         user.admined_vm.companies
       elsif user.first_level_vendor?
-        user.companies
+        user_belongs_to_company_ids = user.companies.pluck(:id)
+        user_managed_company_ids = user_belongs_to_company_ids +
+                                   Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)
+        scope.where(id: user_managed_company_ids)
       else
         scope.none
       end
