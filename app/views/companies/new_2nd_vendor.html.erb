@@ -1,7 +1,8 @@
 <main class="app-content">
   <div class="row">
     <div class="col-md-8">
-<%= form_with(model: @user, scope: :user, url: create_user_companies_path(current_user), local: true, class: 'login-form') do |f| %>
+
+<%= form_with(model: @user, scope: :user, url: create_2nd_vendor_companies_path(current_user), local: true, class: 'login-form') do |f| %>
       <div class="tile">
         <h3 class="tile-title"><%= t('ui.vendor_2nd_signup') -%></h3>
         <div class="tile-body">

@@ -75,9 +75,9 @@
           <% end %>
         </li>
         <% end -%>
-        <% if policy(Company2ndRegistration).create_user? %>
+        <% if policy(Company2ndRegistration).create_2nd_vendor? %>
         <li>
-          <%= link_to new_user_companies_path, class: "app-menu__item #{params[:controller] == 'companies' && params[:action] == 'new_user' ? 'active' : ''}" do %>
+          <%= link_to new_2nd_vendor_companies_path, class: "app-menu__item #{params[:controller] == 'companies' && params[:action] == 'new_user' ? 'active' : ''}" do %>
             <i class="app-menu__icon fa fa-user-plus"></i><span class="app-menu__label"><%= t('ui.vendor_2nd_signup') -%></span>
           <% end %>
         </li>
