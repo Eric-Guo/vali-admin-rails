@@ -15,9 +15,10 @@ class Company2ndRegistration
     @user.save(validate: false)
     @user.lock_access!
 
-    company = Company.find_or_create_by(name: co_name, city: city) do |co|
+    company = Company.find_or_create_by(name: co_name) do |co|
       co.district = district
       co.address = address
+      co.city = city
       co.managed_by_company_id = create_user_via_company_id
     end
     CompanyUser.find_or_create_by!(company: company, user: @user)
