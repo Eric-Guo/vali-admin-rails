@@ -1,4 +1,4 @@
-<main class="app-content">
+<main class="app-content app-content-bg">
   <div class="app-title">
     <div>
       <h1><i class="fa fa-list-ol"></i>&nbsp;&nbsp;<%= t('ui.vendor_list') -%></h1>
@@ -11,8 +11,8 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="tile">
-        <div class="tile-body">
+<!--       <div class="tile">
+        <div class="tile-body"> -->
           <table class="table table-hover table-bordered" id="users-table">
             <thead>
               <tr>
@@ -47,14 +47,14 @@
                   <% end -%>
                 </td>
                 <td>
-                  <%= link_to t('company.add_user'), new_user_vendor_path(user, company_ids: user.companies.pluck(:id)), class: 'btn btn-success btn-xs' -%>
+                  <%= link_to t('company.add_user'), new_user_vendor_path(user, company_ids: user.companies.pluck(:id)), class: 'btn btn-success btn-sm' -%>
                 </td>
               </tr>
               <% end -%>
             </tbody>
           </table>
-        </div>
-      </div>
+<!--         </div>
+      </div> -->
     </div>
   </div>
 </main>

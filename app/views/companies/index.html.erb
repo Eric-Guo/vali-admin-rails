@@ -1,4 +1,4 @@
-<main class="app-content">
+<main class="app-content app-content-bg">
   <div class="app-title">
     <div>
       <h1><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<%= t('ui.vendor_companies_list') -%></h1>
@@ -11,8 +11,8 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="tile">
-        <div class="tile-body">
+<!--       <div class="tile">
+        <div class="tile-body"> -->
           <table class="table table-hover table-bordered" id="companies-table">
             <thead>
               <tr>
@@ -43,7 +43,7 @@
                 <% if policy(Company).approve? %>
                 <td>
                   <% if company.approved_at.nil? -%>
-                    <%= link_to t('company.approve'), approve_company_path(company), method: :patch, class: 'btn btn-success btn-xs' -%>
+                    <%= link_to t('company.approve'), approve_company_path(company), method: :patch, class: 'btn btn-success btn-sm' -%>
                   <% end -%>
                 </td>
                 <% end -%>
@@ -51,8 +51,8 @@
               <% end -%>
             </tbody>
           </table>
-        </div>
-      </div>
+<!--         </div>
+      </div> -->
     </div>
   </div>
 </main>

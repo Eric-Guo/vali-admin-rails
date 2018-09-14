@@ -1,4 +1,4 @@
-<main class="app-content">
+<main class="app-content app-content-bg">
   <div class="app-title">
     <div>
       <h1><i class="fa fa-calendar"></i>&nbsp;&nbsp;<%= t('ui.circular_list') -%></h1>
@@ -11,8 +11,8 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="tile">
-        <div class="tile-body">
+<!--       <div class="tile">
+        <div class="tile-body"> -->
           <table class="table table-hover table-bordered" id="courses-table">
             <thead>
               <tr>
@@ -35,14 +35,14 @@
                 </td>
                 <td><%= circular.body -%></td>
                 <td>
-                  <%= link_to t('circular.delete'), circular_path(circular), method: :delete, class: 'btn btn-danger btn-xs' -%>
+                  <%= link_to t('circular.delete'), circular_path(circular), method: :delete, class: 'btn btn-danger btn-sm' -%>
                 </td>
               </tr>
               <% end -%>
             </tbody>
           </table>
-        </div>
-      </div>
+<!--         </div>
+      </div> -->
     </div>
   </div>
 </main>
