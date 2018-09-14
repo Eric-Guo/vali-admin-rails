@@ -7,14 +7,14 @@
         <div class="tile-body">
           <form class="form-horizontal">
             <div class="form-group row">
-              <label class="control-label col-md-4"><%= t('circular.title') -%></label>
+              <label class="control-label col-md-3"><%= t('circular.title') -%></label>
               <div class="col-md-8">
-                <%= f.text_field :title, class: 'form-control col-md-8' %>
+                <%= f.text_field :title, class: 'form-control col-md-10' %>
               </div>
             </div>
             <div class="form-group row">
               <label class="control-label col-md-3"><%= t('vertical_market.title') -%></label>
-              <div class="col-md-9">
+              <div class="col-md-8">
   <%= f.select :vertical_market_ids, policy_scope(VerticalMarket).pluck(:name, :id), {}, id: 'circular-vertical-markets-select', class: 'form-control col-md-9', multiple: true %>
               </div>
             </div>
