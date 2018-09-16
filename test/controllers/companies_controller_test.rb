@@ -3,7 +3,7 @@ require 'test_helper'
 class CompaniesControllerTest < ActionDispatch::IntegrationTest
   test 'should show index if sign in' do
     sign_in users(:shin)
-    post create_user_companies_url, params: { user:
+    post create_2nd_vendor_companies_url, params: { user:
       { email: '2nd@company.com', name: '金无命', title: '剑客',
         phone: '13311825138', co_name: '金钱帮', city: '上海',
         district: '杨浦', address: '山庄', vm_ids: [vertical_markets(:akg).id, vertical_markets(:amx).id],
