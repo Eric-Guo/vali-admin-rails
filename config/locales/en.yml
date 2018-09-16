@@ -19,6 +19,7 @@ en:
     training_user_rsvp: "Attend & RSVP"
     training_user_signin: "Sign in first then RSVP"
     training_user_manage: "Training RSVP"
+    training_user_full: "Training capacity full"
     training_user_end: "Training end"
     no_access_list: "Please contact the administrator to gain access to this list."
     list_all_companies: "Below list all companies."
