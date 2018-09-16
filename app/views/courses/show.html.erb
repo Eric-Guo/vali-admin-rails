@@ -15,7 +15,7 @@
       <div class="tile">
         <h3 class="tile-title">
           <span class="badge badge-info"><%= t('course.status.title') -%>: <%= @course.status -%></span>
-          <span class="badge badge-secondary"><%= t('course.rsvp_count') -%>: <%= @course.users.count -%></span>
+          <span class="badge badge-secondary"><%= t('course.rsvp_count') -%>: <%= @course_users.count -%></span>
         </h3>
         <div class="tile-body">
           <h5>
@@ -38,7 +38,7 @@
             </div>
           </form>
           <%= render partial: 'add_user_to_table', locals: { course: @course, users: @users } %>
-          <%= render partial: 'course_trainees_table', locals: { course: @course } %>
+          <%= render partial: 'course_trainees_table', locals: { course: @course, users: @course_users } %>
         </div>
       </div>
     </div>
