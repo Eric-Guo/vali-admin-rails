@@ -25,6 +25,9 @@ zh-CN:
     list_unlocked_managed_user: "下表列出了%{managed}代理商"
     list_locked_managed_user: "下表列出了%{managed}锁定的代理商"
     admin_action: "管理员操作"
+    settings: "设置"
+    profile: "档案"
+    logout: "登出"
   user:
     username: "用户名"
     name: "姓名"

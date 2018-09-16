@@ -25,6 +25,9 @@ en:
     list_unlocked_managed_user: "Below list the %{managed} vendor list"
     list_locked_managed_user: "Below list the %{managed} locked vendor list"
     admin_action: "Admin action"
+    settings: "Settings"
+    profile: "Profile"
+    logout: "Logout"
   user:
     username: "Username"
     name: "Name"
