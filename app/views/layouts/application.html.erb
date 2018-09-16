@@ -26,17 +26,17 @@
             <ul class="dropdown-menu settings-menu dropdown-menu-right">
               <li>
                 <%= link_to edit_user_registration_path, class: 'dropdown-item' do -%>
-                  <i class="fa fa-cog fa-lg"></i> Settings
+                  <i class="fa fa-cog fa-lg"></i> <%= t('ui.settings') -%>
                 <% end %>
               </li>
               <li>
                 <%= link_to edit_user_registration_path, class: 'dropdown-item' do -%>
-                  <i class="fa fa-user fa-lg"></i> Profile
+                  <i class="fa fa-user fa-lg"></i> <%= t('ui.profile') -%>
                 <% end %>
               </li>
               <li>
                 <%= link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do %>
-                  <i class="fa fa-sign-out fa-lg"></i> Logout
+                  <i class="fa fa-sign-out fa-lg"></i> <%= t('ui.logout') -%>
                 <% end %>
               </li>
             </ul>
