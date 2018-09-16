@@ -25,7 +25,11 @@
               <% if current_user.nil? %>
                 <a class="btn btn-primary" href="<%= new_user_session_path -%>" role="button"><%= t('ui.training_user_signin') -%></a>
               <% elsif policy(course).update? %>
-                <a class="btn btn-primary" href="<%= course_path(course) -%>" role="button"><%= t('ui.training_user_manage') -%></a>
+                <% if course.status == I18n.t('course.status.end') -%>
+                  <a class="btn btn-secondary disabled" href="<%= course_path(course) -%>" role="button"><%= t('ui.training_user_end') -%></a>
+                <% else -%>
+                  <a class="btn btn-primary" href="<%= course_path(course) -%>" role="button"><%= t('ui.training_user_manage') -%></a>
+                <% end %>
               <% elsif course.users.exists?(current_user.id) -%>
                 <a class="btn btn-primary disabled" href="#" role="button"><i class="fa fa-sign-in"></i><%= t('ui.training_user_exist') -%></a>
               <% else -%>
@@ -34,7 +38,6 @@
                 <% end %>
               <% end -%>
               <a class="btn btn-secondary disabled" href="<%= course_path(course) -%>" role="button"><%= "报名已满" -%></a>
-              <a class="btn btn-secondary disabled" href="<%= course_path(course) -%>" role="button"><%= "结束报名" -%></a>
 
             </div>
           </div>
