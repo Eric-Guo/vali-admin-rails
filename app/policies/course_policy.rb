@@ -40,6 +40,6 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def delete_trainee?
-    internal_user?
+    internal_user? || first_level_vendor?
   end
 end
