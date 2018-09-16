@@ -4,7 +4,7 @@ class VendorsController < ApplicationController
   def index
     authorize User
     @vendor_list_description = policy(User).vendor_unlocked_list_description
-    @users = policy_scope(User)
+    @users = policy_scope(User).includes(:companies, :vertical_markets)
   end
 
   def new_user
