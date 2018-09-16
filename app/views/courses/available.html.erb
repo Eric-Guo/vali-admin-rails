@@ -33,6 +33,10 @@
                   <i class="fa fa-sign-in"></i><%= t('ui.training_user_rsvp') -%>
                 <% end %>
               <% end -%>
+              <a class="btn btn-primary" href="<%= course_path(course) -%>" role="button"><%= "报名培训" -%></a>
+              <a class="btn btn-secondary disabled" href="<%= course_path(course) -%>" role="button"><%= "报名已满" -%></a>
+              <a class="btn btn-secondary disabled" href="<%= course_path(course) -%>" role="button"><%= "结束报名" -%></a>
+
             </div>
           </div>
         </div>
