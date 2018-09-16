@@ -4,6 +4,6 @@ class HomeController < ApplicationController
 
   def index
     authorize Circular, :public_home?
-    @circulars = Circular.order(id: :desc)
+    @circulars = Circular.order(id: :desc).includes(:vertical_markets)
   end
 end
