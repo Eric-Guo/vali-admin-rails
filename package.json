@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "^5.4.2",
     "core-js": "3",
+    "datatables": "^1.10.18",
     "stimulus": "^2.0.0",
     "vali-admin": "^2.4.1"
   },
