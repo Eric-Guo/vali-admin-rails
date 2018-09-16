@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
   def index
     authorize Company
     @companies_list_description = policy(Company).companies_list_description
-    @companies = policy_scope(Company)
+    @companies = policy_scope(Company).includes(:vertical_markets)
   end
 
   def new_2nd_vendor
