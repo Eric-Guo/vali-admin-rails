@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
 
   def index
     authorize Course
-    @courses = policy_scope(Course)
+    @courses = policy_scope(Course).includes(:vertical_markets)
   end
 
   def show
@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
 
   def available
     authorize Course
-    @courses = policy_scope(Course).available
+    @courses = policy_scope(Course).includes(:vertical_markets).available
   end
 
   def new
