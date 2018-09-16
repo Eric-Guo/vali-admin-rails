@@ -49,10 +49,19 @@ document.addEventListener("turbolinks:load", function() {
     return false;
   });
 
-  $('#users-table').DataTable();
-  $('#companies-table').DataTable();
-  $('#courses-table').DataTable();
-  $('#course-trainees-table').DataTable();
+  if ($("#users-table_wrapper").length == 0) {
+    $('#users-table').DataTable();
+  }
+  if ($("#companies-table_wrapper").length == 0) {
+    $('#companies-table').DataTable();
+  }
+  if ($("#courses-table_wrapper").length == 0) {
+    $('#courses-table').DataTable();
+  }
+  if ($("#course-trainees-table_wrapper").length == 0) {
+    $('#course-trainees-table').DataTable();
+  }
+
   $('#circular-vertical-markets-select').select2();
   $('#course-vertical-markets-select').select2();
   $('#to-filter-company-id').select2();
