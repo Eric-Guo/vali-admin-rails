@@ -17,7 +17,7 @@ zh-CN:
     training_user_add: "培训报名"
     training_user_exist: "已报名"
     training_user_rsvp: "报名此培训"
-    training_user_manage: "查看报名情况"
+    training_user_manage: "报名培训"
     training_user_signin: "登录后可报名"
     no_access_list: "请联系管理员获得访问此列表权限"
     list_all_companies: "下表列出了所有的代理商公司"
