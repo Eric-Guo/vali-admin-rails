@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_and_authorize_company, only: %i[approve freeze]
   after_action :verify_authorized
 
   def index
@@ -25,8 +26,6 @@ class CompaniesController < ApplicationController
   end
 
   def approve
-    @company = policy_scope(Company).find params[:id]
-    authorize @company
     @company.update_attributes(approved_at: Time.current)
     @company.users.map(&:unlock_access!)
     @company.users.each do |user|
@@ -35,7 +34,18 @@ class CompaniesController < ApplicationController
     redirect_to companies_path, status: :found, notice: "Company #{@company.name} approved."
   end
 
+  def freeze
+    @company.update_attributes(approved_at: nil)
+    @company.users.map(&:lock_access!)
+    redirect_to companies_path, status: :found, notice: "Company #{@company.name} freezen."
+  end
+
   private
+
+  def set_and_authorize_company
+    @company = policy_scope(Company).find params[:id]
+    authorize @company
+  end
 
   def user_params
     @user_params ||= params.require(:user).permit(*(Company2ndRegistration::FORM_FIELDS - [:vm_ids] + [vm_ids: []]))
