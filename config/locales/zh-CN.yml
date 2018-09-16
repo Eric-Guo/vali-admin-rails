@@ -41,7 +41,7 @@ zh-CN:
     password: "密码"
     password_confirmation: "确认密码"
     sign_in: "登录"
-    sign_up: "供应商注册"
+    sign_up: "经销商注册"
     stay_signed_in: "保持登录"
     forgot_password: "忘记密码 ？"
     back_to_login: "回到登入"

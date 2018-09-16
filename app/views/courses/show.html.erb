@@ -28,7 +28,7 @@
           <%= simple_format @course.body -%>
           <form class="form-horizontal">
             <div class="form-group row">
-              <label class="control-label col-md-4"><%= t('course.company') -%></label>
+              <label class="control-label col-md-3"><%= t('course.company') -%></label>
               <div class="col-md-8">
                 <%= select_tag :company_id, options_from_collection_for_select(policy_scope(Company), 'id', 'name'),
                   class: 'form-control col-md-8', id: 'to-filter-company-id', include_blank: true,
