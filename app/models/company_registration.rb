@@ -28,6 +28,6 @@ class CompanyRegistration
   private
 
   def vm_ids_at_least_one
-    errors.add(:base, I18n.t('user.at_least_one_vm')) if vm_ids.reject(&:blank?).blank?
+    errors.add(:base, I18n.t('user.at_least_one_vm')) if vm_ids&.reject(&:blank?)&.blank?
   end
 end
