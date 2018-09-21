@@ -64,7 +64,7 @@
             <div class="form-group row">
               <label class="control-label col-md-5"><%= t('company.vm_name') -%></label>
               <div class="col-md-7">
-                <%= f.collection_check_boxes :vm_ids, VerticalMarket.all, :id, :name do |b| %>
+                <%= f.collection_check_boxes :vm_ids, current_user.vertical_markets, :id, :name do |b| %>
                   <div class='checkbox'>
                     <label>
                       <%= b.check_box -%>
