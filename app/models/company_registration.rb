@@ -6,6 +6,7 @@ class CompanyRegistration
   attr_accessor(*COMPANY_REG_FIELDS)
   validates_presence_of(*COMPANY_REG_FIELDS)
   attr_writer :user
+  validate :vm_ids_at_least_one
 
   def save
     return false unless valid?
@@ -22,5 +23,11 @@ class CompanyRegistration
       VerticalMarketCompany.find_or_create_by!(company: company, vertical_market_id: vm_id)
     end
     true
+  end
+
+  private
+
+  def vm_ids_at_least_one
+    errors.add(:base, I18n.t('user.at_least_one_vm')) if vm_ids.reject(&:blank?).blank?
   end
 end
