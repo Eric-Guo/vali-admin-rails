@@ -11,50 +11,46 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-<!--       <div class="tile">
-        <div class="tile-body"> -->
-          <table class="table table-hover table-bordered" id="companies-table">
-            <thead>
-              <tr>
-                <th><%= t('company.created_at') -%></th>
-                <th><%= t('company.name') -%></th>
-                <th><%= t('company.rank') -%></th>
-                <th><%= t('company.address') -%></th>
-                <th><%= t('company.district') -%></th>
-                <th><%= t('company.belongs_to_vertical_market') -%></th>
-                <% if policy(Company).approve? %>
-                  <th><%= t('ui.admin_action') -%></th>
-                <% end -%>
-              </tr>
-            </thead>
-            <tbody>
-              <% @companies.each do |company| -%>
-              <tr>
-                <td><%= company.created_at.to_date -%></td>
-                <td><%= company.name -%></td>
-                <td><%= company.rank -%></td>
-                <td><%= company.address -%></td>
-                <td><%= company.city -%> <%= company.district -%></td>
-                <td>
-                  <% company.vertical_markets.each do |vm| -%>
-                    <span class="badge badge-primary"><%= vm.name -%></span>
-                  <% end -%>
-                </td>
-                <% if policy(Company).approve? %>
-                <td>
-                  <% if company.approved_at.nil? -%>
-                    <%= link_to t('company.approve'), approve_company_path(company), method: :patch, class: 'btn btn-success btn-sm' -%>
-                  <% else %>
-                    <%= link_to t('company.freeze'), freeze_company_path(company), method: :patch, class: 'btn btn-danger btn-sm' -%>
-                  <% end -%>
-                </td>
-                <% end -%>
-              </tr>
+      <table class="table table-hover table-bordered" id="companies-table">
+        <thead>
+          <tr>
+            <th><%= t('company.created_at') -%></th>
+            <th><%= t('company.name') -%></th>
+            <th><%= t('company.rank') -%></th>
+            <th><%= t('company.address') -%></th>
+            <th><%= t('company.district') -%></th>
+            <th><%= t('company.belongs_to_vertical_market') -%></th>
+            <% if policy(Company).approve? %>
+              <th><%= t('ui.admin_action') -%></th>
+            <% end -%>
+          </tr>
+        </thead>
+        <tbody>
+          <% @companies.each do |company| -%>
+          <tr>
+            <td><%= company.created_at.to_date -%></td>
+            <td><%= company.name -%></td>
+            <td><%= company.rank -%></td>
+            <td><%= company.address -%></td>
+            <td><%= company.city -%> <%= company.district -%></td>
+            <td>
+              <% company.vertical_markets.each do |vm| -%>
+                <span class="badge badge-primary"><%= vm.name -%></span>
               <% end -%>
-            </tbody>
-          </table>
-<!--         </div>
-      </div> -->
+            </td>
+            <% if policy(Company).approve? %>
+            <td>
+              <% if company.approved_at.nil? -%>
+                <%= link_to t('company.approve'), approve_company_path(company), method: :patch, class: 'btn btn-success btn-sm' -%>
+              <% else %>
+                <%= link_to t('company.freeze'), freeze_company_path(company), method: :patch, class: 'btn btn-danger btn-sm' -%>
+              <% end -%>
+            </td>
+            <% end -%>
+          </tr>
+          <% end -%>
+        </tbody>
+      </table>
     </div>
   </div>
 </main>
