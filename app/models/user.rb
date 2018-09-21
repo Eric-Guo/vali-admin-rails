@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def super_admin?
-    email == 'eric@cloud-mes.com'
+    email == 'johnson.yang@harman.com'
   end
 
   def first_level_vendor?

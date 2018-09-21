@@ -1,16 +1,20 @@
 ---
 akg_mi:
   name: AKG/MI
-  admin: ruby
+  admin: steve_gong
 
 install_sound:
   name: Install Sound
+  admin: sam_xu
 
 amx:
   name: AMX
+  admin: robert_hu
 
 martin_lighting:
   name: Martin Lighting
+  admin: devin_liu
 
 jbl_entertainment:
   name: JBL Entertainment
+  admin: yin_chen
