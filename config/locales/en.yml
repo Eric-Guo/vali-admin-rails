@@ -59,6 +59,7 @@ en:
     belongs_to_vertical_market: "Belongs to Vertical Market"
     belongs_to_company: "Belongs to Company"
     email_duplicate: "Duplicated email found"
+    at_least_one_vm: "Must select at least one VM"
     created_at: "Created at"
   company:
     name: "Company name"

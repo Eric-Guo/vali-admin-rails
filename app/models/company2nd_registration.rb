@@ -7,6 +7,7 @@ class Company2ndRegistration
   validates_presence_of(*FORM_FIELDS)
   attr_writer :user
   validate :email_not_exist_in_user
+  validate :vm_ids_at_least_one
 
   def save
     return false unless valid?
@@ -30,5 +31,9 @@ class Company2ndRegistration
 
   def email_not_exist_in_user
     errors.add(:email, I18n.t('user.email_duplicate')) if User.find_by(email: email).present?
+  end
+
+  def vm_ids_at_least_one
+    errors.add(:base, I18n.t('user.at_least_one_vm')) if vm_ids.reject(&:blank?).blank?
   end
 end

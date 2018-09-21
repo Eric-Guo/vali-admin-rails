@@ -21,7 +21,7 @@ class CompaniesController < ApplicationController
       redirect_to new_2nd_vendor_companies_path, notice: "User #{@user.name} created."
     else
       flash[:alert] = @user.errors.full_messages.to_sentence
-      render :new_user
+      render :new_2nd_vendor
     end
   end
 
