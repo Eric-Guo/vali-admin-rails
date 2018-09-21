@@ -13,7 +13,7 @@ eric:
 steve_gong:
   name: "Steve Gong"
   title: "AKG/MI Admin"
-  email: "Steve.Gong@harman.com"
+  email: "steve.gong@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -33,7 +33,7 @@ sam_xu:
 robert_hu:
   name: "Robert Hu"
   title: "AMX Admin"
-  email: "Robert.hu@harman.com"
+  email: "robert.hu@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -43,7 +43,7 @@ robert_hu:
 devin_liu:
   name: "Devin Liu"
   title: "Marting lighting Admin"
-  email: "Dunyan.liu@harman.com"
+  email: "dunyan.liu@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -53,7 +53,7 @@ devin_liu:
 yin_chen:
   name: "Yin Chen"
   title: "JBL entertainment Admin"
-  email: "Yin.chen@harman.com"
+  email: "yin.chen@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
