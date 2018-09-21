@@ -9,14 +9,54 @@ eric:
   phone: "+"
   confirmed_at: <%= Time.zone.now %>
 
-# Harman VM admin
-ruby:
-  name: "过纾逸"
-  title: "宝宝"
-  email: "rubygsy@icloud.com"
+# AKG/MI VM admin
+steve_gong:
+  name: "Steve Gong"
+  title: "AKG/MI Admin"
+  email: "Steve.Gong@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
-  phone: "+8613901862171"
+  phone: "+"
+  confirmed_at: <%= Time.zone.now %>
+
+# Install sound VM admin
+sam_xu:
+  name: "Steve Gong"
+  title: "Install sound Admin"
+  email: "lingxiao.xu@harman.com"
+  # password: 123456
+  encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
+  phone: "+"
+  confirmed_at: <%= Time.zone.now %>
+
+# AMX VM admin
+robert_hu:
+  name: "Robert Hu"
+  title: "AMX Admin"
+  email: "Robert.hu@harman.com"
+  # password: 123456
+  encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
+  phone: "+"
+  confirmed_at: <%= Time.zone.now %>
+
+# Marting lighting VM admin
+devin_liu:
+  name: "Devin Liu"
+  title: "Marting lighting Admin"
+  email: "Dunyan.liu@harman.com"
+  # password: 123456
+  encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
+  phone: "+"
+  confirmed_at: <%= Time.zone.now %>
+
+# JBL entertainment VM admin
+yin_chen:
+  name: "Yin Chen"
+  title: "JBL entertainment Admin"
+  email: "Yin.chen@harman.com"
+  # password: 123456
+  encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
+  phone: "+"
   confirmed_at: <%= Time.zone.now %>
 
 # 1st level vendor user

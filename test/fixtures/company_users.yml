@@ -7,7 +7,7 @@ harman_eric:
 # Harman VM admin
 jiefu_ruby:
   company: harman
-  user: ruby
+  user: steve_gong
 
 # 1st level vendor user
 jiefu_shin:
