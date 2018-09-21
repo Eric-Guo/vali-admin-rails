@@ -31,7 +31,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def index?
-    internal_user?
+    user&.super_admin?
   end
 
   def show?
@@ -47,11 +47,11 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def new?
-    internal_user?
+    user&.super_admin?
   end
 
   def create?
-    internal_user?
+    user&.super_admin?
   end
 
   def update?
@@ -59,7 +59,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def destroy?
-    internal_user?
+    user&.super_admin?
   end
 
   def publish?
