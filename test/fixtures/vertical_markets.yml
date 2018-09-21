@@ -1,16 +1,16 @@
 ---
 akg_mi:
-  name: AKG & MI
+  name: AKG/MI
   admin: ruby
-
-amx:
-  name: AMX
-
-jbl_entertainment:
-  name: JBL Entertainment
 
 install_sound:
   name: Install Sound
 
+amx:
+  name: AMX
+
 martin_lighting:
   name: Martin Lighting
+
+jbl_entertainment:
+  name: JBL Entertainment

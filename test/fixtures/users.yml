@@ -1,12 +1,12 @@
 ---
 # Harman Admin
 eric:
-  name: "Eric Guo"
-  title: "Rails developer"
-  email: "eric@cloud-mes.com"
+  name: "Johnson Yang"
+  title: "Harman Admin"
+  email: "johnson.yang@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
-  phone: "+8613901862171"
+  phone: "+"
   confirmed_at: <%= Time.zone.now %>
 
 # Harman VM admin
