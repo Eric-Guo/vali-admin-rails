@@ -49,4 +49,15 @@ bin/rake
 bin/rails s
 ```
 
+## Refresh postgresql DB
+
+
+```bash
+psql -U postgres
+DROP DATABASE harman_vendor_production;
+CREATE DATABASE harman_vendor_production WITH ENCODING='UTF8';
+createuser deployer --pwprompt
+ALTER ROLE deployer CREATEDB;
+bundle exec rake db:migrate
+```
 
