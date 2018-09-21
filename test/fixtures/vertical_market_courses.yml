@@ -1,6 +1,6 @@
 ---
 svsi_course_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   course: svsi_course
 
 svsi_course_install_sound:
@@ -8,7 +8,7 @@ svsi_course_install_sound:
   course: svsi_course
 
 wine_bar_course_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   course: wine_bar_course
 
 wine_bar_course_install_sound:
@@ -20,7 +20,7 @@ wine_bar_course_jbl_entertainment:
   course: wine_bar_course
 
 martin_lighting_course_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   course: martin_lighting_course
 
 martin_lighting_course_amx:
@@ -28,5 +28,5 @@ martin_lighting_course_amx:
   course: martin_lighting_course
 
 audio_architecture_course_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   course: audio_architecture_course

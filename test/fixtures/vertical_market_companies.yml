@@ -1,6 +1,6 @@
 ---
 harman_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   company: harman
 
 harman_install_sound:
@@ -8,7 +8,7 @@ harman_install_sound:
   company: harman
 
 51fund_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   company: 51fund
 
 51fund_install_sound:
@@ -20,7 +20,7 @@ harman_install_sound:
   company: 51fund
 
 citicprufunds_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   company: jiefu
 
 citicprufunds_amx:
@@ -28,5 +28,5 @@ citicprufunds_amx:
   company: jiefu
 
 gbicc_akg:
-  vertical_market: akg
+  vertical_market: akg_mi
   company: gbicc

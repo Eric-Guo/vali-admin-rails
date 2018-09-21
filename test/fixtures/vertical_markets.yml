@@ -1,10 +1,7 @@
 ---
-akg:
-  name: AKG
+akg_mi:
+  name: AKG & MI
   admin: ruby
-
-mi:
-  name: MI
 
 amx:
   name: AMX
