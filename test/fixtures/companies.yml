@@ -13,6 +13,7 @@ jiefu:
   district: 静安
   address: 茂名北路
   rank: 1
+  approved_at: <%= Time.zone.now %>
 
 # Below are all 2nd level vendor
 citicprufunds:
@@ -22,6 +23,7 @@ citicprufunds:
   address: 上海国金中心汇丰银行大楼9层
   rank: 2
   managed_by_company: jiefu
+  approved_at: <%= Time.zone.now %>
 
 51fund:
   name: 上投摩根基金管理有限公司
