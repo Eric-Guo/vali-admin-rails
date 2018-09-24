@@ -31,12 +31,20 @@ class CompaniesController < ApplicationController
     @company.users.each do |user|
       user.update_attributes(confirmed_at: Time.current)
     end
+    if current_user.admined_vm.present?
+      vmc = @company.vertical_market_companies.find_by(vertical_market_id: current_user.admined_vm.id)
+      vmc.update_attributes(approved_at: Time.current)
+    end
     redirect_to companies_path, status: :found, notice: "Company #{@company.name} approved."
   end
 
   def freeze
     @company.update_attributes(approved_at: nil)
     @company.users.map(&:lock_access!)
+    if current_user.admined_vm.present?
+      vmc = @company.vertical_market_companies.find_by(vertical_market_id: current_user.admined_vm.id)
+      vmc.update_attributes(approved_at: nil)
+    end
     redirect_to companies_path, status: :found, notice: "Company #{@company.name} freezen."
   end
 
