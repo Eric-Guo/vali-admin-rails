@@ -13,13 +13,15 @@ class CompanyPolicy < ApplicationPolicy
       elsif user.admined_vm.present?
         user_admined_vm_company_ids = user.admined_vm.companies.pluck(:id)
         user_managed_company_ids = user_admined_vm_company_ids +
-                                   Company.where(managed_by_company_id: user_admined_vm_company_ids).pluck(:id)
+                                   Company.where(managed_by_company_id: user_admined_vm_company_ids)
+                                   .joins(:vertical_market_companies).where(vertical_market_companies: {vertical_market_id: user.admined_vm.id})
+                                   .pluck(:id)
         scope.where(id: user_managed_company_ids)
       elsif user.first_level_vendor?
         user_belongs_to_company_ids = user.companies.pluck(:id)
         user_managed_company_ids = user_belongs_to_company_ids +
                                    Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)
-        scope.where(id: user_managed_company_ids)
+        scope.where(id: user_managed_company_ids).joins(:vertical_market_companies).where.not(approved_at: nil).where.not(vertical_market_companies: {approved_at: nil})
       else
         scope.none
       end
