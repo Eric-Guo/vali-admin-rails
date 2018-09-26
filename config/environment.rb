@@ -10,5 +10,6 @@ ActionMailer::Base.smtp_settings = {
   domain: 'cloud-mes.com',
   address: 'smtp.sendgrid.net',
   port: 465,
+  authentication: :plain,
   enable_starttls_auto: true
 }
