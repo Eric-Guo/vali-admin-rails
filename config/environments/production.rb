@@ -66,13 +66,13 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "harman_vendor_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'https://prochina-training.com' }
+  config.action_mailer.default_url_options = { host: 'https://training.harmanpro.com.cn' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     user_name: 'apikey',
     password: Rails.application.credentials.sendgrid_apikey,
     address: 'smtp.sendgrid.net',
-    domain: 'prochina-training.com',
+    domain: 'training.harmanpro.com.cn',
     port: 587,
     authentication: :plain,
     enable_starttls_auto: true
