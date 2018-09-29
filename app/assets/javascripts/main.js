@@ -50,13 +50,13 @@ document.addEventListener("turbolinks:load", function() {
   });
 
   if ($("#users-table_wrapper").length == 0) {
-    $('#users-table').DataTable();
+    $('#users-table').DataTable().order([0, 'desc']).draw();
   }
   if ($("#companies-table_wrapper").length == 0) {
-    $('#companies-table').DataTable();
+    $('#companies-table').DataTable().order([0, 'desc']).draw();
   }
   if ($("#courses-table_wrapper").length == 0) {
-    $('#courses-table').DataTable();
+    $('#courses-table').DataTable().order([0, 'desc']).draw();
   }
   if ($("#course-trainees-table_wrapper").length == 0) {
     $('#course-trainees-table').DataTable();
