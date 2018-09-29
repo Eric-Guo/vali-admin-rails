@@ -20,6 +20,9 @@
               <%= simple_format course.body -%>
               <br />
               <%= t('course.address') -%>: <%= course.address -%>
+              <br />
+              <span class="badge badge-info"><%= t('course.status.title') -%>: <%= course.status -%></span>
+              <span class="badge badge-secondary"><%= t('course.rsvp_count') -%>: <%= current_course_users(course, current_user).count -%></span>
             </div>
             <div class="tile-footer">
               <% if current_user.nil? %>
