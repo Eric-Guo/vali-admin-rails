@@ -8,4 +8,12 @@ module ApplicationHelper
                       resource: resource.class.model_name.human.downcase)
     "#{sentence}#{messages}"
   end
+
+  def current_course_users(course, current_user)
+    if current_user&.super_admin?
+      course.users
+    else
+      course.users.where(id: policy_scope(User).pluck(:id))
+    end
+  end
 end

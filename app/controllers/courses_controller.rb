@@ -1,7 +1,6 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_and_authorize_course, only: %i[show update publish select_company_changed delete_trainee]
-  before_action :set_course_users, only: %i[show update delete_trainee]
   after_action :verify_authorized
 
   def index
@@ -67,14 +66,6 @@ class CoursesController < ApplicationController
   def set_and_authorize_course
     @course = policy_scope(Course).find(params[:id])
     authorize @course
-  end
-
-  def set_course_users
-    @course_users = if current_user&.super_admin?
-      @course.users
-    else
-      @course.users.where(id: policy_scope(User).pluck(:id))
-    end
   end
 
   def course_params
