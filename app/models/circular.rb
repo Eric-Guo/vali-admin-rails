@@ -1,7 +1,7 @@
 class Circular < ApplicationRecord
   has_many :vertical_market_circulars
   has_many :vertical_markets, through: :vertical_market_circulars
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :vertical_market_circulars
 
   def vertical_market_ids
     @vertical_market_ids ||= vertical_markets.pluck(:id)
