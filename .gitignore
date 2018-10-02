@@ -30,6 +30,6 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
-harman_vendor.sublime-workspace
+harman_training.sublime-workspace
 config/database.yml
 /test/reports/TEST-*.xml
