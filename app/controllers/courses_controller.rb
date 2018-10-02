@@ -47,6 +47,9 @@ class CoursesController < ApplicationController
 
   def publish
     @course.update_attributes!(published: true)
+    @course.vertical_market_courses.each do |v|
+      NotificationMailer.with(vertical_market_course: v).new_course_email.deliver_later
+    end
     redirect_to courses_path, status: :found, notice: 'Course published.'
   end
 

@@ -106,6 +106,12 @@ en:
   activerecord:
     errors:
       models:
+        course:
+          attributes:
+            start_time:
+              blank: "Start time is blank"
+            end_time:
+              blank: "End time is blank"
         user:
           attributes:
             email:
