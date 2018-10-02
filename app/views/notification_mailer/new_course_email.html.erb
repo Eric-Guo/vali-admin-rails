@@ -1,0 +1,9 @@
+<h2>
+  <%= @course.title -%>
+</h2>
+
+<h5>开始时间：<%= @course.start_time %></h6>
+<h5>结束时间：<%= @course.end_time %></h6>
+<h6>培训地点：<%= @course.address %></h6>
+
+<%= simple_format @course.body -%>
