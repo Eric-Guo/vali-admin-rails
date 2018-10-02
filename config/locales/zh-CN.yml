@@ -106,6 +106,12 @@ zh-CN:
   activerecord:
     errors:
       models:
+        course:
+          attributes:
+            start_time:
+              blank: "开始时间必填"
+            end_time:
+              blank: "结束时间必填"
         user:
           attributes:
             email:
