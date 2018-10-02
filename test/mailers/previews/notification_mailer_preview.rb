@@ -9,4 +9,9 @@ class NotificationMailerPreview < ActionMailer::Preview
     circular = Circular.find_by(title: '2019年度Rails技术认证培训会')
     NotificationMailer.with(vertical_market_circular: circular.vertical_market_circulars.first).new_circular_email
   end
+
+  def new_course_email
+    course = Course.find_by(title: '酒吧音频系统调音认证培训')
+    NotificationMailer.with(vertical_market_course: course.vertical_market_courses.first).new_course_email
+  end
 end
