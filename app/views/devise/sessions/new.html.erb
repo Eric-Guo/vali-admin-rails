@@ -1,11 +1,6 @@
-
 <section class="login-content">
-  <% unless alert %>
-
-  <% else %>
-    <div class="alert alert-primary" role="alert">
-      <%= alert %>
-    </div>
+  <% if flash[:alert] %>
+    <div class="alert alert-primary"><%= flash[:alert] %></div>
   <% end %>
   <div class="logo">
     <h2>哈曼培训报名系统</h2>
