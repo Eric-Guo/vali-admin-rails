@@ -30,11 +30,6 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to edit_user_registration_path, class: 'dropdown-item' do -%>
-                  <i class="fa fa-user fa-lg"></i> <%= t('ui.profile') -%>
-                <% end %>
-              </li>
-              <li>
                 <%= link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do %>
                   <i class="fa fa-sign-out fa-lg"></i> <%= t('ui.logout') -%>
                 <% end %>
