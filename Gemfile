@@ -1,8 +1,4 @@
-if ENV['USE_OFFICIAL_GEM_SOURCE']
-  source 'https://rubygems.org'
-else
-  source 'https://gems.ruby-china.com'
-end
+source 'https://gems.ruby-china.com'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
