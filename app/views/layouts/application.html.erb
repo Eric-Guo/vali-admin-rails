@@ -54,11 +54,11 @@
     <aside class="app-sidebar">
       <% if current_user.present? %>
         <div class="app-sidebar__user">
-          <img class="app-sidebar__user-avatar" src="<%= current_user.gravatarurl -%>" alt="User Image">
+          <!-- <img class="app-sidebar__user-avatar" src="<%#= current_user.gravatarurl -%>" alt="User Image"> -->
           <div>
-            <p class="app-sidebar__user-name"><%= current_user.name -%></p>
-            <p class="app-sidebar__user-designation"><%= current_user.title -%></p>
-            <%= policy(User).system_role_name -%>
+            <p class="app-sidebar__user-name"><small><%= current_user.name -%></small></p>
+            <p class="app-sidebar__user-designation"><small><%= current_user.title -%></small></p>
+            <small><%= policy(User).system_role_name -%></small>
           </div>
         </div>
       <% end %>

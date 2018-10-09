@@ -1,0 +1,448 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pr",
+				"product"
+			],
+			[
+				"image",
+				"image_tag"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1061,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"upgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: UPGRADE",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"UPG",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 455.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/shin/project/harman_vendor"
+	],
+	"file_history":
+	[
+		"/Users/shin/project/jbl/app/views/products/_product_index_image.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/static_pages/_message_form.html.erb",
+		"/Users/shin/project/serviceschina-harman/config/routes.rb",
+		"/Users/shin/project/serviceschina-harman/app/views/industries/automotive_engineering.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/services/digital_transformation.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/assets/stylesheets/solutions.scss",
+		"/Users/shin/project/serviceschina-harman/app/assets/stylesheets/custom.scss",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/iot.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/end_point.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/ignite.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/cloud.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/infos/index.html.erb",
+		"/Users/shin/project/serviceschina-harman/config/environment.rb",
+		"/Users/shin/project/serviceschina-harman/app/controllers/infos_controller.rb",
+		"/Users/shin/project/serviceschina-harman/Gemfile",
+		"/Users/shin/project/serviceschina-harman/app/views/static_pages/home.html.erb",
+		"/Users/shin/project/jbl/config/routes.rb",
+		"/Users/shin/project/jbl/app/assets/stylesheets/style.css",
+		"/Users/shin/project/jbl/app/views/layouts/_footer.html.erb",
+		"/Users/shin/project/jbl/app/views/static_pages/content.html.erb",
+		"/Users/shin/project/jbl/app/views/products/index.html.erb",
+		"/Users/shin/project/jbl/app/views/static_pages/text2.html.erb",
+		"/Users/shin/project/jbl/app/views/static_pages/home.html.erb",
+		"/Users/shin/project/jbl/app/views/static_pages/text.html.erb",
+		"/Users/shin/project/harman-train/app/views/static_pages/courseuser.html.erb",
+		"/Users/shin/project/jbl/app/views/products/show.html.erb",
+		"/Users/shin/project/jbl/app/controllers/products_controller.rb",
+		"/Users/shin/project/jbl/app/views/layouts/_navbar.html.erb",
+		"/Users/shin/project/jbl/db/schema.rb",
+		"/Users/shin/project/jbl/app/views/products/_product_image.erb",
+		"/Users/shin/project/jbl/app/views/admin/products/edit.html.erb",
+		"/Users/shin/project/jbl/app/views/admin/products/new.html.erb",
+		"/Users/shin/project/jbl/app/views/admin/photos/new.html.erb",
+		"/Users/shin/project/jbl/app/views/admin/photos/show.html.erb",
+		"/Users/shin/project/jbl/app/views/static_pages/all.html.erb",
+		"/Users/shin/project/jbl/app/views/products/_product.json.jbuilder",
+		"/Users/shin/project/serviceschina-harman/app/views/static_pages/contact_us.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/messages/new.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/messages/show.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/messages/index.html.erb",
+		"/Users/shin/project/jbl/app/views/admin/products/index.html.erb",
+		"/Users/shin/project/jbl/app/views/admin/products/show.html.erb",
+		"/Users/shin/project/jbl/app/views/products/show.json.jbuilder",
+		"/Users/shin/project/harman_vendor/app/views/devise/sessions/new.html.erb",
+		"/Users/shin/project/harman_vendor/config/locales/zh-CN.yml",
+		"/Users/shin/project/harman_vendor/app/views/layouts/application.html.erb",
+		"/Users/shin/project/jbl/app/controllers/posts_controller.rb",
+		"/Users/shin/project/jbl/app/views/posts/show.json.jbuilder",
+		"/Users/shin/project/jbl/app/views/posts/index.json.jbuilder",
+		"/Users/shin/project/jbl/app/views/admin/products/show.json.jbuilder",
+		"/Users/shin/project/jbl/app/controllers/admin/products_controller.rb",
+		"/Users/shin/project/jbl/app/controllers/admin/photos_controller.rb",
+		"/Users/shin/project/jbl/app/views/admin/photos/show.json.jbuilder",
+		"/Users/shin/project/jbl/app/views/admin/products/index.json.jbuilder",
+		"/Users/shin/project/jbl/app/views/admin/photos/edit.html.erb",
+		"/Users/shin/project/jbl/app/models/product.rb",
+		"/Users/shin/project/jbl/app/models/photo.rb",
+		"/Users/shin/project/jbl/db/migrate/20180820011427_add_technical_size_to_products.rb",
+		"/Users/shin/project/jbl/app/assets/stylesheets/admin.scss",
+		"/Users/shin/project/jbl/app/helpers/application_helper.rb",
+		"/Users/shin/project/jbl/app/views/admin/photos/index.html.erb",
+		"/Users/shin/project/jbl/app/views/layouts/admin.html.erb",
+		"/Users/shin/project/jbl/db/migrate/20180816034723_add_feature_picture_to_products.rb",
+		"/Users/shin/project/jbl/db/migrate/20180816034450_add_feature_picture_to_products.rb",
+		"/Users/shin/project/jbl/app/uploaders/icon_uploader.rb",
+		"/Users/shin/project/jbl/db/migrate/20180816020854_add_icon_to_products.rb",
+		"/Users/shin/project/jbl/Gemfile",
+		"/Users/shin/project/jbl/app/assets/stylesheets/scaffolds.scss",
+		"/Users/shin/project/jbl/db/seeds.rb",
+		"/Users/shin/project/jbl/db/migrate/20180813090844_create_photos.rb",
+		"/Users/shin/project/jbl/config/initializers/assets.rb",
+		"/Users/shin/project/jbl/app/controllers/admin/application_controller.rb",
+		"/Users/shin/project/jbl/app/views/shared/_error_messages.html.erb",
+		"/Users/shin/project/jbl/app/assets/stylesheets/admin/products.scss",
+		"/Users/shin/project/jbl/db/migrate/20180810061957_create_products.rb",
+		"/Users/shin/project/jbl/app/assets/javascripts/jquery.js",
+		"/Users/shin/project/jbl/app/assets/javascripts/harman.js",
+		"/Users/shin/project/jbl/app/assets/javascripts/application.js",
+		"/Users/shin/project/jbl/app/assets/javascripts/app.js",
+		"/Users/shin/project/jbl/app/views/layouts/application.html.erb",
+		"/Users/shin/project/jbl/config/application.rb",
+		"/Users/shin/project/jbl/app/assets/stylesheets/bootstrap.all.css",
+		"/Users/shin/project/jbl/app/assets/javascripts/underscore.js",
+		"/Users/shin/project/jbl/app/assets/stylesheets/custom.scss",
+		"/Users/shin/project/jbl/app/assets/javascripts/underscore-min.map",
+		"/Users/shin/project/jbl/app/assets/javascripts/responsive.js",
+		"/Users/shin/project/jbl/app/views/static_pages/content2.html.erb",
+		"/Users/shin/project/jbl/app/views/layouts/PC.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/models/ignite.rb",
+		"/Users/shin/project/serviceschina-harman/db/migrate/20180723013900_add_section10_to_ignites.rb",
+		"/Users/shin/project/serviceschina-harman/db/migrate/20180723013759_add_section10_to_ignites.rb",
+		"/Users/shin/project/serviceschina-harman/app/views/industries/industrie.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/services/service.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/solution.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/controllers/messages_controller.rb",
+		"/Users/shin/project/serviceschina-harman/app/models/message.rb",
+		"/Users/shin/project/serviceschina-harman/db/schema.rb",
+		"/Users/shin/project/serviceschina-harman/app/views/layouts/_footer.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/digitaltrans/edit.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/digitaltrans/show.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/devicevirs/edit.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/devicevirs/show.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/cybersecurities/edit.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/cybersecurities/show.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/models/digitaltran.rb",
+		"/Users/shin/project/serviceschina-harman/app/models/cybersecurity.rb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/automotive_cybersecurity.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/models/automotive.rb",
+		"/Users/shin/project/serviceschina-harman/app/models/iot.rb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/iots/edit.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/iots/show.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/ota.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/home/edit.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/admin/home/show.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/models/home.rb",
+		"/Users/shin/project/serviceschina-harman/db/migrate/20180720023340_add_banner5_to_homes.rb",
+		"/Users/shin/project/serviceschina-harman/app/controllers/solutions_controller.rb",
+		"/Users/shin/project/serviceschina-harman/app/views/solutions/intelligent.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/services/product_engineering.html.erb",
+		"/Users/shin/project/serviceschina-harman/app/views/industries/mobile_communications.html.erb",
+		"/Users/shin/project/jbl/app/assets/stylesheets/iconfonts.css",
+		"/Users/shin/project/harman-train/app/assets/stylesheets/custom.scss",
+		"/Users/shin/project/harman-train/app/views/layouts/_nav.html.erb",
+		"/Users/shin/project/harman-train/app/views/static_pages/notice.html.erb",
+		"/Users/shin/project/harman-train/config/routes.rb",
+		"/Users/shin/project/harman-train/app/views/static_pages/coursepost.html.erb",
+		"/Users/shin/project/harman-train/app/views/static_pages/noticepost.html.erb",
+		"/Users/shin/project/harman-train/app/controllers/static_pages_controller.rb"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1061,
+								1061
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 26.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "harman_vendor.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"u",
+				"test/fixtures/users.yml"
+			],
+			[
+				"r",
+				"config/routes.rb"
+			],
+			[
+				"g",
+				"Gemfile"
+			],
+			[
+				"user",
+				"app/views/static_pages/courseuser.html.erb"
+			],
+			[
+				"app/controllers/products_controller.rb",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"app/views/products/_product_image.erb",
+				"app/views/products/_product_image.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"users yml",
+				"test/fixtures/users.yml"
+			],
+			[
+				"c",
+				"app/assets/stylesheets/custom.scss"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"cu",
+				"app/assets/stylesheets/custom.scss"
+			],
+			[
+				"ad",
+				"app/views/layouts/admin.html.erb"
+			],
+			[
+				"a",
+				"app/models/admin.rb"
+			],
+			[
+				"adm",
+				"app/models/admin.rb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			],
+			[
+				"Package Control.sublime-settings",
+				"Package Control.sublime-settings"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
