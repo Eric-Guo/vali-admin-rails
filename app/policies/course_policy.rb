@@ -55,7 +55,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def update?
-    internal_user? || first_level_vendor?
+    internal_user? || (first_level_vendor? && record.status == I18n.t('course.status.open'))
   end
 
   def destroy?
