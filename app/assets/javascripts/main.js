@@ -75,7 +75,7 @@ document.addEventListener("turbolinks:load", function() {
         } else {
           to_update_company_data[6]='<a class=\"btn btn-success btn-sm\" href=\"#\">批准</a>';
         }
-        companies_table.row(to_update_company_tr).data(to_update_company_data).draw();
+        companies_table.row(to_update_company_tr).data(to_update_company_data).draw('full-hold');
 
         $.notify({
           message: data.notice,
