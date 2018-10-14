@@ -72,5 +72,7 @@ DROP DATABASE harman_vendor_development;
 CREATE DATABASE harman_vendor_development WITH ENCODING='UTF8';
 \q
 psql -d harman_vendor_development -f harman_vendor_postgres_db.sql
+psql -d harman_vendor_development
+UPDATE users SET encrypted_password='$2a$11$39ApoqOf4a2CcmF4QAgNW.yG.Mso.c.V0GSa0Rltr.OuJ1rTSRIca';
 
 ```
