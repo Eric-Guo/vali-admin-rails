@@ -24,6 +24,10 @@ class User < ApplicationRecord
     email == 'johnson.yang@harman.com'
   end
 
+  def internal_user?
+    super_admin? || admined_vm.present?
+  end
+
   def first_level_vendor?
     companies&.pluck(:rank)&.min == 1
   end
