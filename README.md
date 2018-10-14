@@ -61,3 +61,16 @@ ALTER ROLE deployer CREATEDB;
 bundle exec rake db:migrate
 ```
 
+## Backup production DB and import into local
+
+```bash
+pg_dump harman_vendor_production -O -x > harman_vendor_postgres_db.sql
+logout
+scp deployer@training.harmanpro.com.cn:harman_vendor_postgres_db.sql .
+psql -d postgres
+DROP DATABASE harman_vendor_development;
+CREATE DATABASE harman_vendor_development WITH ENCODING='UTF8';
+\q
+psql -d harman_vendor_development -f harman_vendor_postgres_db.sql
+
+```
