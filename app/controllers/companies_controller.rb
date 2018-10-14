@@ -35,7 +35,7 @@ class CompaniesController < ApplicationController
       vmc = @company.vertical_market_companies.find_by(vertical_market_id: current_user.admined_vm.id)
       vmc.update_attributes(approved_at: Time.current)
     end
-    redirect_to companies_path, status: :found, notice: "Company #{@company.name} approved."
+    render json: { notice: "Company #{@company.name} approved." }
   end
 
   def freeze
@@ -45,13 +45,13 @@ class CompaniesController < ApplicationController
       vmc = @company.vertical_market_companies.find_by(vertical_market_id: current_user.admined_vm.id)
       vmc.update_attributes(approved_at: nil)
     end
-    redirect_to companies_path, status: :found, notice: "Company #{@company.name} freezen."
+    render json: { notice: "Company #{@company.name} freezen." }
   end
 
   private
 
   def set_and_authorize_company
-    @company = policy_scope(Company).find params[:id]
+    @company = policy_scope(Company).find_by name: params[:name]
     authorize @company
   end
 
