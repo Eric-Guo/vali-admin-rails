@@ -37,7 +37,7 @@ class ApplicationPolicy
   private
 
   def internal_user?
-    user&.super_admin? || user&.admined_vm.present?
+    user&.internal_user?
   end
 
   def first_level_vendor?

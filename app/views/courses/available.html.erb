@@ -32,6 +32,9 @@
                   <%= link_to t('ui.training_user_end'), course_path(course), class: 'btn btn-secondary disabled', role: 'button' -%>
                 <% elsif course.status == I18n.t('course.status.full') -%>
                   <%= link_to t('ui.training_user_full'), course_path(course), class: 'btn btn-secondary disabled', role: 'button' -%>
+                  <% if current_user.internal_user? -%>
+                    <%= link_to t('ui.training_user_manage_view'), course_path(course) -%>
+                  <% end %>
                 <% else -%>
                   <%= link_to t('ui.training_user_manage'), course_path(course), class: 'btn btn-primary', role: 'button' -%>
                 <% end %>
