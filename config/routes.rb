@@ -11,11 +11,9 @@ Rails.application.routes.draw do
     end
   end
   resources :companies, only: %i[index] do
-    member do
+    collection do
       patch :approve
       patch :freeze
-    end
-    collection do
       get :new_2nd_vendor
       post :create_2nd_vendor
     end

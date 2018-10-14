@@ -41,9 +41,9 @@
             <% if policy(Company).approve? %>
             <td>
               <% if company.approved_at.nil? -%>
-                <%= link_to t('company.approve'), approve_company_path(company), method: :patch, class: 'btn btn-success btn-sm' -%>
+                <%= link_to t('company.approve'), '#', class: 'btn btn-success btn-sm' -%>
               <% else %>
-                <%= link_to t('company.freeze'), freeze_company_path(company), method: :patch, class: 'btn btn-danger btn-sm' -%>
+                <%= link_to t('company.freeze'), '#', class: 'btn btn-danger btn-sm' -%>
               <% end -%>
             </td>
             <% end -%>
