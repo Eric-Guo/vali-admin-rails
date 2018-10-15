@@ -56,6 +56,11 @@ document.addEventListener("turbolinks:load", function() {
   if ($("#users-table_wrapper").length == 0) {
     $('#users-table').DataTable().order([0, 'desc']).draw();
   }
+
+  $('#companies-table').DataTable( {
+     "lengthMenu": [ 25, 50, 75, 100 ]
+   } );
+
   if ($("#companies-table_wrapper").length == 0) {
     var companies_table = $('#companies-table').DataTable().order([0, 'desc']).draw();
 
@@ -90,6 +95,11 @@ document.addEventListener("turbolinks:load", function() {
       });
     });
   }
+
+  $('#courses-table').DataTable( {
+     "lengthMenu": [ 25, 50, 75, 100 ]
+   } );
+
   if ($("#courses-table_wrapper").length == 0) {
     $('#courses-table').DataTable().order([0, 'desc']).draw();
   }
