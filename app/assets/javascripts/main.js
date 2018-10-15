@@ -49,6 +49,10 @@ document.addEventListener("turbolinks:load", function() {
     return false;
   });
 
+  $('#users-table').DataTable( {
+     "lengthMenu": [ 25, 50, 75, 100 ]
+   } );
+
   if ($("#users-table_wrapper").length == 0) {
     $('#users-table').DataTable().order([0, 'desc']).draw();
   }
