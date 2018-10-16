@@ -1,1 +1,1 @@
-<%= @company_name %>作为新公司刚刚注册。
+<%= render partial: 'shared/mail_sentence', locals: { text: "#{@company_name}作为新公司刚刚注册。", font_size: "14px" } -%>
