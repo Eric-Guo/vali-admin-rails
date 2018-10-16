@@ -57,12 +57,10 @@ document.addEventListener("turbolinks:load", function() {
     $('#users-table').DataTable().order([0, 'desc']).draw();
   }
 
-  $('#companies-table').DataTable( {
-     "lengthMenu": [ 25, 50, 75, 100 ]
-   } );
-
   if ($("#companies-table_wrapper").length == 0) {
-    var companies_table = $('#companies-table').DataTable().order([0, 'desc']).draw();
+    var companies_table = $('#companies-table').DataTable({
+     "lengthMenu": [ 25, 50, 75, 100 ]
+    }).order([0, 'desc']).draw();
 
     $('#companies-table tbody').on('click', 'a', function(event) {
       event.preventDefault();
