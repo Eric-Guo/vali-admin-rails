@@ -1,9 +1,5 @@
-<h2>
-  <%= @course.title -%>
-</h2>
-
-<h5>开始时间：<%= @course.start_time %></h6>
-<h5>结束时间：<%= @course.end_time %></h6>
-<h6>培训地点：<%= @course.address %></h6>
-
-<%= simple_format @course.body -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: @course.title, font_size: "18px" } -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: "开始时间：#{@course.start_time}", font_size: "14px" } -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: "结束时间：#{@course.end_time}", font_size: "14px" } -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: "培训地点：#{@course.address}", font_size: "14px" } -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: simple_format(@course.body), font_size: "14px" } -%>
