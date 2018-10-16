@@ -49,12 +49,10 @@ document.addEventListener("turbolinks:load", function() {
     return false;
   });
 
-  $('#users-table').DataTable( {
-     "lengthMenu": [ 25, 50, 75, 100 ]
-   } );
-
   if ($("#users-table_wrapper").length == 0) {
-    $('#users-table').DataTable().order([0, 'desc']).draw();
+    $('#users-table').DataTable( {
+     "lengthMenu": [ 25, 50, 75, 100 ]
+    } ).order([0, 'desc']).draw();
   }
 
   if ($("#companies-table_wrapper").length == 0) {
@@ -94,12 +92,10 @@ document.addEventListener("turbolinks:load", function() {
     });
   }
 
-  $('#courses-table').DataTable( {
-     "lengthMenu": [ 25, 50, 75, 100 ]
-   } );
-
   if ($("#courses-table_wrapper").length == 0) {
-    $('#courses-table').DataTable().order([0, 'desc']).draw();
+    $('#courses-table').DataTable({
+     "lengthMenu": [ 25, 50, 75, 100 ]
+    }).order([0, 'desc']).draw();
   }
   if ($("#course-trainees-table_wrapper").length == 0) {
     $('#course-trainees-table').DataTable();
