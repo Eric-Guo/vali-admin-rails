@@ -1,5 +1,2 @@
-<h2>
-  <%= @circular.title -%>
-</h2>
-
-<%= simple_format @circular.body -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: @circular.title, font_size: "14px" } -%>
+<%= render partial: 'shared/mail_sentence', locals: { text: simple_format(@circular.body), font_size: "14px" } -%>
