@@ -1,5 +1,5 @@
 <section class="login-content">
-  <% if flash[:alert] %>
+  <% if flash[:alert].presence %>
     <div class="alert alert-primary"><%= flash[:alert] %></div>
   <% end %>
   <div class="logo">
