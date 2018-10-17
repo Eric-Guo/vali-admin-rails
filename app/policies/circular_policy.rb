@@ -11,19 +11,9 @@ class CircularPolicy < ApplicationPolicy
       if user.super_admin?
         scope.all
       elsif user.admined_vm.present?
-        user_admined_vm_company_ids = user.admined_vm.companies.pluck(:id)
-        user_managed_company_ids = user_admined_vm_company_ids +
-                                   Company.where(managed_by_company_id: user_admined_vm_company_ids).pluck(:id)
-        allow_to_see_vm_ids = VerticalMarketCompany.where(company_id: user_managed_company_ids).pluck(:vertical_market_id)
-        allow_to_see_circular_ids = VerticalMarketCircular.where(vertical_market_id: allow_to_see_vm_ids).pluck(:circular_id)
-        scope.where(id: allow_to_see_circular_ids)
+        scope.all
       elsif user.first_level_vendor?
-        user_belongs_to_company_ids = user.companies.pluck(:id)
-        user_managed_company_ids = user_belongs_to_company_ids +
-                                   Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)
-        allow_to_see_vm_ids = VerticalMarketCompany.where(company_id: user_managed_company_ids).pluck(:vertical_market_id)
-        allow_to_see_circular_ids = VerticalMarketCircular.where(vertical_market_id: allow_to_see_vm_ids).pluck(:circular_id)
-        scope.where(id: allow_to_see_circular_ids)
+        scope.all
       else
         scope.none
       end
