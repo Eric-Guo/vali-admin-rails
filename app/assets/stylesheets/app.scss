@@ -28,11 +28,20 @@ a.app-header__logo {
 }
 
 td {
-  min-width: 30px;
+  min-width: 20px;
   max-width: 400px;
 }
 
 .course-add-user {
   margin-left: 14px;
   margin-right: 8px;
+}
+
+.tile-2 {
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
 }
