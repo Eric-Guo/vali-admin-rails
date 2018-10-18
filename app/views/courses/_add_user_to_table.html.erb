@@ -1,7 +1,7 @@
 <%= form_with model: course, class: 'form-horizontal', id: 'to-add-user-id' do |f| %>
   <div class="form-group row">
-    <label class="control-label col-md-3"><%= t('course.trainee') -%></label>
-    <%= f.select :attend_user_id, users.pluck(:name, :id), {}, class: 'form-control col-md-5 course-add-user' %>
-    <%= f.submit t('form.add'), class: 'btn btn-primary' %>
+    <label class="control-label col-md-2 col-4"><%= t('course.trainee') -%></label>
+    <%= f.select :attend_user_id, users.pluck(:name, :id), {}, class: 'form-control col-md-1 col-3 course-add-user' %>
+    <%= f.submit t('form.add'), class: 'btn btn-primary btn-sm' %>
   </div>
 <% end %>

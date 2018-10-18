@@ -1,4 +1,4 @@
-<main class="app-content">
+<main class="app-content app-content-bg">
   <div class="app-title">
     <div>
       <h1><i class="fa fa-laptop"></i> <%= @course.title -%></h1>
@@ -12,32 +12,35 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="tile">
+      <div class="tile-2">
         <h3 class="tile-title">
           <span class="badge badge-info"><%= t('course.status.title') -%>: <%= @course.status -%></span>
           <span class="badge badge-secondary"><%= t('course.rsvp_count') -%>: <%= current_course_users(@course, current_user).count -%></span>
         </h3>
         <div class="tile-body">
+
           <h5>
             <% @course.vertical_markets.each do |vm| -%>
               <span class="badge badge-primary"><%= vm.name -%></span>
             <% end -%>
           </h5>
           <p><%= @course.address -%></p>
-          <br />
+          <br>
           <%= simple_format @course.body -%>
+          <br> <br>
           <form class="form-horizontal">
             <div class="form-group row">
-              <label class="control-label col-md-3"><%= t('course.company') -%></label>
-              <div class="col-md-8">
+              <label class="control-label col-4 col-md-2"><%= t('course.company') -%></label>
+              <div class="col-md-6 col-4">
                 <%= select_tag :company_id, options_from_collection_for_select(policy_scope(Company), 'id', 'name'),
-                  class: 'form-control col-md-8', id: 'to-filter-company-id', include_blank: true,
+                  class: 'form-control col-md-6', id: 'to-filter-company-id', include_blank: true,
                   'data-remote' => true, 'data-type' => 'script',
                   'data-url' => url_for(controller: 'courses', action: 'select_company_changed', format: 'js') %>
               </div>
             </div>
           </form>
           <%= render partial: 'add_user_to_table', locals: { course: @course, users: @users } %>
+          <br> <br>
           <%= render partial: 'course_trainees_table', locals: { course: @course, users: current_course_users(@course, current_user) } %>
         </div>
       </div>
