@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_and_authorize_company, only: %i[approve freeze]
+  before_action :set_and_authorize_company, only: %i[approve approve_vm freeze]
   after_action :verify_authorized
 
   def index
@@ -36,6 +36,14 @@ class CompaniesController < ApplicationController
       vmc.update_attributes(approved_at: Time.current)
     end
     render json: { notice: "Company #{@company.name} approved." }
+  end
+
+  def approve_vm
+    if current_user.admined_vm.present?
+      vmc = @company.vertical_market_companies.find_by(vertical_market_id: current_user.admined_vm.id)
+      vmc.update_attributes(approved_at: Time.current)
+    end
+    render json: { notice: "Company #{@company.name} VM approved." }
   end
 
   def freeze

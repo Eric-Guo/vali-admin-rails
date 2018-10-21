@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :companies, only: %i[index] do
     collection do
       patch :approve
+      patch :approve_vm
       patch :freeze
       get :new_2nd_vendor
       post :create_2nd_vendor
