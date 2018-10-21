@@ -45,9 +45,6 @@ class CoursesController < ApplicationController
       CourseUser.create!(course: @course, user: user)
       @message = I18n.t('course.success_add')
     end
-    respond_to do |format|
-      format.js
-    end
   end
 
   def destroy
