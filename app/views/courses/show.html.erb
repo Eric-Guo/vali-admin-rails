@@ -32,7 +32,7 @@
             <div class="form-group row">
               <label class="control-label col-4 col-md-2"><%= t('course.company') -%></label>
               <div class="col-md-6 col-4">
-                <%= select_tag :company_id, options_from_collection_for_select(policy_scope(Company), 'id', 'name'),
+                <%= select_tag :company_id, options_from_collection_for_select(policy_scope(Company).joins(:vertical_market_companies).where(vertical_market_companies: {vertical_market_id: @course.vertical_markets.pluck(:id)}), 'id', 'name'),
                   class: 'form-control col-md-6', id: 'to-filter-company-id', include_blank: true,
                   'data-remote' => true, 'data-type' => 'script',
                   'data-url' => url_for(controller: 'courses', action: 'select_company_changed', format: 'js') %>
