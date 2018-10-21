@@ -17,7 +17,7 @@ class CoursePolicy < ApplicationPolicy
         user_belongs_to_company_ids = user.companies.pluck(:id)
         user_managed_company_ids = user_belongs_to_company_ids +
                                    Company.where(managed_by_company_id: user_belongs_to_company_ids).pluck(:id)
-        allow_to_see_vm_ids = VerticalMarketCompany.where(company_id: user_managed_company_ids).pluck(:vertical_market_id)
+        allow_to_see_vm_ids = VerticalMarketCompany.where(company_id: user_managed_company_ids).where.not(approved_at: nil).pluck(:vertical_market_id)
         allow_to_see_course_ids = VerticalMarketCourse.where(vertical_market_id: allow_to_see_vm_ids).pluck(:course_id)
         scope.where(id: allow_to_see_course_ids)
       else
