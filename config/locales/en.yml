@@ -98,6 +98,8 @@ en:
     trainee: "Trainee"
     delete_trainee: "Delete trainee"
     created_at: "Created at"
+    user_added: "User added to the course"
+    success_add: "Sucessfully added"
   circular:
     title: "Title"
     belongs_to_vertical_market: "Belongs to Vertical Market"

@@ -35,7 +35,19 @@ class CoursesController < ApplicationController
 
   def update
     user = policy_scope(User).find course_params[:attend_user_id]
-    CourseUser.find_or_create_by!(course: @course, user: user)
+
+    user_added = CourseUser.find_by(course: @course, user: user)
+    if user_added.present?
+      @message = I18n.t('course.user_added')
+    elsif @course.status == I18n.t('course.status.full')
+      @message = I18n.t('course.status.full')
+    else
+      CourseUser.create!(course: @course, user: user)
+      @message = I18n.t('course.success_add')
+    end
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy

@@ -1,3 +1,6 @@
 $("h3.tile-title").html("<%= I18n.t('course.rsvp_count') -%>: <%= current_course_users(@course, current_user).count -%>");
 $('#course-trainees-table').html("<%= j render partial: 'course_trainees_table', locals: { course: @course, users: current_course_users(@course, current_user) } -%>");
 $('#course-trainees-table').DataTable();
+<% if @message.present? -%>
+  $.notify({ message: "<%= @message %>", icon: 'fa fa-check' },{ type: "info" });
+<% end %>
