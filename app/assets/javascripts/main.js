@@ -78,6 +78,8 @@ document.addEventListener("turbolinks:load", function() {
       }).done(function(data) {
         if(is_approve) {
           to_update_company_data[6]='<a class=\"btn btn-danger btn-sm\" href=\"#\">冻结</a>';
+        } else if (is_approve_vm) {
+          to_update_company_data[6]='<a class=\"btn btn-danger btn-sm\" href=\"#\">冻结</a>';
         } else {
           to_update_company_data[6]='<a class=\"btn btn-success btn-sm\" href=\"#\">批准</a>';
         }
