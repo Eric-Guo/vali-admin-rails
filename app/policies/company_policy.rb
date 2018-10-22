@@ -41,7 +41,7 @@ class CompanyPolicy < ApplicationPolicy
   end
 
   def freeze?
-    internal_user?
+    super_admin?
   end
 
   def companies_list_description

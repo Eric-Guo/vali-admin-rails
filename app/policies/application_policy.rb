@@ -36,6 +36,10 @@ class ApplicationPolicy
 
   private
 
+  def super_admin?
+    user&.super_admin?
+  end
+
   def internal_user?
     user&.internal_user?
   end
