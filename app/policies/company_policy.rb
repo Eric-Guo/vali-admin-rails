@@ -36,6 +36,10 @@ class CompanyPolicy < ApplicationPolicy
     internal_user?
   end
 
+  def approve_vm?
+    internal_user?
+  end
+
   def freeze?
     internal_user?
   end
