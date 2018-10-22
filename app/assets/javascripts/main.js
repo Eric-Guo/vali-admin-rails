@@ -67,9 +67,8 @@ document.addEventListener("turbolinks:load", function() {
       var to_update_company_data = companies_table.row(to_update_company_tr).data();
       var company_name = to_update_company_data[1];
       var is_approve = to_update_company_data[6].indexOf('批准') !== -1
-      var is_approve_vm = to_update_company_data[6].indexOf('批准VM') !== -1
       $.ajax({
-        url: is_approve ? ( is_approve_vm ? "/companies/approve_vm" : "/companies/approve") : "/companies/freeze",
+        url: is_approve ? "/companies/approve" : "/companies/freeze",
         dataType: "json",
         type: "patch",
         data: {
