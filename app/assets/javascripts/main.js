@@ -66,10 +66,12 @@ document.addEventListener("turbolinks:load", function() {
       var to_update_company_tr = $(this).parents('tr');
       var to_update_company_data = companies_table.row(to_update_company_tr).data();
       var company_name = to_update_company_data[1];
-      var is_approve = to_update_company_data[6].indexOf('批准') !== -1
-      var is_approve_vm = to_update_company_data[6].indexOf('批 准') !== -1
+      var is_approve = to_update_company_data[6].indexOf('批准') !== -1 || to_update_company_data[6].indexOf('批 准') !== -1;
+      var is_approve_vm = to_update_company_data[6].indexOf('批 准') !== -1;
+      var call_url = (is_approve ? ( is_approve_vm ? "/companies/approve_vm" : "/companies/approve") : "/companies/freeze");
+      console.log(call_url);
       $.ajax({
-        url: is_approve ? ( is_approve_vm ? "/companies/approve_vm" : "/companies/approve") : "/companies/freeze",
+        url: call_url,
         dataType: "json",
         type: "patch",
         data: {
