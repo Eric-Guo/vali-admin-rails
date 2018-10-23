@@ -10,7 +10,7 @@ class NotificationMailer < ApplicationMailer
     @circular = vertical_market_circular.circular
     vertical_market = vertical_market_circular.vertical_market
 
-    mail(to: emails_belongs_to_vm(vertical_market) + all_vm_admin_emails,
+    mail(to: (emails_belongs_to_vm(vertical_market) << vertical_market.admin.email),
          subject: "新通知：#{@circular.title}")
   end
 
@@ -29,9 +29,5 @@ class NotificationMailer < ApplicationMailer
     vertical_market.companies.where(rank: 1).where.not(approved_at: nil).collect do |company|
       company.users.where(locked_at: nil).where.not(email: nil).pluck(:email)
     end
-  end
-
-  def all_vm_admin_emails
-    VerticalMarket.all.collect { |vm| vm.admin.email }
   end
 end
