@@ -1,3 +1,5 @@
+require 'cgi'
+
 class CompaniesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_and_authorize_company, only: %i[approve approve_vm freeze]
@@ -59,7 +61,7 @@ class CompaniesController < ApplicationController
   private
 
   def set_and_authorize_company
-    @company = policy_scope(Company).find_by name: params[:name]
+    @company = policy_scope(Company).find_by name: CGI.unescapeHTML(params[:name])
     authorize @company
   end
 
