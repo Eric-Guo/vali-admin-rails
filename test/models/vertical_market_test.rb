@@ -7,6 +7,6 @@ class VerticalMarketTest < ActiveSupport::TestCase
     assert_equal akg.companies.count, 4
     assert_equal akg.courses.count, 4
     assert_equal akg.circulars.count, 1
-    assert_equal akg.admin.name, 'Steve Gong'
+    assert_equal akg.admin.name, 'Yun Ji'
   end
 end

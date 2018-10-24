@@ -13,7 +13,7 @@ class CompanyTest < ActiveSupport::TestCase
     assert gbicc.valid?
     assert_equal gbicc.users.count, 1
     assert_equal gbicc.vertical_markets.count, 1
-    assert_equal gbicc.managed_by_company.name, '杰夫'
+    assert_equal gbicc.managed_by_company.name, '一级供应商测试'
   end
 
   test 'Company jiefu has one managed company' do
