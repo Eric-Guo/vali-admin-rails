@@ -6,7 +6,3 @@ circular2018_akg:
 circular2018_install_sound:
   vertical_market: install_sound
   circular: circular2018
-
-circular2019_akg:
-  vertical_market: akg_mi
-  circular: circular2019
