@@ -11,9 +11,9 @@ eric:
 
 # AKG/MI VM admin
 steve_gong:
-  name: "Steve Gong"
+  name: "Yun Ji"
   title: "AKG/MI Admin"
-  email: "steve.gong@harman.com"
+  email: "yun.ji@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -21,9 +21,9 @@ steve_gong:
 
 # Install sound VM admin
 sam_xu:
-  name: "Steve Gong"
+  name: "Leo Yan"
   title: "Install sound Admin"
-  email: "lingxiao.xu@harman.com"
+  email: "leo.yan@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -31,9 +31,9 @@ sam_xu:
 
 # AMX VM admin
 robert_hu:
-  name: "Robert Hu"
+  name: "Yao Yu"
   title: "AMX Admin"
-  email: "robert.hu@harman.com"
+  email: "yao.yu@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -41,9 +41,9 @@ robert_hu:
 
 # Marting lighting VM admin
 devin_liu:
-  name: "Devin Liu"
+  name: "Xueqin Zhang"
   title: "Marting lighting Admin"
-  email: "dunyan.liu@harman.com"
+  email: "xueqin.zhang@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
@@ -51,9 +51,9 @@ devin_liu:
 
 # JBL entertainment VM admin
 yin_chen:
-  name: "Yin Chen"
+  name: "Tim Bao"
   title: "JBL entertainment Admin"
-  email: "yin.chen@harman.com"
+  email: "tim.bao@harman.com"
   # password: 123456
   encrypted_password: "$2a$11$dVaHVzmBsg1HFbhtZHBPseqFVrVjAKBQKngf0mfEhoAoGPyFCUG0u"
   phone: "+"
