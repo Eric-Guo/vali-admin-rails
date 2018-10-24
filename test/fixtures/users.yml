@@ -61,7 +61,7 @@ yin_chen:
 
 # 1st level vendor user
 shin:
-  name: "张华"
+  name: "一级供应商测试用户"
   title: "Shin"
   email: "shin.php@gmail.com"
   # password: 123456
@@ -70,7 +70,7 @@ shin:
   confirmed_at: <%= Time.zone.now %>
 
 ming_pan:
-  name: "潘明"
+  name: "二级供应商测试1用户"
   title: "IT 经理"
   email: "tyye@gmail.com"
   # password: 123456
@@ -80,7 +80,7 @@ ming_pan:
   locked_at: <%= Time.zone.now %>
 
 zhemin_chu:
-  name: "褚哲敏"
+  name: "二级供应商测试2用户"
   title: "总经理"
   email: "tggyye@gmail.com"
   # password: 123456
@@ -90,7 +90,7 @@ zhemin_chu:
   locked_at: <%= Time.zone.now %>
 
 yinguang_zhang:
-  name: "张银光"
+  name: "二级供应商测试3用户"
   title: "经理"
   email: "zyg@gmail.com"
   # password: 123456

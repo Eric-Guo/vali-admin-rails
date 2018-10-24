@@ -8,7 +8,7 @@ harman:
 
 # 1st level vendor
 jiefu:
-  name: 杰夫
+  name: 一级供应商测试
   city: 上海
   district: 静安
   address: 茂名北路
@@ -17,7 +17,7 @@ jiefu:
 
 # Below are all 2nd level vendor
 citicprufunds:
-  name: 信诚基金
+  name: 二级供应商测试1
   city: 上海
   district: 浦东
   address: 上海国金中心汇丰银行大楼9层
@@ -26,7 +26,7 @@ citicprufunds:
   approved_at: <%= Time.zone.now %>
 
 51fund:
-  name: 上投摩根基金管理有限公司
+  name: 二级供应商测试2
   city: 上海
   district: 浦东
   address: 震旦国际大楼25楼
@@ -34,7 +34,7 @@ citicprufunds:
   managed_by_company: jiefu
 
 gbicc:
-  name: 吉贝克信息技术
+  name: 二级供应商测试3
   city: 上海
   district: 杨浦
   address: 凯迪金融大厦15层
