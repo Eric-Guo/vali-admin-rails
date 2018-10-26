@@ -11,7 +11,13 @@
     {
       "path": "./node_modules/vali-admin",
       "file_exclude_patterns": ["docs/js/bootstrap.min.js",
-                                "docs/js/jquery-*.min.js"]
+                                "docs/js/jquery-*.min.js",
+                                "docs/js/popper.min.js",
+                                "docs/js/plugins/fullcalendar.min.js",
+                                "docs/js/plugins/jquery-ui.custom.min.js",
+                                "docs/js/plugins/jquery.dataTables.min.js",
+                                "docs/js/plugins/pace.min.js",
+                                "docs/js/plugins/select2.min.js"]
     }
   ],
     "settings":
