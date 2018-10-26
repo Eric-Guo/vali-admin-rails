@@ -5,11 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
 
-  has_many :company_users
+  has_many :company_users, dependent: :destroy
   has_many :companies, through: :company_users
   has_many :vertical_markets, through: :companies
   has_one :admined_vm, class_name: :VerticalMarket, foreign_key: :admin_id
-  has_many :course_users
+  has_many :course_users, dependent: :destroy
   has_many :courses, through: :course_users
 
   attr_accessor(*CompanyRegistration::COMPANY_REG_FIELDS)
