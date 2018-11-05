@@ -44,7 +44,7 @@
                 <td>
                   <% user.vertical_markets.each do |vm| -%>
                     <span class="badge badge-primary"><%= vm.name -%></span>
-                  <% end -%>
+                  <% end unless user.companies.any? { |c| c.rank == 0 }-%>
                 </td>
                 <td>
                   <%= link_to t('company.add_user'), new_user_vendor_path(user, company_ids: user.companies.pluck(:id)), class: 'btn btn-success btn-sm' -%>
