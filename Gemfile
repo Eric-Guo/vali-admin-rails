@@ -22,7 +22,7 @@ gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem 'webpacker', '~> 3.5.5'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -65,8 +65,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
 
-  gem 'minitest-ci' if ENV['CIRCLECI']
+group :ci do
+  gem 'minitest-ci'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
