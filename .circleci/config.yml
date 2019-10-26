@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.6.1-node-browsers
+      - image: circleci/ruby:2.6.5-node-browsers
         environment: # environment variables for primary container
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -21,15 +21,15 @@ jobs:
           POSTGRES_DB: harman_vendor_test
           POSTGRES_PASSWORD: ""
 
-    working_directory: ~/harman_vendor
+    working_directory: ~/vali-admin
 
     steps:
       - checkout
 
       # Which version of bundler? should keep same as Gemfile.lock
       - run:
-          name: Which bundler?
-          command: bundle -v
+          name: install bundler v2.0.2
+          command: gem install bundler:2.0.2 && bundle -v
 
       # Restore bundle cache
       - restore_cache:
