@@ -2,11 +2,12 @@
   "name": "harman_vendor",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "^4.0.7",
     "stimulus": "^1.0.1",
     "vali-admin": "^2.4.1"
   },
   "devDependencies": {
-    "webpack-dev-server": "2.11.2"
+    "webpack": "^4.28.4",
+    "webpack-dev-server": "^3.2.1"
   }
 }
