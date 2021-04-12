@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^5.2.1",
+    "core-js": "3",
     "stimulus": "^2.0.0",
     "vali-admin": "^2.4.1"
   },
