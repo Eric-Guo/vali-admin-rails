@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:3.0.1-node-browsers
         environment: # environment variables for primary container
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -15,7 +15,7 @@ jobs:
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
           USE_OFFICIAL_GEM_SOURCE: true
 
-      - image: circleci/postgres:10.4-alpine # database image
+      - image: circleci/postgres:10.10-alpine
         environment: # environment variables for database
           POSTGRES_USER: harman-vendor-test
           POSTGRES_DB: harman_vendor_test
@@ -28,8 +28,8 @@ jobs:
 
       # Which version of bundler? should keep same as Gemfile.lock
       - run:
-          name: install bundler v2.0.2
-          command: gem install bundler:2.0.2 && bundle -v
+          name: install bundler v2.2.16
+          command: gem install bundler:2.2.16 && bundle -v
 
       # Restore bundle cache
       - restore_cache:
