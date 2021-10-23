@@ -18,8 +18,7 @@ gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'terser'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -55,7 +54,6 @@ group :development do
   gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen'
 end
 
 group :test do
