@@ -116,10 +116,10 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
-    minitest (5.17.0)
+    minitest (5.18.0)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
-    msgpack (1.6.0)
+    msgpack (1.6.1)
     net-imap (0.3.4)
       date
       net-protocol
@@ -262,4 +262,4 @@ DEPENDENCIES
   webpacker
 
 BUNDLED WITH
-   2.4.7
+   2.4.8
