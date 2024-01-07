@@ -1,16 +1,10 @@
-if ENV['USE_OFFICIAL_GEM_SOURCE']
-  source 'https://rubygems.org'
-else
-  source 'https://gems.ruby-china.com'
-end
-
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.4'
-gem 'rexml'
+gem 'rails', '~> 6.1.7'
+
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 1.2.3'
 # Use Puma as the app server
 gem 'puma'
 # Use jquery as the JavaScript library
@@ -20,14 +14,16 @@ gem 'sassc-rails'
 
 gem 'terser'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem 'webpacker', '~> 5.4.4'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
@@ -40,7 +36,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.7.5', require: false
+gem 'bootsnap', '>= 1.17.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,9 +54,8 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'capybara', '>= 3.39'
+  gem 'selenium-webdriver', '>= 4.14.0'
 end
 
 group :ci do
